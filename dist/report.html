@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Events Report - 2025-08-26 10:10</title>
+    <title>AI Events Report - 2025-08-26 17:55</title>
     <style>
         * {
             margin: 0;
@@ -602,19 +602,19 @@
     <div class="container">
         <div class="header">
             <h1>AI Events Report</h1>
-            <p>Through December 2026 • Generated 2025-08-26 10:10</p>
+            <p>Through December 2026 • Generated 2025-08-26 17:55</p>
         </div>
         
         <div class="content">
             <!-- Filters -->
             <div class="filters">
                 <div class="filter-group">
-                    <label for="cityFilter">Filter by City:</label>
+                    <label for="cityFilter">Filter by City: <span id="cityFilterCount" style="font-weight: 600;">(All)</span></label>
                     <select id="cityFilter" class="filter-select" multiple size="4">
                     </select>
                 </div>
                 <div class="filter-group">
-                    <label for="tagFilter">Filter by Tag:</label>
+                    <label for="tagFilter">Filter by Tag: <span id="tagFilterCount" style="font-weight: 600;">(All)</span></label>
                     <select id="tagFilter" class="filter-select" multiple size="4">
                     </select>
                 </div>
@@ -624,14 +624,24 @@
             <!-- Statistics -->
             <div class="stats">
                 <a href="#us-events" class="stat-card">
-                    <div class="stat-number">82</div>
+                    <div class="stat-number" id="usEventCount" data-total="82">82</div>
                     <div class="stat-label">US Events</div>
-                    <div class="stat-breakdown">27 flagship, 25 major, 30 other</div>
+                    <div class="stat-breakdown" id="usEventBreakdown" 
+                        data-flagship="27" 
+                        data-major="25" 
+                        data-other="30">
+                        27 flagship, 25 major, 30 other
+                    </div>
                 </a>
                 <a href="#intl-events" class="stat-card">
-                    <div class="stat-number">55</div>
+                    <div class="stat-number" id="intlEventCount" data-total="55">55</div>
                     <div class="stat-label">International Events</div>
-                    <div class="stat-breakdown">13 flagship, 20 major, 22 other</div>
+                    <div class="stat-breakdown" id="intlEventBreakdown" 
+                        data-flagship="13" 
+                        data-major="20" 
+                        data-other="22">
+                        13 flagship, 20 major, 22 other
+                    </div>
                 </a>
             </div>
             
@@ -4105,6 +4115,111 @@
             });
         }
         
+        // Update filter count displays
+        function updateFilterCounts() {
+            const cityFilter = document.getElementById('cityFilter');
+            const tagFilter = document.getElementById('tagFilter');
+            const cityFilterCount = document.getElementById('cityFilterCount');
+            const tagFilterCount = document.getElementById('tagFilterCount');
+            
+            const selectedCities = Array.from(cityFilter.selectedOptions).map(option => option.value).filter(v => v);
+            const selectedTags = Array.from(tagFilter.selectedOptions).map(option => option.value).filter(v => v);
+            
+            // Update city filter count display
+            if (selectedCities.length === 0) {
+                cityFilterCount.textContent = '(All)';
+            } else {
+                cityFilterCount.textContent = `(${selectedCities.length} selected)`;
+            }
+            
+            // Update tag filter count display
+            if (selectedTags.length === 0) {
+                tagFilterCount.textContent = '(All)';
+            } else {
+                tagFilterCount.textContent = `(${selectedTags.length} selected)`;
+            }
+        }
+        
+        // Update event statistics based on visible events
+        function updateEventStats() {
+            // Count visible US events
+            let usTotal = 0;
+            let usFlagship = 0;
+            let usMajor = 0;
+            let usOther = 0;
+            
+            // Count main US event cards
+            const usSection = document.getElementById('us-events');
+            if (usSection) {
+                const usCards = usSection.querySelectorAll('.event-card:not(.hidden):not(.minor-events)');
+                usCards.forEach(card => {
+                    usTotal++;
+                    const tierTags = card.querySelectorAll('.tier-flagship, .tier-major');
+                    if (card.querySelector('.tier-flagship')) {
+                        usFlagship++;
+                    } else if (card.querySelector('.tier-major')) {
+                        usMajor++;
+                    }
+                });
+                
+                // Count visible minor US events
+                const usMinorTile = usSection.querySelector('.minor-events:not(.hidden)');
+                if (usMinorTile) {
+                    const visibleMinorItems = usMinorTile.querySelectorAll('.minor-event-item:not([style*="display: none"])');
+                    usOther = visibleMinorItems.length;
+                    usTotal += usOther;
+                }
+            }
+            
+            // Count visible International events
+            let intlTotal = 0;
+            let intlFlagship = 0;
+            let intlMajor = 0;
+            let intlOther = 0;
+            
+            // Count main International event cards
+            const intlSection = document.getElementById('intl-events');
+            if (intlSection) {
+                const intlCards = intlSection.querySelectorAll('.event-card:not(.hidden):not(.minor-events)');
+                intlCards.forEach(card => {
+                    intlTotal++;
+                    if (card.querySelector('.tier-flagship')) {
+                        intlFlagship++;
+                    } else if (card.querySelector('.tier-major')) {
+                        intlMajor++;
+                    }
+                });
+                
+                // Count visible minor International events
+                const intlMinorTile = intlSection.querySelector('.minor-events:not(.hidden)');
+                if (intlMinorTile) {
+                    const visibleMinorItems = intlMinorTile.querySelectorAll('.minor-event-item:not([style*="display: none"])');
+                    intlOther = visibleMinorItems.length;
+                    intlTotal += intlOther;
+                }
+            }
+            
+            // Update US stats display
+            const usEventCount = document.getElementById('usEventCount');
+            const usEventBreakdown = document.getElementById('usEventBreakdown');
+            if (usEventCount) {
+                usEventCount.textContent = usTotal;
+            }
+            if (usEventBreakdown) {
+                usEventBreakdown.textContent = `${usFlagship} flagship, ${usMajor} major, ${usOther} other`;
+            }
+            
+            // Update International stats display
+            const intlEventCount = document.getElementById('intlEventCount');
+            const intlEventBreakdown = document.getElementById('intlEventBreakdown');
+            if (intlEventCount) {
+                intlEventCount.textContent = intlTotal;
+            }
+            if (intlEventBreakdown) {
+                intlEventBreakdown.textContent = `${intlFlagship} flagship, ${intlMajor} major, ${intlOther} other`;
+            }
+        }
+        
         // Filter events
         function filterEvents() {
             const cityFilter = document.getElementById('cityFilter');
@@ -4112,6 +4227,9 @@
             
             const selectedCities = Array.from(cityFilter.selectedOptions).map(option => option.value).filter(v => v);
             const selectedTags = Array.from(tagFilter.selectedOptions).map(option => option.value).filter(v => v);
+            
+            // Update filter count displays
+            updateFilterCounts();
             
             // Filter main event cards
             const eventCards = document.querySelectorAll('.event-card[data-city]');
@@ -4199,6 +4317,9 @@
                     }
                 }
             });
+            
+            // Update event statistics
+            updateEventStats();
         }
         
         // Reset filters
@@ -4227,11 +4348,17 @@
             
             // Update tag filter to show all tags again
             updateTagFilter();
+            
+            // Update filter counts and stats
+            updateFilterCounts();
+            updateEventStats();
         }
         
         // Initialize filters on page load
         document.addEventListener('DOMContentLoaded', function() {
             populateFilters();
+            updateFilterCounts();
+            updateEventStats();
             
             // Add event listeners for filters
             document.getElementById('cityFilter').addEventListener('change', function() {
