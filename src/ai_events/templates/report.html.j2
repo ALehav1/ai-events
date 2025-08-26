@@ -890,12 +890,13 @@
                 }
             });
             
-            // Add "All" option first for cities
-            const allCityOption = document.createElement('option');
-            allCityOption.value = '';
-            allCityOption.textContent = 'All Cities';
-            allCityOption.selected = true;
-            cityFilter.appendChild(allCityOption);
+            // Add placeholder option for cities
+            const placeholderCityOption = document.createElement('option');
+            placeholderCityOption.value = '';
+            placeholderCityOption.textContent = 'Select Cities';
+            placeholderCityOption.disabled = true;
+            placeholderCityOption.selected = true;
+            cityFilter.appendChild(placeholderCityOption);
             
             // Populate city dropdown
             Array.from(cities).sort().forEach(city => {
@@ -939,12 +940,13 @@
                 }
             }
             
-            // Add "All" option first for tags
-            const allTagOption = document.createElement('option');
-            allTagOption.value = '';
-            allTagOption.textContent = 'All Tags';
-            allTagOption.selected = true;
-            tagFilter.appendChild(allTagOption);
+            // Add placeholder option for tags
+            const placeholderTagOption = document.createElement('option');
+            placeholderTagOption.value = '';
+            placeholderTagOption.textContent = 'Select Tags';
+            placeholderTagOption.disabled = true;
+            placeholderTagOption.selected = true;
+            tagFilter.appendChild(placeholderTagOption);
             
             // Populate tag dropdown
             Array.from(tagsToShow).sort().forEach(tag => {
@@ -1075,17 +1077,13 @@
             const cityFilter = document.getElementById('cityFilter');
             const tagFilter = document.getElementById('tagFilter');
             
-            // Handle "All" option selection - if "All" is selected or no selection, show all
-            let selectedCities = Array.from(cityFilter.selectedOptions).map(option => option.value).filter(v => v);
-            let selectedTags = Array.from(tagFilter.selectedOptions).map(option => option.value).filter(v => v);
-            
-            // If "All" option is selected or nothing is selected, treat as no filter
-            if (selectedCities.length === 0 || cityFilter.selectedOptions[0]?.value === '') {
-                selectedCities = [];
-            }
-            if (selectedTags.length === 0 || tagFilter.selectedOptions[0]?.value === '') {
-                selectedTags = [];
-            }
+            // Get selected values, filtering out empty/placeholder values
+            const selectedCities = Array.from(cityFilter.selectedOptions)
+                .map(option => option.value)
+                .filter(v => v && v !== '');
+            const selectedTags = Array.from(tagFilter.selectedOptions)
+                .map(option => option.value)
+                .filter(v => v && v !== '');
             
             // Update filter count displays
             updateFilterCounts();
@@ -1234,16 +1232,10 @@
             const tagFilter = document.getElementById('tagFilter');
             
             cityFilter.addEventListener('change', function(e) {
-                // Deselect "All" if any specific city is selected
-                const allOption = cityFilter.querySelector('option[value=""]');
-                const selectedOptions = Array.from(cityFilter.selectedOptions);
-                
-                if (selectedOptions.length > 1 && selectedOptions.includes(allOption)) {
-                    // If "All" and others are selected, deselect "All"
-                    allOption.selected = false;
-                } else if (selectedOptions.length === 0) {
-                    // If nothing is selected, select "All"
-                    allOption.selected = true;
+                // Ensure placeholder is deselected when cities are selected
+                const placeholderOption = cityFilter.querySelector('option[value=""]');
+                if (placeholderOption) {
+                    placeholderOption.selected = false;
                 }
                 
                 updateTagFilter();
@@ -1253,16 +1245,10 @@
             });
             
             tagFilter.addEventListener('change', function(e) {
-                // Deselect "All" if any specific tag is selected
-                const allOption = tagFilter.querySelector('option[value=""]');
-                const selectedOptions = Array.from(tagFilter.selectedOptions);
-                
-                if (selectedOptions.length > 1 && selectedOptions.includes(allOption)) {
-                    // If "All" and others are selected, deselect "All"
-                    allOption.selected = false;
-                } else if (selectedOptions.length === 0) {
-                    // If nothing is selected, select "All"
-                    allOption.selected = true;
+                // Ensure placeholder is deselected when tags are selected
+                const placeholderOption = tagFilter.querySelector('option[value=""]');
+                if (placeholderOption) {
+                    placeholderOption.selected = false;
                 }
                 
                 filterEvents();
