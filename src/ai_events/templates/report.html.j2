@@ -890,6 +890,13 @@
                 }
             });
             
+            // Add "All" option first for cities
+            const allCityOption = document.createElement('option');
+            allCityOption.value = '';
+            allCityOption.textContent = 'All Cities';
+            allCityOption.selected = true;
+            cityFilter.appendChild(allCityOption);
+            
             // Populate city dropdown
             Array.from(cities).sort().forEach(city => {
                 const option = document.createElement('option');
@@ -931,6 +938,13 @@
                     });
                 }
             }
+            
+            // Add "All" option first for tags
+            const allTagOption = document.createElement('option');
+            allTagOption.value = '';
+            allTagOption.textContent = 'All Tags';
+            allTagOption.selected = true;
+            tagFilter.appendChild(allTagOption);
             
             // Populate tag dropdown
             Array.from(tagsToShow).sort().forEach(tag => {
@@ -1061,8 +1075,17 @@
             const cityFilter = document.getElementById('cityFilter');
             const tagFilter = document.getElementById('tagFilter');
             
-            const selectedCities = Array.from(cityFilter.selectedOptions).map(option => option.value).filter(v => v);
-            const selectedTags = Array.from(tagFilter.selectedOptions).map(option => option.value).filter(v => v);
+            // Handle "All" option selection - if "All" is selected or no selection, show all
+            let selectedCities = Array.from(cityFilter.selectedOptions).map(option => option.value).filter(v => v);
+            let selectedTags = Array.from(tagFilter.selectedOptions).map(option => option.value).filter(v => v);
+            
+            // If "All" option is selected or nothing is selected, treat as no filter
+            if (selectedCities.length === 0 || cityFilter.selectedOptions[0]?.value === '') {
+                selectedCities = [];
+            }
+            if (selectedTags.length === 0 || tagFilter.selectedOptions[0]?.value === '') {
+                selectedTags = [];
+            }
             
             // Update filter count displays
             updateFilterCounts();
@@ -1207,11 +1230,45 @@
             });
             
             // Add event listeners for filters
-            document.getElementById('cityFilter').addEventListener('change', function() {
+            const cityFilter = document.getElementById('cityFilter');
+            const tagFilter = document.getElementById('tagFilter');
+            
+            cityFilter.addEventListener('change', function(e) {
+                // Deselect "All" if any specific city is selected
+                const allOption = cityFilter.querySelector('option[value=""]');
+                const selectedOptions = Array.from(cityFilter.selectedOptions);
+                
+                if (selectedOptions.length > 1 && selectedOptions.includes(allOption)) {
+                    // If "All" and others are selected, deselect "All"
+                    allOption.selected = false;
+                } else if (selectedOptions.length === 0) {
+                    // If nothing is selected, select "All"
+                    allOption.selected = true;
+                }
+                
                 updateTagFilter();
                 filterEvents();
+                updateFilterCounts();
+                updateEventStats();
             });
-            document.getElementById('tagFilter').addEventListener('change', filterEvents);
+            
+            tagFilter.addEventListener('change', function(e) {
+                // Deselect "All" if any specific tag is selected
+                const allOption = tagFilter.querySelector('option[value=""]');
+                const selectedOptions = Array.from(tagFilter.selectedOptions);
+                
+                if (selectedOptions.length > 1 && selectedOptions.includes(allOption)) {
+                    // If "All" and others are selected, deselect "All"
+                    allOption.selected = false;
+                } else if (selectedOptions.length === 0) {
+                    // If nothing is selected, select "All"
+                    allOption.selected = true;
+                }
+                
+                filterEvents();
+                updateFilterCounts();
+                updateEventStats();
+            });
         });
 
         // Smooth scrolling for anchor links
