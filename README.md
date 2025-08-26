@@ -23,18 +23,23 @@ Automated AI events tracking system that fetches, analyzes, and reports on globa
 - **macOS Automation**: Implemented weekly launchd job with installation scripts
 - **Database System**: SQLite persistence with change detection and event history
 
+## Live Demo
+
+🌐 **View the live AI Events Tracker**: [https://ai-events-alehav1-alehav1s-projects.vercel.app/](https://ai-events-alehav1-alehav1s-projects.vercel.app/)
+
 ## Features
 
 - **🔍 Intelligent Event Discovery**: Automatically scrapes 40+ major AI conference websites globally
 - **📊 Smart Categorization**: Events classified as Flagship, Major, or Other tier with intelligent scoring
 - **📱 Beautiful Reports**: Professional HTML reports with perfect card alignment and responsive design
-- **🔧 Advanced Filtering**: Multi-select city and tag filters for precise event discovery
+- **🔧 Advanced Filtering**: Multi-select city and tag filters for precise event discovery (shows "All" when no filters selected)
 - **📅 Calendar Integration**: Generates ICS files for seamless calendar import
 - **⚡ Windsurf Integration**: One-click commands, NPM scripts, and keyboard shortcuts
 - **🤖 Weekly Automation**: macOS launchd job for hands-free operation
 - **🌍 Global Coverage**: Events across North America, Europe, Asia, Middle East, and Africa
 - **📍 Location Details**: Complete city, state/country information for all events
 - **🎯 Through December 2026**: Fixed horizon for comprehensive AI event planning
+- **📈 Dynamic Statistics**: US/International event counts update in real-time based on filters
 
 ## Project Structure
 
