@@ -50,7 +50,7 @@ async def parse(url: str) -> list[Event]:
             tier="major",
             evidence="Conference on AI and blockchain convergence with policymakers, developers, and investors"
         ),
-        tracks_themes=["AI", "Blockchain", "Healthcare AI", "Education AI", "Smart Cities", "Policy"],
+        tracks_themes=["AI & Blockchain", "Healthcare AI", "Education AI", "Smart Cities", "AI Policy"],
         emerging_flagship=False,
         priority="go",
         why_priority="Unique focus on AI-blockchain convergence with high-level attendees",

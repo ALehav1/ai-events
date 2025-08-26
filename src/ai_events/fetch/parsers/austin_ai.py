@@ -25,7 +25,7 @@ async def parse(url: str) -> list[Event]:
             tier="major",
             evidence="Long-running annual event covering big data, data science, machine learning, and AI"
         ),
-        tracks_themes=["Big Data", "Data Science", "Machine Learning", "AI", "Analytics"],
+        tracks_themes=["Big Data", "Data Science", "Machine Learning", "Applied AI", "Analytics"],
         emerging_flagship=False,
         priority="go",
         why_priority="Established annual event with comprehensive AI and data science coverage",
