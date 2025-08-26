@@ -1,0 +1,38 @@
+{
+  "commands": [
+    {
+      "id": "ai-events.generate-report",
+      "title": "AI Events: Generate & Open Report",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "source .venv/bin/activate 2>/dev/null || true; ai-events fetch && ai-events report && open dist/report.html"
+      ],
+      "group": "AI Events",
+      "keybinding": "cmd+shift+r",
+      "description": "Fetch latest AI events, generate HTML report, and open in browser"
+    },
+    {
+      "id": "ai-events.fetch-only",
+      "title": "AI Events: Fetch Data Only",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "source .venv/bin/activate 2>/dev/null || true; ai-events fetch"
+      ],
+      "group": "AI Events",
+      "description": "Fetch and update AI events data without generating report"
+    },
+    {
+      "id": "ai-events.list-priority",
+      "title": "AI Events: List Priority Events",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "source .venv/bin/activate 2>/dev/null || true; ai-events list --priority go"
+      ],
+      "group": "AI Events",
+      "description": "List high-priority AI events marked as 'go'"
+    }
+  ]
+}

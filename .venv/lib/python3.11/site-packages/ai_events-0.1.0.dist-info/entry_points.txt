@@ -1,0 +1,2 @@
+[console_scripts]
+ai-events = ai_events.cli:main

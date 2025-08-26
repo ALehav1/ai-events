@@ -1,0 +1,157 @@
+sources:
+  - name: humanx
+    parser: humanx
+    url: https://www.humanx.co/
+    region: US
+  - name: aiconf_sf
+    parser: aiconf_sf
+    url: https://aiconference.com/
+    region: US
+  - name: neurips
+    parser: neurips
+    url: https://neurips.cc/
+    region: International
+  - name: world_ai_summit
+    parser: world_ai_summit
+    url: https://worldsummit.ai/
+    region: International
+  - name: ray_summit
+    parser: ray_summit
+    url: https://raysummit.anyscale.com/
+    region: US
+  - name: ai_summit_london
+    parser: ai_summit_london
+    url: https://london.theaisummit.com/
+    region: International
+  - name: dotai
+    parser: dotai
+    url: https://www.dotai.io/
+    region: International
+  - name: dreamforce
+    parser: dreamforce
+    url: https://www.salesforce.com/dreamforce/
+    region: US
+  - name: gtc
+    parser: gtc
+    url: https://www.nvidia.com/gtc/
+    region: US
+  - name: aws_reinvent
+    parser: aws_reinvent
+    url: https://reinvent.awsevents.com/
+    region: US
+  - name: ai_compute_nyc
+    parser: ai_compute_nyc
+    url: https://www.eventbrite.com/e/new-york-ai-conference-tickets-912664222257
+    region: US
+  - name: microsoft_ignite
+    parser: microsoft_ignite
+    url: https://ignite.microsoft.com/
+    region: US
+  - name: google_io
+    parser: google_io
+    url: https://io.google/2025/
+    region: US
+  - name: apple_wwdc
+    parser: apple_wwdc
+    url: https://developer.apple.com/wwdc25/
+    region: US
+  - name: kubecon
+    parser: kubecon
+    url: https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/
+    region: US
+  - name: odsc_west
+    parser: odsc_west
+    url: https://odsc.com/california/
+    region: US
+  - name: meta_connect
+    parser: meta_connect
+    url: https://www.meta.com/connect/
+    region: US
+  - name: anthropic_code_with_claude
+    parser: anthropic_code_with_claude
+    url: https://www.anthropic.com/events/code-with-claude-2025
+    region: US
+  - name: openai_devday
+    parser: openai_devday
+    url: https://openai.com/index/announcing-devday-2025/
+    region: US
+  - name: strata_data_ai
+    parser: strata_data_ai
+    url: https://www.oreilly.com/conferences/strata-data-ai.html
+    region: US
+  - name: south_florida_ai
+    parser: south_florida_ai
+    url: https://www.southfloridaai.com/events
+    region: US
+  - name: austin_ai
+    parser: austin_ai
+    url: https://www.austinai.com/events
+    region: US
+  - name: gartner
+    parser: gartner
+    url: https://www.gartner.com/en/conferences
+    region: US
+  - name: singapore_ai
+    parser: singapore_ai
+    url: https://www.singaporeai.com/events
+    region: International
+  - name: london_ai
+    parser: london_ai
+    url: https://www.londonai.com/events
+    region: International
+  - name: dubai_ai
+    parser: dubai_ai
+    url: https://www.dubaiaiweek.com/events
+    region: International
+  - name: los_angeles_ai
+    parser: los_angeles_ai
+    url: https://www.laaiconference.com/events
+    region: US
+  - name: new_york_ai
+    parser: new_york_ai
+    url: https://www.nyaiconference.com/events
+    region: US
+  - name: lisbon_ai
+    parser: lisbon_ai
+    url: https://www.lisbonai.com/events
+    region: International
+  - name: ai4_vegas
+    parser: ai4_vegas
+    url: https://ai4.io/vegas/
+    region: US
+  - name: data_ai_summit
+    parser: data_ai_summit
+    url: https://www.databricks.com/dataaisummit
+    region: US
+  - name: ai_summit_nyc
+    parser: ai_summit_nyc
+    url: https://newyork.theaisummit.com/
+    region: US
+  - name: world_summit_ai_amsterdam
+    parser: world_summit_ai
+    url: https://worldsummit.ai/
+    region: International
+  - name: superai_singapore
+    parser: superai_singapore
+    url: https://www.superai.com/
+    region: International
+  - name: deepfest_riyadh
+    parser: deepfest_riyadh
+    url: https://deepfest.com
+    region: International
+  - name: ai_expo_africa
+    parser: ai_expo_africa
+    url: "https://aiexpoafrica.com/"
+    priority: "major"
+    region: "International"
+  - name: techcrunch_disrupt
+    parser: techcrunch_disrupt
+    url: "https://techcrunch.com/events/"
+    priority: "flagship"
+    region: "US"
+  
+  - name: openai_forum_events
+    parser: openai_forum_events
+    url: "https://forum.openai.com/public/events"
+    priority: "focused"
+    region: "US"

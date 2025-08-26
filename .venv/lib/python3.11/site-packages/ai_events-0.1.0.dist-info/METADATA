@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: ai-events
+Version: 0.1.0
+Summary: Weekly AI events report (US + International) with emerging flagships
+Requires-Python: >=3.11
+Requires-Dist: httpx>=0.27
+Requires-Dist: selectolax>=0.3.21
+Requires-Dist: jinja2>=3.1
+Requires-Dist: pydantic>=2.8
+Requires-Dist: python-dateutil>=2.9

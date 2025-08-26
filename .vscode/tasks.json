@@ -1,0 +1,44 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "AI Events: Report",
+      "type": "shell",
+      "command": "source .venv/bin/activate 2>/dev/null || true; ai-events fetch && ai-events report && open dist/report.html",
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "AI Events: Fetch Only",
+      "type": "shell",
+      "command": "source .venv/bin/activate 2>/dev/null || true; ai-events fetch",
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "AI Events: List Priority",
+      "type": "shell",
+      "command": "source .venv/bin/activate 2>/dev/null || true; ai-events list --priority go",
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

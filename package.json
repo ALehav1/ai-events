@@ -1,0 +1,10 @@
+{
+  "name": "ai-events-runner",
+  "private": true,
+  "scripts": {
+    "report": "bash -lc 'source .venv/bin/activate 2>/dev/null || true; ai-events fetch && ai-events report && open dist/report.html'",
+    "fetch": "bash -lc 'source .venv/bin/activate 2>/dev/null || true; ai-events fetch'",
+    "list": "bash -lc 'source .venv/bin/activate 2>/dev/null || true; ai-events list'",
+    "list-priority": "bash -lc 'source .venv/bin/activate 2>/dev/null || true; ai-events list --priority go'"
+  }
+}
