@@ -25,7 +25,7 @@ Automated AI events tracking system that fetches, analyzes, and reports on globa
 
 ## Live Demo
 
-🌐 **View the live AI Events Tracker**: [https://ai-events-alehav1-alehav1s-projects.vercel.app/](https://ai-events-alehav1-alehav1s-projects.vercel.app/)
+🌐 **View the live AI Events Tracker**: [https://ai-events-8xqaspn8t-alehav1s-projects.vercel.app/](https://ai-events-8xqaspn8t-alehav1s-projects.vercel.app/)
 
 ## Features
 
