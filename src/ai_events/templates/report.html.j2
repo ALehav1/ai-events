@@ -948,21 +948,31 @@
             const cityFilterCount = document.getElementById('cityFilterCount');
             const tagFilterCount = document.getElementById('tagFilterCount');
             
+            // Ensure elements exist before updating
+            if (!cityFilter || !tagFilter || !cityFilterCount || !tagFilterCount) {
+                console.warn('Filter elements not found');
+                return;
+            }
+            
             const selectedCities = Array.from(cityFilter.selectedOptions).map(option => option.value).filter(v => v);
             const selectedTags = Array.from(tagFilter.selectedOptions).map(option => option.value).filter(v => v);
             
             // Update city filter count display
             if (selectedCities.length === 0) {
                 cityFilterCount.textContent = '(All)';
+                cityFilterCount.innerHTML = '(All)'; // Force update on mobile
             } else {
                 cityFilterCount.textContent = `(${selectedCities.length} selected)`;
+                cityFilterCount.innerHTML = `(${selectedCities.length} selected)`;
             }
             
             // Update tag filter count display
             if (selectedTags.length === 0) {
                 tagFilterCount.textContent = '(All)';
+                tagFilterCount.innerHTML = '(All)'; // Force update on mobile
             } else {
                 tagFilterCount.textContent = `(${selectedTags.length} selected)`;
+                tagFilterCount.innerHTML = `(${selectedTags.length} selected)`;
             }
         }
         
@@ -1183,8 +1193,18 @@
         // Initialize filters on page load
         document.addEventListener('DOMContentLoaded', function() {
             populateFilters();
-            updateFilterCounts();
-            updateEventStats();
+            
+            // Ensure filter counts are set after a delay for mobile
+            setTimeout(function() {
+                updateFilterCounts();
+                updateEventStats();
+            }, 100);
+            
+            // Also update on window load for mobile browsers
+            window.addEventListener('load', function() {
+                updateFilterCounts();
+                updateEventStats();
+            });
             
             // Add event listeners for filters
             document.getElementById('cityFilter').addEventListener('change', function() {
