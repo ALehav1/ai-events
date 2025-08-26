@@ -103,6 +103,22 @@
             box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
         
+        /* Ensure consistent option styling across all browsers */
+        .filter-select option {
+            padding: 4px 8px;
+            color: #334155;
+        }
+        
+        .filter-select option:checked {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        .filter-select option:disabled {
+            color: #64748b;
+            font-style: italic;
+        }
+        
         .filter-select:hover {
             background: white;
             box-shadow: 0 1px 3px rgba(102, 126, 234, 0.2);
@@ -1187,6 +1203,12 @@
             // Clear all selections
             Array.from(cityFilter.options).forEach(option => option.selected = false);
             Array.from(tagFilter.options).forEach(option => option.selected = false);
+            
+            // Select the placeholder options
+            const cityPlaceholder = cityFilter.querySelector('option[value=""]');
+            const tagPlaceholder = tagFilter.querySelector('option[value=""]');
+            if (cityPlaceholder) cityPlaceholder.selected = true;
+            if (tagPlaceholder) tagPlaceholder.selected = true;
             
             // Show all events
             document.querySelectorAll('.event-card').forEach(card => {
