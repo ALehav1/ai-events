@@ -325,11 +325,12 @@ sudo chown $(whoami) ~/Library/LaunchAgents/
 
 ## Known Issues & Future Fixes
 
-### Tag Cleanup Tasks
-- **FinTech Capitalization**: Fix inconsistent "Fintech AI" vs "FinTech AI" tags across parsers to use consistent "FinTech AI" format
-- **Standalone AI Tags**: Remove or replace standalone "AI" tags with more descriptive compound tags (e.g., "Enterprise AI", "Applied AI")
-- **Infrastructure Tags**: Fix standalone "Infra" tags to "AI Infrastructure" for consistency
-- **Minor Events UI**: Fix faded font issue in minor events display
+### Recently Resolved
+- ✅ **FinTech Capitalization**: Fixed to consistent "FinTech AI" format across all parsers
+- ✅ **Standalone AI Tags**: Replaced with descriptive compound tags like "Applied AI"
+- ✅ **Infrastructure Tags**: Fixed to "AI Infrastructure" for consistency
+- ✅ **Minor Events UI**: Fixed faded font colors and improved readability
+- ✅ **Mobile Responsive Filters**: Fixed filter alignment on mobile devices
 
 ### Future Enhancements
 
