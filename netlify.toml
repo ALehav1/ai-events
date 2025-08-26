@@ -1,0 +1,14 @@
+[build]
+  publish = "dist"
+  command = "python -m ai_events fetch && python -m ai_events report"
+
+[build.environment]
+  PYTHON_VERSION = "3.11"
+
+[[redirects]]
+  from = "/*"
+  to = "/report.html"
+  status = 200
+
+[context.production.environment]
+  NODE_VERSION = "18"
