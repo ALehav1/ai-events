@@ -12,7 +12,8 @@ from ai_events.fetch.parsers import (
     ai4_vegas, data_ai_summit, ai_summit_nyc, world_summit_ai, superai_singapore, 
     deepfest_riyadh, ai_expo_africa, techcrunch_disrupt, ai_compute_nyc, odsc_west,
     strata_data_ai, south_florida_ai, austin_ai, singapore_ai, london_ai, dubai_ai, 
-    los_angeles_ai, new_york_ai, lisbon_ai, openai_forum_events, caio_london)
+    los_angeles_ai, new_york_ai, lisbon_ai, openai_forum_events, caio_london,
+    caio_berlin, cdao_defense, responsible_ai_summit, caio_boston, caio_london_dec)
 
 OUT_DIR = Path.cwd() / "dist"
 
@@ -60,6 +61,11 @@ async def fetch_all():
         (techcrunch_disrupt, "https://techcrunch.com/events/"),
         (openai_forum_events, "https://forum.openai.com/public/events"),
         (caio_london, "https://caio-london.re-work.co"),
+        (caio_berlin, "https://world.aiacceleratorinstitute.com/location/caioberlin"),
+        (cdao_defense, "https://cdao-def.coriniumintelligence.com/"),
+        (responsible_ai_summit, "https://www.aidataanalytics.network/events-responsible-ai-summit/"),
+        (caio_boston, "https://world.aiacceleratorinstitute.com/location/caioboston"),
+        (caio_london_dec, "https://world.aiacceleratorinstitute.com/location/caiolondon"),
     ]:
         try:
             events.extend(await parser.parse(url))

@@ -161,3 +161,33 @@ sources:
     url: "https://caio-london.re-work.co"
     priority: "major"
     region: "International"
+  
+  - name: caio_berlin
+    parser: caio_berlin
+    url: "https://world.aiacceleratorinstitute.com/location/caioberlin"
+    priority: "major"
+    region: "International"
+  
+  - name: cdao_defense
+    parser: cdao_defense
+    url: "https://cdao-def.coriniumintelligence.com/"
+    priority: "major"
+    region: "US"
+  
+  - name: responsible_ai_summit
+    parser: responsible_ai_summit
+    url: "https://www.aidataanalytics.network/events-responsible-ai-summit/"
+    priority: "major"
+    region: "International"
+  
+  - name: caio_boston
+    parser: caio_boston
+    url: "https://world.aiacceleratorinstitute.com/location/caioboston"
+    priority: "major"
+    region: "US"
+  
+  - name: caio_london_dec
+    parser: caio_london_dec
+    url: "https://world.aiacceleratorinstitute.com/location/caiolondon"
+    priority: "major"
+    region: "International"
