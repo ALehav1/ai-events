@@ -155,3 +155,9 @@ sources:
     url: "https://forum.openai.com/public/events"
     priority: "focused"
     region: "US"
+  
+  - name: caio_london
+    parser: caio_london
+    url: "https://caio-london.re-work.co"
+    priority: "major"
+    region: "International"

@@ -203,11 +203,78 @@ ai-events fetch && ai-events report && open dist/report.html
 - **Fixed Horizon**: Through December 2026 for comprehensive AI event planning
 - **Configurable**: Edit horizon dates in `src/ai_events/cli.py`
 
-### Adding New Sources
+### Adding New Event Sources
 
-1. Add source to `src/ai_events/fetch/rules.yml`
-2. Create parser in `src/ai_events/fetch/parsers/`
-3. Update CLI imports in `src/ai_events/cli.py`
+#### Step-by-Step Instructions
+
+1. **Add source configuration** to `src/ai_events/fetch/rules.yml`:
+
+   ```yaml
+   - name: event_name
+     parser: event_name
+     url: "https://event-website.com"
+     priority: "major"  # or "flagship" or "focused"
+     region: "US"  # or "International"
+   ```
+
+2. **Create parser file** in `src/ai_events/fetch/parsers/event_name.py`:
+
+   ```python
+   from datetime import datetime
+   from typing import List
+   from ..base import fetch_html
+   from ...models import Event, SizeProfile
+   from ...utils import stable_id
+
+   async def parse(url: str) -> List[Event]:
+       events = []
+       
+       event = Event(
+           id="",  # Will be set by stable_id
+           name="Event Name",
+           start_date="2026-MM-DD",  # ISO format, MUST be future date
+           end_date="2026-MM-DD",
+           city="City",
+           state_province="State",  # Optional for US events
+           country="Country",
+           region="US" or "International",
+           format="live",  # or "virtual" or "hybrid"
+           site_url="https://event-website.com",
+           tracks_themes=["AI Theme 1", "AI Theme 2"],
+           size_profile=SizeProfile(
+               tier="major",  # "flagship", "major", or "focused"
+               attendees_estimate=1000,
+               evidence="Source or reasoning for size estimate"
+           )
+       )
+       event.id = stable_id(event.site_url, event.start_date)
+       events.append(event)
+       
+       return events
+   ```
+
+3. **Update CLI imports** in `src/ai_events/cli.py`:
+   - Add to imports: `from ai_events.fetch.parsers import (..., event_name)`
+   - Add to fetch_all() list: `(event_name, "https://event-website.com"),`
+
+#### Common Mistakes to Avoid
+
+- **Date Issues**: Always use future dates in ISO format "YYYY-MM-DD"
+- **Field Names**: Use exact field names from Event model (e.g., `city` not `location`)
+- **Region Values**: Must be exactly "US" or "International"
+- **Format Values**: Must be exactly "live", "virtual", or "hybrid"
+- **Tier Values**: Must be exactly "flagship", "major", or "focused"
+- **ID Generation**: Always use `stable_id(url, start_date)` with string parameters
+
+#### Testing Your Addition
+
+```bash
+# Test the fetch and report generation
+ai-events fetch && ai-events report
+
+# Check if your event appears
+grep "Event Name" dist/report.html
+```
 
 ### Scoring Weights
 Adjust scoring in `src/ai_events/config.py`:
@@ -270,6 +337,9 @@ ai-events report
 
 # Test automation (dry run)
 launchctl start com.ai.events.weekly
+
+# Verify specific event was added
+python -c "from ai_events.db import get_all_events; events = get_all_events(); found = [e for e in events if 'Your Event Name' in e.name]; print(f'Found {len(found)} matching events')"
 ```
 
 ## Troubleshooting

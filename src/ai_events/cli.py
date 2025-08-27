@@ -12,7 +12,7 @@ from ai_events.fetch.parsers import (
     ai4_vegas, data_ai_summit, ai_summit_nyc, world_summit_ai, superai_singapore, 
     deepfest_riyadh, ai_expo_africa, techcrunch_disrupt, ai_compute_nyc, odsc_west,
     strata_data_ai, south_florida_ai, austin_ai, singapore_ai, london_ai, dubai_ai, 
-    los_angeles_ai, new_york_ai, lisbon_ai, openai_forum_events)
+    los_angeles_ai, new_york_ai, lisbon_ai, openai_forum_events, caio_london)
 
 OUT_DIR = Path.cwd() / "dist"
 
@@ -58,7 +58,8 @@ async def fetch_all():
         (deepfest_riyadh, "https://deepfest.com"),
         (ai_expo_africa, "https://aiexpoafrica.com/"),
         (techcrunch_disrupt, "https://techcrunch.com/events/"),
-        (openai_forum_events, "https://forum.openai.com/public/events")
+        (openai_forum_events, "https://forum.openai.com/public/events"),
+        (caio_london, "https://caio-london.re-work.co"),
     ]:
         try:
             events.extend(await parser.parse(url))
