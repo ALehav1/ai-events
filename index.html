@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Events Report - 2025-08-26 18:47</title>
+    <title>AI Events Report - 2025-08-27 07:37</title>
     <style>
         * {
             margin: 0;
@@ -110,8 +110,9 @@
         }
         
         .filter-select option:checked {
-            background-color: #007bff;
-            color: white;
+            background-color: #e3f2fd;
+            color: #1976d2;
+            font-weight: 500;
         }
         
         .filter-select option:disabled {
@@ -618,7 +619,7 @@
     <div class="container">
         <div class="header">
             <h1>AI Events Report</h1>
-            <p>Through December 2026 • Generated 2025-08-26 18:47</p>
+            <p>Through December 2026 • Generated 2025-08-27 07:37</p>
         </div>
         
         <div class="content">
@@ -4383,6 +4384,10 @@
             const tagPlaceholder = tagFilter.querySelector('option[value=""]');
             if (cityPlaceholder) cityPlaceholder.selected = true;
             if (tagPlaceholder) tagPlaceholder.selected = true;
+            
+            // Scroll dropdowns back to top
+            cityFilter.scrollTop = 0;
+            tagFilter.scrollTop = 0;
             
             // Show all events
             document.querySelectorAll('.event-card').forEach(card => {

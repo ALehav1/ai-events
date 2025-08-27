@@ -110,8 +110,9 @@
         }
         
         .filter-select option:checked {
-            background-color: #007bff;
-            color: white;
+            background-color: #e3f2fd;
+            color: #1976d2;
+            font-weight: 500;
         }
         
         .filter-select option:disabled {
@@ -1209,6 +1210,10 @@
             const tagPlaceholder = tagFilter.querySelector('option[value=""]');
             if (cityPlaceholder) cityPlaceholder.selected = true;
             if (tagPlaceholder) tagPlaceholder.selected = true;
+            
+            // Scroll dropdowns back to top
+            cityFilter.scrollTop = 0;
+            tagFilter.scrollTop = 0;
             
             // Show all events
             document.querySelectorAll('.event-card').forEach(card => {
