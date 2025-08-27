@@ -1211,10 +1211,14 @@
             if (cityPlaceholder) cityPlaceholder.selected = true;
             if (tagPlaceholder) tagPlaceholder.selected = true;
             
-            // Scroll dropdowns back to top with a small delay to ensure DOM updates
+            // Ensure placeholder options are visible by scrolling them into view
             setTimeout(() => {
-                cityFilter.scrollTop = 0;
-                tagFilter.scrollTop = 0;
+                if (cityPlaceholder) {
+                    cityPlaceholder.scrollIntoView({ block: 'nearest' });
+                }
+                if (tagPlaceholder) {
+                    tagPlaceholder.scrollIntoView({ block: 'nearest' });
+                }
             }, 10);
             
             // Show all events
