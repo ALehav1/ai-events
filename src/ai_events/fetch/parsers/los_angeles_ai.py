@@ -105,7 +105,7 @@ async def parse(url: str) -> list[Event]:
             evidence="ITU-led global summit bringing top AI experts and decision-makers for innovative AI solutions"
         ),
         tracks_themes=["AI for Good", "Social Impact AI", "Global Challenges", "AI Ethics", "Sustainable AI"],
-        emerging_flagship=True,
+        emerging_flagship=False,
         priority="go",
         why_priority="ITU-led flagship summit focusing on AI solutions for global challenges",
         source_urls=[url]

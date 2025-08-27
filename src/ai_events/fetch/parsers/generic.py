@@ -18,5 +18,6 @@ async def parse(url:str, name:str, region:str) -> list[Event]:
         format="live",
         site_url=url,
         size_profile=SizeProfile(tier="focused", evidence="Placeholder; update parser."),
+        emerging_flagship=False,
         source_urls=[url]
     )]

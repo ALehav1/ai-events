@@ -682,7 +682,7 @@
                                 {% if event.size_profile %}
                                 <span class="tag tier-{{ event.size_profile.tier }}">{{ event.size_profile.tier|title }}</span>
                                 {% endif %}
-                                {% if event.emerging_flagship %}
+                                {% if event.emerging_flagship and (not event.size_profile or event.size_profile.tier != 'flagship') %}
                                 <span class="tag tier-flagship">Flagship</span>
                                 {% endif %}
                                 {% if event.audience_tag %}
@@ -747,7 +747,7 @@
                                 {% if event.size_profile %}
                                 <span class="tag tier-{{ event.size_profile.tier }}">{{ event.size_profile.tier|title }}</span>
                                 {% endif %}
-                                {% if event.emerging_flagship %}
+                                {% if event.emerging_flagship and (not event.size_profile or event.size_profile.tier != 'flagship') %}
                                 <span class="tag tier-flagship">Flagship</span>
                                 {% endif %}
                                 {% if event.audience_tag %}

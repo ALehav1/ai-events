@@ -28,7 +28,6 @@ class Event(BaseModel):
     call_for_speakers_url: Optional[HttpUrl] = None
     tracks_themes: List[str] = []
     audience_tag: Optional[AudienceTag] = None
-    emerging_flagship: bool = False
     priority: Priority = "maybe"
     why_priority: Optional[str] = None
     source_urls: List[str] = []
@@ -36,3 +35,4 @@ class Event(BaseModel):
     last_changed_hash: Optional[str] = None
     first_discovered: Optional[str] = None
     size_profile: Optional[SizeProfile] = None
+    emerging_flagship: bool = False

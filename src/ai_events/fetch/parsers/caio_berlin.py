@@ -11,6 +11,7 @@ async def parse(url: str) -> List[Event]:
     
     # Chief AI Officer Summit Berlin 2025
     event = Event(
+        emerging_flagship=False,
         id="",  # Will be set by stable_id
         name="Chief AI Officer Summit Berlin",
         start_date="2025-09-11",

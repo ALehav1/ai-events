@@ -27,7 +27,7 @@ async def parse(url: str) -> list[Event]:
             evidence="Singapore's premier AI summit bringing together global AI leaders and researchers"
         ),
         tracks_themes=["AI Research", "AI Applications", "AI Policy", "Southeast Asia AI", "AI Innovation"],
-        emerging_flagship=True,
+        emerging_flagship=False,
         priority="go",
         why_priority="Singapore's flagship AI summit with global reach and government backing",
         source_urls=[url]
@@ -79,7 +79,7 @@ async def parse(url: str) -> list[Event]:
             evidence="World's largest FinTech festival with extensive AI in finance focus"
         ),
         tracks_themes=["FinTech AI", "AI in Banking", "Financial AI", "RegTech", "AI Trading"],
-        emerging_flagship=True,
+        emerging_flagship=False,
         priority="go",
         why_priority="World's largest FinTech festival with major AI in finance coverage",
         source_urls=[url]

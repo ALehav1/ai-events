@@ -27,7 +27,7 @@ async def parse(url: str) -> list[Event]:
             evidence="Gartner's premier IT conference with extensive AI, automation, and digital transformation coverage"
         ),
         tracks_themes=["AI Strategy", "Digital Transformation", "IT Leadership", "Automation", "Enterprise AI"],
-        emerging_flagship=True,
+        emerging_flagship=False,
         priority="go",
         why_priority="Gartner's flagship IT conference with major AI and automation focus",
         source_urls=[url]
@@ -53,7 +53,7 @@ async def parse(url: str) -> list[Event]:
             evidence="Gartner's premier data and analytics conference with AI, ML, and advanced analytics focus"
         ),
         tracks_themes=["Data Analytics", "Machine Learning", "Advanced Analytics", "Data Strategy", "Business Intelligence"],
-        emerging_flagship=True,
+        emerging_flagship=False,
         priority="go",
         why_priority="Gartner's flagship data and analytics summit with comprehensive AI coverage",
         source_urls=[url]
@@ -79,7 +79,7 @@ async def parse(url: str) -> list[Event]:
             evidence="Gartner's dedicated AI and data science summit for European market"
         ),
         tracks_themes=["Artificial Intelligence", "Data Science", "Machine Learning", "AI Ethics", "AI Governance"],
-        emerging_flagship=True,
+        emerging_flagship=False,
         priority="go",
         why_priority="Gartner's dedicated AI and data science summit with global reach",
         source_urls=[url]

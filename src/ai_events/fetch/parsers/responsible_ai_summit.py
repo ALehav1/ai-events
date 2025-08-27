@@ -26,7 +26,8 @@ async def parse(url: str) -> List[Event]:
             tier="major",
             attendees_estimate=500,
             evidence="Enterprise leaders, regulators, and practitioners focused on AI ethics"
-        )
+        ),
+        emerging_flagship=False
     )
     event.id = stable_id(event.site_url, event.start_date)
     events.append(event)
