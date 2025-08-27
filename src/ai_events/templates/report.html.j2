@@ -1211,9 +1211,11 @@
             if (cityPlaceholder) cityPlaceholder.selected = true;
             if (tagPlaceholder) tagPlaceholder.selected = true;
             
-            // Scroll dropdowns back to top
-            cityFilter.scrollTop = 0;
-            tagFilter.scrollTop = 0;
+            // Scroll dropdowns back to top with a small delay to ensure DOM updates
+            setTimeout(() => {
+                cityFilter.scrollTop = 0;
+                tagFilter.scrollTop = 0;
+            }, 10);
             
             // Show all events
             document.querySelectorAll('.event-card').forEach(card => {
