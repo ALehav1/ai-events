@@ -26,6 +26,7 @@ async def parse(url: str) -> list[Event]:
             evidence="World's largest tech event with 5000+ exhibitors covering AI breakthroughs, quantum computing, and Metaverse"
         ),
         tracks_themes=["AI Breakthroughs", "Quantum Computing", "Metaverse", "Tech Innovation", "Startups"],
+        audience_tag="Mixed Audience",
         emerging_flagship=True,
         priority="go",
         why_priority="World's largest tech event with major AI focus and global reach",

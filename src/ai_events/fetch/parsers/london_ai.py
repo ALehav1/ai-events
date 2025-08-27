@@ -12,6 +12,7 @@ async def parse(url: str) -> list[Event]:
     ev1 = Event(
         id=stable_id(url, "2026-02-04"),
         name="AI & Big Data Expo Global",
+        audience_tag="Mixed Audience",
         start_date="2026-02-04", 
         end_date="2026-02-05",
         city="London", 
@@ -37,6 +38,7 @@ async def parse(url: str) -> list[Event]:
     ev2 = Event(
         id=stable_id(url, "2026-03-23"),
         name="Data & AI Governance Conference Europe",
+        audience_tag="Mixed Audience",
         start_date="2026-03-23", 
         end_date="2026-03-26",
         city="London", 
@@ -62,6 +64,7 @@ async def parse(url: str) -> list[Event]:
     ev3 = Event(
         id=stable_id(url, "2026-02-25"),
         name="Chief AI Officer Summit UK",
+        audience_tag="Mixed Audience",
         start_date="2026-02-25", 
         end_date="2026-02-25",
         city="London", 
@@ -87,6 +90,7 @@ async def parse(url: str) -> list[Event]:
     ev4 = Event(
         id=stable_id(url, "2026-06-29"),
         name="Global AI Conference",
+        audience_tag="Mixed Audience",
         start_date="2026-06-29", 
         end_date="2026-06-30",
         city="London", 

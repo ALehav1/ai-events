@@ -13,6 +13,7 @@ async def parse(url: str) -> list[Event]:
     ev = Event(
         id=stable_id(url, start),
         name="New York AI Conference 2026",
+        audience_tag="Mixed Audience",
         start_date=start, 
         end_date=end,
         city=city, 

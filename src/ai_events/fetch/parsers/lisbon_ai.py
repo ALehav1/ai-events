@@ -12,6 +12,7 @@ async def parse(url: str) -> list[Event]:
     ev1 = Event(
         id=stable_id(url, "2026-04-16"),
         name="AIMLR2026 - International Conference on Artificial Intelligence, Machine Learning, and Robotics",
+        audience_tag="Mixed Audience",
         start_date="2026-04-16", 
         end_date="2026-04-18",
         city="Lisbon", 
@@ -37,6 +38,7 @@ async def parse(url: str) -> list[Event]:
     ev2 = Event(
         id=stable_id(url, "2026-10-15"),
         name="International Conference on Artificial Intelligence and Data Mining (ICAIDM)",
+        audience_tag="Mixed Audience",
         start_date="2026-10-15", 
         end_date="2026-10-16",
         city="Lisbon", 

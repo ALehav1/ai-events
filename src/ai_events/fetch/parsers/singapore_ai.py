@@ -12,6 +12,7 @@ async def parse(url: str) -> list[Event]:
     ev1 = Event(
         id=stable_id(url, "2026-03-18"),
         name="AI Singapore Summit 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-03-18", 
         end_date="2026-03-19",
         city="Singapore", 
@@ -37,6 +38,7 @@ async def parse(url: str) -> list[Event]:
     ev2 = Event(
         id=stable_id(url, "2026-05-14"),
         name="Tech in Asia Conference 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-05-14", 
         end_date="2026-05-15",
         city="Singapore", 
@@ -62,6 +64,7 @@ async def parse(url: str) -> list[Event]:
     ev3 = Event(
         id=stable_id(url, "2026-11-04"),
         name="Singapore FinTech Festival 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-11-04", 
         end_date="2026-11-06",
         city="Singapore", 
@@ -87,6 +90,7 @@ async def parse(url: str) -> list[Event]:
     ev4 = Event(
         id=stable_id(url, "2026-07-15"),
         name="RISE Conference 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-07-15", 
         end_date="2026-07-17",
         city="Singapore", 
@@ -112,6 +116,7 @@ async def parse(url: str) -> list[Event]:
     ev5 = Event(
         id=stable_id(url, "2026-09-23"),
         name="AI World Singapore 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-09-23", 
         end_date="2026-09-24",
         city="Singapore", 
@@ -137,6 +142,7 @@ async def parse(url: str) -> list[Event]:
     ev6 = Event(
         id=stable_id(url, "2026-04-22"),
         name="Data Science & AI Summit Singapore 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-04-22", 
         end_date="2026-04-23",
         city="Singapore", 

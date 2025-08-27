@@ -13,7 +13,7 @@ async def parse(url: str) -> List[Event]:
     # Chief AI Officer Summit London 2025
     event = Event(
         id="",  # Will be set by stable_id
-        name="Chief AI Officer Summit London",
+        name="Chief AI Officer Summit UK",
         start_date="2026-02-25",
         end_date="2026-02-26",
         city="London",
@@ -21,11 +21,12 @@ async def parse(url: str) -> List[Event]:
         region="International",
         format="live",
         site_url="https://caio-london.re-work.co",
-        tracks_themes=["Enterprise AI", "AI Strategy", "AI Governance", "AI Leadership"],
+        tracks_themes=["AI Strategy", "Enterprise AI", "AI Governance", "AI ROI"],
+        audience_tag="Business Leaders",
         size_profile=SizeProfile(
             tier="major",
-            attendees_estimate=500,
-            evidence="RE•WORK events typically attract 300-800 senior executives"
+            attendees_estimate=200,
+            evidence="200+ senior AI leaders"
         )
     )
     event.id = stable_id(event.site_url, event.start_date)

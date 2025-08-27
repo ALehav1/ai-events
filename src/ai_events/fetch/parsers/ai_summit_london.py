@@ -10,6 +10,7 @@ async def parse(url: str) -> list[Event]:
     event = Event(
         id=stable_id(url, "2026-06-11"),
         name="AI Summit London",
+        audience_tag="Business Leaders",
         start_date="2026-06-11",
         end_date="2026-06-12",
         city="London",

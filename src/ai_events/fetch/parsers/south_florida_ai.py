@@ -12,6 +12,7 @@ async def parse(url: str) -> list[Event]:
     ev1 = Event(
         id=stable_id(url, "2026-01-26"),
         name="Business Transformation World Summit 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-01-26", 
         end_date="2026-01-28",
         city="Miami", 
@@ -37,6 +38,7 @@ async def parse(url: str) -> list[Event]:
     ev2 = Event(
         id=stable_id(url, "2026-02-10"),
         name="Generative AI Expo 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-02-10", 
         end_date="2026-02-12",
         city="Fort Lauderdale", 
@@ -62,6 +64,7 @@ async def parse(url: str) -> list[Event]:
     ev3 = Event(
         id=stable_id(url, "2026-03-05"),
         name="Agile International Conference (AIC 2026)",
+        audience_tag="Mixed Audience",
         start_date="2026-03-05", 
         end_date="2026-03-06",
         city="Miami", 
@@ -87,6 +90,7 @@ async def parse(url: str) -> list[Event]:
     ev4 = Event(
         id=stable_id(url, "2026-04-01"),
         name="MindFest 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-04-01", 
         end_date="2026-04-02",
         city="Boca Raton", 
@@ -112,6 +116,7 @@ async def parse(url: str) -> list[Event]:
     ev5 = Event(
         id=stable_id(url, "2026-04-13"),
         name="ACE 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-04-13", 
         end_date="2026-04-13",
         city="Miami", 
@@ -137,6 +142,7 @@ async def parse(url: str) -> list[Event]:
     ev6 = Event(
         id=stable_id(url, "2026-11-10"),
         name="BST Global's AI Summit 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-11-10", 
         end_date="2026-11-12",
         city="Palm Beach", 
@@ -162,6 +168,7 @@ async def parse(url: str) -> list[Event]:
     ev7 = Event(
         id=stable_id(url, "2026-02-12"),
         name="Miami Startup Ecosystem Conference 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-02-12", 
         end_date="2026-02-13",
         city="Miami", 

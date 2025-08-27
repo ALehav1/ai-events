@@ -13,6 +13,7 @@ async def parse(url: str) -> list[Event]:
     events.append(Event(
         id=stable_id("gtc-san-jose", "2026-03-17"),
         name="NVIDIA GTC San Jose",
+        audience_tag="Tech Leaders",
         start_date="2026-03-17", 
         end_date="2026-03-21",
         city="San Jose", 
@@ -37,6 +38,7 @@ async def parse(url: str) -> list[Event]:
     events.append(Event(
         id=stable_id("gtc-taipei", "2026-05-21"),
         name="NVIDIA GTC Taipei",
+        audience_tag="Tech Leaders",
         start_date="2026-05-21", 
         end_date="2026-05-22",
         city="Taipei", 
@@ -61,6 +63,7 @@ async def parse(url: str) -> list[Event]:
     events.append(Event(
         id=stable_id("gtc-paris", "2026-06-10"),
         name="NVIDIA GTC Paris",
+        audience_tag="Tech Leaders",
         start_date="2026-06-10", 
         end_date="2026-06-12",
         city="Paris", 

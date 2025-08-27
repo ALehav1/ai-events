@@ -21,6 +21,7 @@ async def parse(url: str) -> List[Event]:
         format="live",
         site_url="https://www.aidataanalytics.network/events-responsible-ai-summit/",
         tracks_themes=["AI Ethics", "AI Governance", "Responsible AI", "AI Bias", "AI Regulation"],
+        audience_tag="Mixed Audience",
         size_profile=SizeProfile(
             tier="major",
             attendees_estimate=500,

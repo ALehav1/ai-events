@@ -20,7 +20,8 @@ async def parse(url: str) -> List[Event]:
         region="International",
         format="live",
         site_url="https://world.aiacceleratorinstitute.com/location/caioberlin",
-        tracks_themes=["AI Strategy", "Enterprise AI", "AI Leadership", "AI Production"],
+        tracks_themes=["AI Strategy", "Enterprise AI", "AI Scale", "AI Production", "AI Leadership"],
+        audience_tag="Business Leaders",
         size_profile=SizeProfile(
             tier="major",
             attendees_estimate=150,

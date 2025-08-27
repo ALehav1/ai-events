@@ -12,6 +12,7 @@ async def parse(url: str) -> list[Event]:
     events.append(Event(
         id=stable_id("kubecon-europe", "2026-04-01"),
         name="KubeCon + CloudNativeCon Europe 2026",
+        audience_tag="Tech Leaders",
         start_date="2026-04-01", 
         end_date="2026-04-04",
         city="London", 
@@ -36,6 +37,7 @@ async def parse(url: str) -> list[Event]:
     events.append(Event(
         id=stable_id("kubecon-north-america", "2025-11-10"),
         name="KubeCon + CloudNativeCon North America 2025",
+        audience_tag="Tech Leaders",
         start_date="2025-11-10", 
         end_date="2025-11-13",
         city="Atlanta", 

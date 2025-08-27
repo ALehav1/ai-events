@@ -5,6 +5,7 @@ from datetime import datetime
 Priority = Literal["go", "maybe"]
 Region = Literal["US", "International"]
 Format = Literal["live", "virtual", "hybrid"]
+AudienceTag = Literal["Business Leaders", "Tech Leaders", "Mixed Audience", "Practitioners"]
 
 class SizeProfile(BaseModel):
     attendees_estimate: Optional[int] = None
@@ -26,6 +27,7 @@ class Event(BaseModel):
     register_url: Optional[HttpUrl] = None
     call_for_speakers_url: Optional[HttpUrl] = None
     tracks_themes: List[str] = []
+    audience_tag: Optional[AudienceTag] = None
     emerging_flagship: bool = False
     priority: Priority = "maybe"
     why_priority: Optional[str] = None

@@ -12,6 +12,7 @@ async def parse(url: str) -> list[Event]:
     ev1 = Event(
         id=stable_id(url, "2026-03-23"),
         name="Gen AI Conference 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-03-23", 
         end_date="2026-03-23",
         city="New York", 
@@ -37,6 +38,7 @@ async def parse(url: str) -> list[Event]:
     ev2 = Event(
         id=stable_id(url, "2026-05-19"),
         name="AI Summit NYC 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-05-19", 
         end_date="2026-05-19",
         city="New York", 
@@ -62,6 +64,7 @@ async def parse(url: str) -> list[Event]:
     ev3 = Event(
         id=stable_id(url, "2026-05-19-sports"),
         name="AI Sports 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-05-19", 
         end_date="2026-05-19",
         city="New York", 
@@ -87,6 +90,7 @@ async def parse(url: str) -> list[Event]:
     ev4 = Event(
         id=stable_id(url, "2026-06-17"),
         name="AWS Summit New York 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-06-17", 
         end_date="2026-06-17",
         city="New York", 
@@ -112,6 +116,7 @@ async def parse(url: str) -> list[Event]:
     ev5 = Event(
         id=stable_id(url, "2026-04-11"),
         name="AI, Data Science & Biotechnology Conference 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-04-11", 
         end_date="2026-04-12",
         city="New York", 
@@ -137,6 +142,7 @@ async def parse(url: str) -> list[Event]:
     ev6 = Event(
         id=stable_id(url, "2026-03-14"),
         name="PROMPT NYC AI Conference 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-03-14", 
         end_date="2026-03-15",
         city="New York", 

@@ -626,12 +626,12 @@
             <!-- Filters -->
             <div class="filters">
                 <div class="filter-group">
-                    <label for="cityFilter">Filter by City: <span id="cityFilterCount" style="font-weight: 600;">(All)</span></label>
+                    <label for="cityFilter">Filter by City: <span id="cityFilterCount" style="font-weight: 600;"></span></label>
                     <select id="cityFilter" class="filter-select" multiple size="4">
                     </select>
                 </div>
                 <div class="filter-group">
-                    <label for="tagFilter">Filter by Tag: <span id="tagFilterCount" style="font-weight: 600;">(All)</span></label>
+                    <label for="tagFilter">Filter by Tag: <span id="tagFilterCount" style="font-weight: 600;"></span></label>
                     <select id="tagFilter" class="filter-select" multiple size="4">
                     </select>
                 </div>
@@ -670,7 +670,7 @@
                 <div class="events-grid">
                     {% for event in report.us_events %}
                     {% if (event.size_profile and event.size_profile.tier in ['flagship', 'major']) or event.emerging_flagship %}
-                    <div class="event-card {% if event.priority == 'go' %}priority-go{% else %}priority-maybe{% endif %}" data-city="{{ event.city }}" data-tags="{% if event.size_profile %}{{ event.size_profile.tier|title }}{% endif %}{% if event.emerging_flagship %} Flagship{% endif %} {{ event.format|title }}{% for theme in event.tracks_themes[:3] %} {{ theme }}{% endfor %}">
+                    <div class="event-card {% if event.priority == 'go' %}priority-go{% else %}priority-maybe{% endif %}" data-city="{{ event.city }}" data-tags="{% if event.size_profile %}{{ event.size_profile.tier|title }}|{% endif %}{% if event.emerging_flagship %}Flagship|{% endif %}{% if event.audience_tag %}{{ event.audience_tag }}|{% endif %}{{ event.format|title }}{% for theme in event.tracks_themes[:3] %}|{{ theme }}{% endfor %}">
                         <div class="event-header">
                             <div class="event-title">{{ event.name }}</div>
                             <div class="event-date">{{ event.start_date }} - {{ event.end_date }}</div>
@@ -684,6 +684,9 @@
                                 {% endif %}
                                 {% if event.emerging_flagship %}
                                 <span class="tag tier-flagship">Flagship</span>
+                                {% endif %}
+                                {% if event.audience_tag %}
+                                <span class="tag audience-tag">{{ event.audience_tag }}</span>
                                 {% endif %}
                                 <span class="tag">{{ event.format|title }}</span>
                                 {% for theme in event.tracks_themes[:2] %}
@@ -732,7 +735,7 @@
                 <div class="events-grid">
                     {% for event in report.intl_events %}
                     {% if (event.size_profile and event.size_profile.tier in ['flagship', 'major']) or event.emerging_flagship %}
-                    <div class="event-card {% if event.priority == 'go' %}priority-go{% else %}priority-maybe{% endif %}" data-city="{{ event.city }}" data-tags="{% if event.size_profile %}{{ event.size_profile.tier|title }}{% endif %}{% if event.emerging_flagship %} Flagship{% endif %} {{ event.format|title }}{% for theme in event.tracks_themes[:3] %} {{ theme }}{% endfor %}">
+                    <div class="event-card {% if event.priority == 'go' %}priority-go{% else %}priority-maybe{% endif %}" data-city="{{ event.city }}" data-tags="{% if event.size_profile %}{{ event.size_profile.tier|title }}|{% endif %}{% if event.emerging_flagship %}Flagship|{% endif %}{% if event.audience_tag %}{{ event.audience_tag }}|{% endif %}{{ event.format|title }}{% for theme in event.tracks_themes[:3] %}|{{ theme }}{% endfor %}">
                         <div class="event-header">
                             <div class="event-title">{{ event.name }}</div>
                             <div class="event-date">{{ event.start_date }} - {{ event.end_date }}</div>
@@ -746,6 +749,9 @@
                                 {% endif %}
                                 {% if event.emerging_flagship %}
                                 <span class="tag tier-flagship">Flagship</span>
+                                {% endif %}
+                                {% if event.audience_tag %}
+                                <span class="tag audience-tag">{{ event.audience_tag }}</span>
                                 {% endif %}
                                 <span class="tag">{{ event.format|title }}</span>
                                 {% for theme in event.tracks_themes[:2] %}
@@ -863,32 +869,36 @@
             const cityFilter = document.getElementById('cityFilter');
             const tagFilter = document.getElementById('tagFilter');
             
-            const cities = new Set();
-            const allTagsMap = new Map(); // Map city to its tags
+            // Clear existing options
+            cityFilter.innerHTML = '';
+            tagFilter.innerHTML = '';
             
-            // Get tags from visible span elements in event cards
+            const cities = new Set();
+            const tierTags = new Set();
+            const audienceTags = new Set();
+            const otherTags = new Set();
+            const allTagsMap = new Map(); // Map of city -> Set of tags for that city
+            
+            // Get all tags from data-tags attribute
             const eventCards = document.querySelectorAll('.event-card[data-city]');
             eventCards.forEach(card => {
                 const city = card.getAttribute('data-city');
+                const tagsStr = card.getAttribute('data-tags');
                 
                 if (city && city !== 'Multiple') {
                     cities.add(city);
-                    
-                    // Get actual theme tags from the span elements
-                    const tagSpans = card.querySelectorAll('.event-tags .tag');
-                    if (!allTagsMap.has(city)) {
-                        allTagsMap.set(city, new Set());
-                    }
-                    
-                    tagSpans.forEach(span => {
-                        const tagText = span.textContent.trim();
-                        // Only include theme tags, not tier/format tags
-                        if (tagText && 
-                            !['Flagship', 'Major', 'Focused', 'Live', 'Virtual', 'Hybrid'].includes(tagText) &&
-                            !span.classList.contains('tier-flagship') &&
-                            !span.classList.contains('tier-major') &&
-                            !span.classList.contains('tier-focused')) {
-                            allTagsMap.get(city).add(tagText);
+                }
+                
+                if (tagsStr) {
+                    const tags = tagsStr.split('|').filter(tag => tag.trim());
+                    tags.forEach(tag => {
+                        // Separate tier, audience, and other tags
+                        if (['Flagship', 'Major', 'Focused'].includes(tag)) {
+                            tierTags.add(tag);
+                        } else if (['Business Leaders', 'Tech Leaders', 'Mixed Audience', 'Practitioners'].includes(tag)) {
+                            audienceTags.add(tag);
+                        } else if (!['Other'].includes(tag)) {
+                            otherTags.add(tag);
                         }
                     });
                 }
@@ -907,71 +917,81 @@
                 }
             });
             
-            // Add placeholder option for cities
-            const placeholderCityOption = document.createElement('option');
-            placeholderCityOption.value = '';
-            placeholderCityOption.textContent = 'Select Cities';
-            placeholderCityOption.disabled = true;
-            placeholderCityOption.selected = true;
-            cityFilter.appendChild(placeholderCityOption);
+            // Add "Select (any)" option for cities
+            const selectAnyCityOption = document.createElement('option');
+            selectAnyCityOption.value = '';
+            selectAnyCityOption.textContent = 'Select (any)';
+            selectAnyCityOption.selected = true;
+            cityFilter.appendChild(selectAnyCityOption);
+            console.log('Added Select (any) to city filter');
             
             // Populate city dropdown
+            console.log('Cities found:', cities.size, Array.from(cities));
             Array.from(cities).sort().forEach(city => {
                 const option = document.createElement('option');
                 option.value = city;
                 option.textContent = city;
                 cityFilter.appendChild(option);
             });
+            console.log('City filter now has', cityFilter.options.length, 'options');
             
-            // Store the tags map for dynamic filtering
-            window.cityTagsMap = allTagsMap;
+            // Add "Select (any)" option for tags
+            const selectAnyTagOption = document.createElement('option');
+            selectAnyTagOption.value = '';
+            selectAnyTagOption.textContent = 'Select (any)';
+            selectAnyTagOption.selected = true;
+            tagFilter.appendChild(selectAnyTagOption);
             
-            // Initially populate all unique tags
-            updateTagFilter();
-        }
-        
-        // Update tag filter based on selected cities
-        function updateTagFilter() {
-            const cityFilter = document.getElementById('cityFilter');
-            const tagFilter = document.getElementById('tagFilter');
-            const selectedCities = Array.from(cityFilter.selectedOptions).map(option => option.value).filter(v => v);
-            
-            // Clear existing options
-            tagFilter.innerHTML = '';
-            
-            let tagsToShow = new Set();
-            
-            if (selectedCities.length > 0 && window.cityTagsMap) {
-                // Show only tags for selected cities
-                selectedCities.forEach(city => {
-                    if (window.cityTagsMap.has(city)) {
-                        window.cityTagsMap.get(city).forEach(tag => tagsToShow.add(tag));
-                    }
-                });
-            } else {
-                // Show all tags from all cities
-                if (window.cityTagsMap) {
-                    window.cityTagsMap.forEach(cityTags => {
-                        cityTags.forEach(tag => tagsToShow.add(tag));
-                    });
+            // Add tier tags first
+            const tierTagsArray = ['Flagship', 'Major', 'Focused'];
+            tierTagsArray.forEach(tag => {
+                if (tierTags.has(tag)) {
+                    const option = document.createElement('option');
+                    option.value = tag;
+                    option.textContent = tag;
+                    tagFilter.appendChild(option);
                 }
+            });
+            
+            // Add separator after tier tags
+            if (tierTags.size > 0 && audienceTags.size > 0) {
+                const separator = document.createElement('option');
+                separator.disabled = true;
+                separator.textContent = '────────────────';
+                tagFilter.appendChild(separator);
             }
             
-            // Add placeholder option for tags
-            const placeholderTagOption = document.createElement('option');
-            placeholderTagOption.value = '';
-            placeholderTagOption.textContent = 'Select Tags';
-            placeholderTagOption.disabled = true;
-            placeholderTagOption.selected = true;
-            tagFilter.appendChild(placeholderTagOption);
+            // Add audience tags
+            const audienceTagsArray = ['Business Leaders', 'Tech Leaders', 'Mixed Audience', 'Practitioners'];
+            audienceTagsArray.forEach(tag => {
+                if (audienceTags.has(tag)) {
+                    const option = document.createElement('option');
+                    option.value = tag;
+                    option.textContent = tag;
+                    tagFilter.appendChild(option);
+                }
+            });
             
-            // Populate tag dropdown
-            Array.from(tagsToShow).sort().forEach(tag => {
+            // Add separator if we have audience tags
+            if (audienceTags.size > 0 && otherTags.size > 0) {
+                const separator = document.createElement('option');
+                separator.disabled = true;
+                separator.textContent = '────────────────';
+                tagFilter.appendChild(separator);
+            }
+            
+            // Add other tags
+            Array.from(otherTags).sort().forEach(tag => {
                 const option = document.createElement('option');
                 option.value = tag;
                 option.textContent = tag;
                 tagFilter.appendChild(option);
             });
+        }
+        
+        // Dummy function for compatibility
+        function updateTagFilter() {
+            // Tags are now static, no need to update based on cities
         }
         
         // Update filter count displays
@@ -992,8 +1012,11 @@
             
             // Update city filter count display
             if (selectedCities.length === 0) {
-                cityFilterCount.textContent = '(All)';
-                cityFilterCount.innerHTML = '(All)'; // Force update on mobile
+                cityFilterCount.textContent = '';
+                cityFilterCount.innerHTML = ''; // Force update on mobile
+            } else if (selectedCities.length === 1) {
+                cityFilterCount.textContent = `(${selectedCities[0]})`;
+                cityFilterCount.innerHTML = `(${selectedCities[0]})`;
             } else {
                 cityFilterCount.textContent = `(${selectedCities.length} selected)`;
                 cityFilterCount.innerHTML = `(${selectedCities.length} selected)`;
@@ -1001,8 +1024,11 @@
             
             // Update tag filter count display
             if (selectedTags.length === 0) {
-                tagFilterCount.textContent = '(All)';
-                tagFilterCount.innerHTML = '(All)'; // Force update on mobile
+                tagFilterCount.textContent = '';
+                tagFilterCount.innerHTML = ''; // Force update on mobile
+            } else if (selectedTags.length === 1) {
+                tagFilterCount.textContent = `(${selectedTags[0]})`;
+                tagFilterCount.innerHTML = `(${selectedTags[0]})`;
             } else {
                 tagFilterCount.textContent = `(${selectedTags.length} selected)`;
                 tagFilterCount.innerHTML = `(${selectedTags.length} selected)`;
@@ -1246,6 +1272,23 @@
         
         // Initialize filters on page load
         document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, populating filters...');
+            
+            // Debug: Check if elements exist
+            const cityFilter = document.getElementById('cityFilter');
+            const tagFilter = document.getElementById('tagFilter');
+            console.log('City filter element:', cityFilter);
+            console.log('Tag filter element:', tagFilter);
+            
+            // Debug: Check event cards
+            const eventCards = document.querySelectorAll('.event-card[data-city]');
+            console.log('Event cards found:', eventCards.length);
+            if (eventCards.length > 0) {
+                console.log('First event card:', eventCards[0]);
+                console.log('First card city:', eventCards[0].getAttribute('data-city'));
+                console.log('First card tags:', eventCards[0].getAttribute('data-tags'));
+            }
+            
             populateFilters();
             
             // Ensure filter counts are set after a delay for mobile
@@ -1253,41 +1296,41 @@
                 updateFilterCounts();
                 updateEventStats();
             }, 100);
+        });
+        
+        // Also update on window load for mobile browsers
+        window.addEventListener('load', function() {
+            updateFilterCounts();
+            updateEventStats();
+        });
+        
+        // Add event listeners for filters
+        const cityFilter = document.getElementById('cityFilter');
+        const tagFilter = document.getElementById('tagFilter');
+        
+        cityFilter.addEventListener('change', function(e) {
+            // Ensure placeholder is deselected when cities are selected
+            const placeholderOption = cityFilter.querySelector('option[value=""]');
+            if (placeholderOption) {
+                placeholderOption.selected = false;
+            }
             
-            // Also update on window load for mobile browsers
-            window.addEventListener('load', function() {
-                updateFilterCounts();
-                updateEventStats();
-            });
+            updateTagFilter();
+            filterEvents();
+            updateFilterCounts();
+            updateEventStats();
+        });
+        
+        tagFilter.addEventListener('change', function(e) {
+            // Ensure placeholder is deselected when tags are selected
+            const placeholderOption = tagFilter.querySelector('option[value=""]');
+            if (placeholderOption) {
+                placeholderOption.selected = false;
+            }
             
-            // Add event listeners for filters
-            const cityFilter = document.getElementById('cityFilter');
-            const tagFilter = document.getElementById('tagFilter');
-            
-            cityFilter.addEventListener('change', function(e) {
-                // Ensure placeholder is deselected when cities are selected
-                const placeholderOption = cityFilter.querySelector('option[value=""]');
-                if (placeholderOption) {
-                    placeholderOption.selected = false;
-                }
-                
-                updateTagFilter();
-                filterEvents();
-                updateFilterCounts();
-                updateEventStats();
-            });
-            
-            tagFilter.addEventListener('change', function(e) {
-                // Ensure placeholder is deselected when tags are selected
-                const placeholderOption = tagFilter.querySelector('option[value=""]');
-                if (placeholderOption) {
-                    placeholderOption.selected = false;
-                }
-                
-                filterEvents();
-                updateFilterCounts();
-                updateEventStats();
-            });
+            filterEvents();
+            updateFilterCounts();
+            updateEventStats();
         });
 
         // Smooth scrolling for anchor links

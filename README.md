@@ -4,20 +4,36 @@ Automated AI events tracking system that fetches, analyzes, and reports on globa
 
 ## Recent Updates
 
-### December 2024
-- **Major Event Expansion**: Added 7 flagship AI conferences globally including Ai4 Vegas, SuperAI Singapore, DeepFest Riyadh
-- **Multi-Select Filtering**: Implemented advanced city and tag filters with multi-selection capabilities  
-- **Perfect Card Alignment**: Fixed event card layout with consistent heights and proper title wrapping
-- **Global Coverage**: Expanded to 70+ events across North America, Europe, Asia, Middle East, and Africa
-- **UI Improvements**: Enhanced filtering interface with user instructions and dynamic tag updates
+### December 2024 - Audience Tag Integration
+
+- **Audience Tag System**: Successfully implemented comprehensive audience categorization
+  - Added audience_tag field to Event model for target audience classification
+  - Categories: Business Leaders, Tech Leaders, Mixed Audience, Practitioners
+  - All 70+ event parsers updated with appropriate audience tags based on event focus
+  - Tags displayed prominently on event cards with distinct styling
+- **Advanced Tag Filtering**: Complete overhaul of tag filtering system
+  - Fixed multi-word tag handling by switching from space to pipe delimiter
+  - Tag filter dropdown now shows tier tags first (Flagship/Major/Focused), then audience tags
+  - Proper separation between tag categories with visual dividers
+  - All audience tags now appear in filter (previously only "Practitioners" was showing)
+- **Tag Display Hierarchy**: Reordered tag presentation for better visual hierarchy
+  - Event tier (Flagship/Major) appears first on event cards
+  - Audience tag appears second
+  - Format and theme tags follow
+- **Filter UX Improvements**: Enhanced user experience with instructional placeholders
+  - "Select (any)" placeholder text instead of confusing "0 items"
+  - Multi-select functionality for both city and tag filters
+  - Dynamic filter updates based on selections
 
 ### November 2024
+
 - **Comprehensive Event Addition**: Expanded from 44 to 63 total events with major flagship conferences
 - **Date System Overhaul**: Fixed filtering to use current date, extended horizon through December 2026
 - **CSS Layout Fixes**: Implemented perfect card alignment with grid and flexbox improvements
 - **Documentation Updates**: Updated README to reflect current system capabilities and event counts
 
 ### October 2024
+
 - **Initial System Creation**: Built complete AI events tracking system with web scraping and reporting
 - **Windsurf Integration**: Added keyboard shortcuts, NPM scripts, and command palette integration
 - **macOS Automation**: Implemented weekly launchd job with installation scripts
@@ -41,21 +57,66 @@ Automated AI events tracking system that fetches, analyzes, and reports on globa
 - **🎯 Through December 2026**: Fixed horizon for comprehensive AI event planning
 - **📈 Dynamic Statistics**: US/International event counts update in real-time based on filters
 
+## Architecture & Lessons Learned
+
+### Understanding the Codebase
+
+This section captures key insights about the codebase architecture that may not be immediately obvious:
+
+#### 1. **Data Flow Architecture**
+
+- **Parsers** → **Event Model** → **Database** → **Report Template** → **HTML Output**
+- Each parser creates Event objects that must strictly conform to the Pydantic model
+- The report template uses Jinja2 with embedded JavaScript for filtering
+
+#### 2. **Critical Integration Points**
+
+- **Event Model (`models.py`)**: The single source of truth for all event data structure
+- **Report Template (`report.html.j2`)**: Complex Jinja2 template with embedded JavaScript
+- **Tag System**: Tags are used for both visual display AND filtering logic
+  - Tags must be properly formatted in `data-tags` attribute (pipe-delimited)
+  - JavaScript splits and categorizes tags for filter dropdowns
+
+#### 3. **Common Pitfalls & Solutions**
+
+- **Multi-word Tags**: Initially broke filtering when space-delimited
+  - Solution: Changed to pipe delimiter (`|`) in data-tags attribute
+- **Audience Tag Filtering**: Only showed "Practitioners" due to hardcoded filter logic
+  - Solution: Dynamic tag categorization in JavaScript
+- **Tag Ordering**: Business requirement for tier tags to appear first
+  - Solution: Explicit ordering in both template and JavaScript
+
+#### 4. **Template Complexity**
+
+The report template (`report.html.j2`) is deceptively complex:
+- Event cards have both visible tags and data attributes for filtering
+- JavaScript functions handle dynamic filtering without page reload
+- Tag categorization happens in multiple places (must stay synchronized)
+
+#### 5. **Parser Patterns**
+
+All parsers follow a consistent pattern but with important requirements:
+- Must return a list of Event objects (even if just one event)
+- Must set all required fields including the new `audience_tag`
+- Must use `stable_id()` for consistent event identification
+- Dates must be future dates in ISO format
+
 ## Project Structure
 
 ```
 ai-events/
 ├── src/ai_events/           # Core Python package
-│   ├── models.py            # Pydantic data models
+│   ├── models.py            # Pydantic data models (Event, SizeProfile)
 │   ├── db.py               # SQLite database operations
-│   ├── cli.py              # Command-line interface
+│   ├── cli.py              # Command-line interface & parser imports
 │   ├── score.py            # Event scoring and prioritization
-│   ├── report.py           # HTML report generation
+│   ├── report.py           # HTML report generation with Jinja2
 │   ├── fetch/              # Web scraping system
-│   │   ├── base.py         # HTTP client and HTML parsing
-│   │   ├── rules.yml       # Source configuration
-│   │   └── parsers/        # Site-specific parsers
+│   │   ├── base.py         # HTTP client and HTML parsing utilities
+│   │   ├── rules.yml       # Source configuration (currently unused)
+│   │   └── parsers/        # Site-specific parsers (70+ files)
 │   └── templates/          # Jinja2 HTML templates
+│       └── report.html.j2  # Main report template with JS filtering
 ├── .windsurf/              # Windsurf IDE configuration
 ├── .vscode/                # VS Code tasks (Windsurf compatible)
 ├── scripts/                # Automation scripts
@@ -241,6 +302,7 @@ ai-events fetch && ai-events report && open dist/report.html
            format="live",  # or "virtual" or "hybrid"
            site_url="https://event-website.com",
            tracks_themes=["AI Theme 1", "AI Theme 2"],
+           audience_tag="Business Leaders",  # REQUIRED: Choose from below
            size_profile=SizeProfile(
                tier="major",  # "flagship", "major", or "focused"
                attendees_estimate=1000,
@@ -257,13 +319,18 @@ ai-events fetch && ai-events report && open dist/report.html
    - Add to imports: `from ai_events.fetch.parsers import (..., event_name)`
    - Add to fetch_all() list: `(event_name, "https://event-website.com"),`
 
-#### Common Mistakes to Avoid
+#### Required Fields Reference
 
 - **Date Issues**: Always use future dates in ISO format "YYYY-MM-DD"
 - **Field Names**: Use exact field names from Event model (e.g., `city` not `location`)
 - **Region Values**: Must be exactly "US" or "International"
 - **Format Values**: Must be exactly "live", "virtual", or "hybrid"
 - **Tier Values**: Must be exactly "flagship", "major", or "focused"
+- **Audience Tag Values**: Must be exactly one of:
+  - "Business Leaders" - C-suite, executives, strategic decision makers
+  - "Tech Leaders" - CTOs, engineering managers, technical decision makers
+  - "Mixed Audience" - Events targeting both business and technical audiences
+  - "Practitioners" - Developers, data scientists, hands-on technical professionals
 - **ID Generation**: Always use `stable_id(url, start_date)` with string parameters
 
 #### Testing Your Addition

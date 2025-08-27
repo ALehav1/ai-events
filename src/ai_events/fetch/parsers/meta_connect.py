@@ -12,6 +12,7 @@ async def parse(url: str) -> list[Event]:
     events.append(Event(
         id=stable_id("meta-connect", "2026-09-17"),
         name="Meta Connect 2026",
+        audience_tag="Practitioners",
         start_date="2026-09-17", 
         end_date="2026-09-18",
         city="Menlo Park", 
@@ -36,6 +37,7 @@ async def parse(url: str) -> list[Event]:
     events.append(Event(
         id=stable_id("llamacon", "2026-07-15"),
         name="LlamaCon 2026",
+        audience_tag="Practitioners",
         start_date="2026-07-15", 
         end_date="2026-07-15",
         city="Menlo Park", 

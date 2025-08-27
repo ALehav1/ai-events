@@ -12,6 +12,7 @@ async def parse(url: str) -> list[Event]:
     amsterdam_event = Event(
         id=stable_id(url + "amsterdam", "2026-10-08"),
         name="World AI Summit Amsterdam",
+        audience_tag="Business Leaders",
         start_date="2026-10-08",
         end_date="2026-10-09",
         city="Amsterdam",
@@ -43,6 +44,7 @@ async def parse(url: str) -> list[Event]:
     montreal_event = Event(
         id=stable_id(url + "montreal", "2026-04-01"),
         name="World AI Summit Montreal",
+        audience_tag="Business Leaders",
         start_date="2026-04-01",
         end_date="2026-04-02",
         city="Montreal",
@@ -69,6 +71,7 @@ async def parse(url: str) -> list[Event]:
     sf_event = Event(
         id=stable_id(url + "sf", "2026-06-01"),
         name="World AI Summit San Francisco",
+        audience_tag="Business Leaders",
         start_date="2026-06-01",
         end_date="2026-06-02",
         city="San Francisco",
@@ -95,6 +98,7 @@ async def parse(url: str) -> list[Event]:
     doha_event = Event(
         id=stable_id(url + "doha", "2026-12-09"),
         name="World AI Summit Doha",
+        audience_tag="Business Leaders",
         start_date="2026-12-09",
         end_date="2026-12-10",
         city="Doha",

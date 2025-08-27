@@ -21,6 +21,7 @@ async def parse(url: str) -> List[Event]:
         format="live",
         site_url="https://world.aiacceleratorinstitute.com/location/caiolondon",
         tracks_themes=["AI Strategy", "Enterprise AI", "AI Scale", "AI Production", "AI Leadership"],
+        audience_tag="Business Leaders",
         size_profile=SizeProfile(
             tier="major",
             attendees_estimate=150,

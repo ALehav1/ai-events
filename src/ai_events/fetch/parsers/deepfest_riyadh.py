@@ -12,6 +12,7 @@ async def parse(url: str) -> list[Event]:
     events.append(Event(
         id=stable_id("deepfest-riyadh", "2026-04-13"),
         name="DeepFest 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-04-13", 
         end_date="2026-04-16",
         city="Riyadh", 

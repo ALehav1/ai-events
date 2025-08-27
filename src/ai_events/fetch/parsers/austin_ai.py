@@ -12,6 +12,7 @@ async def parse(url: str) -> list[Event]:
     ev1 = Event(
         id=stable_id(url, "2026-01-24"),
         name="Data Day Texas +AI 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-01-24", 
         end_date="2026-01-24",
         city="Austin", 
@@ -37,6 +38,7 @@ async def parse(url: str) -> list[Event]:
     ev2 = Event(
         id=stable_id(url, "2026-02-01"),
         name="2026 AI/ML Conference",
+        audience_tag="Mixed Audience",
         start_date="2026-02-01", 
         end_date="2026-02-01",
         city="Austin", 
@@ -62,6 +64,7 @@ async def parse(url: str) -> list[Event]:
     ev3 = Event(
         id=stable_id(url, "2026-02-11"),
         name="Generative AI Summit Austin",
+        audience_tag="Mixed Audience",
         start_date="2026-02-11", 
         end_date="2026-02-11",
         city="Austin", 
@@ -87,6 +90,7 @@ async def parse(url: str) -> list[Event]:
     ev4 = Event(
         id=stable_id(url, "2026-02-18"),
         name="Data Science Salon ATX 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-02-18", 
         end_date="2026-02-19",
         city="Austin", 
@@ -112,6 +116,7 @@ async def parse(url: str) -> list[Event]:
     ev5 = Event(
         id=stable_id(url, "2026-04-13"),
         name="World Tech Summit on Big Data, Data Science & Machine Learning",
+        audience_tag="Mixed Audience",
         start_date="2026-04-13", 
         end_date="2026-04-13",
         city="Austin", 
@@ -137,6 +142,7 @@ async def parse(url: str) -> list[Event]:
     ev6 = Event(
         id=stable_id(url, "2026-04-26"),
         name="B2B Summit North America",
+        audience_tag="Mixed Audience",
         start_date="2026-04-26", 
         end_date="2026-04-26",
         city="Austin", 
@@ -162,6 +168,7 @@ async def parse(url: str) -> list[Event]:
     ev7 = Event(
         id=stable_id(url, "2026-06-16"),
         name="AEC INNOVATE",
+        audience_tag="Mixed Audience",
         start_date="2026-06-16", 
         end_date="2026-06-18",
         city="Austin", 
@@ -187,6 +194,7 @@ async def parse(url: str) -> list[Event]:
     ev8 = Event(
         id=stable_id(url, "2026-02-04"),
         name="Digital Transformation Expo Global 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-02-04", 
         end_date="2026-02-04",
         city="Austin", 
@@ -212,6 +220,7 @@ async def parse(url: str) -> list[Event]:
     ev9 = Event(
         id=stable_id(url, "2026-02-11-sales"),
         name="Sales Enablement Summit Austin 2026",
+        audience_tag="Mixed Audience",
         start_date="2026-02-11", 
         end_date="2026-02-11",
         city="Austin", 

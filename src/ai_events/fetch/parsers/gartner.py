@@ -12,6 +12,7 @@ async def parse(url: str) -> list[Event]:
     ev1 = Event(
         id=stable_id(url, "2026-10-19"),
         name="Gartner IT Symposium/Xpo 2026",
+        audience_tag="Business Leaders",
         start_date="2026-10-19", 
         end_date="2026-10-23",
         city="Orlando", 
@@ -37,6 +38,7 @@ async def parse(url: str) -> list[Event]:
     ev2 = Event(
         id=stable_id(url, "2026-03-23"),
         name="Gartner Data & Analytics Summit 2026",
+        audience_tag="Business Leaders",
         start_date="2026-03-23", 
         end_date="2026-03-25",
         city="Orlando", 
@@ -62,6 +64,7 @@ async def parse(url: str) -> list[Event]:
     ev3 = Event(
         id=stable_id(url, "2026-06-08"),
         name="Gartner AI & Data Science Summit 2026",
+        audience_tag="Business Leaders",
         start_date="2026-06-08", 
         end_date="2026-06-10",
         city="London", 
@@ -87,6 +90,7 @@ async def parse(url: str) -> list[Event]:
     ev4 = Event(
         id=stable_id(url, "2026-05-12"),
         name="Gartner Digital Workplace Summit 2026",
+        audience_tag="Business Leaders",
         start_date="2026-05-12", 
         end_date="2026-05-13",
         city="London", 
@@ -112,6 +116,7 @@ async def parse(url: str) -> list[Event]:
     ev5 = Event(
         id=stable_id(url, "2026-09-08"),
         name="Gartner Security & Risk Management Summit 2026",
+        audience_tag="Business Leaders",
         start_date="2026-09-08", 
         end_date="2026-09-10",
         city="National Harbor", 

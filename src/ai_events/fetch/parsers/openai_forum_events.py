@@ -32,6 +32,7 @@ async def parse(url: str) -> list[Event]:
                     format="virtual",
                     site_url="https://forum.openai.com/public/events",
                     tracks_themes=["Future of Work", "AI Impact", "Employment", "Economic Transformation"],
+        audience_tag="Practitioners",
                     size_profile=SizeProfile(
                         tier="focused",
                         attendees_estimate=500,
@@ -52,6 +53,7 @@ async def parse(url: str) -> list[Event]:
                     format="virtual",
                     site_url="https://forum.openai.com/public/events",
                     tracks_themes=["AI in Education", "Teaching with AI", "Educational Technology"],
+        audience_tag="Practitioners",
                     size_profile=SizeProfile(
                         tier="focused",
                         attendees_estimate=500,

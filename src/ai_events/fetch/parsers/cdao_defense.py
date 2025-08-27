@@ -22,6 +22,7 @@ async def parse(url: str) -> List[Event]:
         format="live",
         site_url="https://cdao-def.coriniumintelligence.com/",
         tracks_themes=["Defense AI", "Security AI", "Government AI", "Data Analytics", "AI Governance"],
+        audience_tag="Business Leaders",
         size_profile=SizeProfile(
             tier="major",
             attendees_estimate=200,
