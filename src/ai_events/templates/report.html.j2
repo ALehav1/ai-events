@@ -304,6 +304,7 @@
             font-size: 0.7rem;
             white-space: nowrap;
             flex-shrink: 0;
+            display: inline-block;
         }
         
         .tag.tier-flagship {
@@ -614,15 +615,28 @@
             }
             
             /* Fix event tags visibility on mobile */
+            .event-content {
+                overflow: visible !important;
+            }
+            
             .event-tags {
-                height: auto;
-                max-height: none;
-                overflow: visible;
+                height: auto !important;
+                max-height: none !important;
+                overflow: visible !important;
+                display: flex !important;
+                flex-wrap: wrap !important;
             }
             
             .event-card {
                 height: auto;
                 min-height: 320px;
+                overflow: visible;
+            }
+            
+            .tag {
+                display: inline-block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
             }
         }
     </style>

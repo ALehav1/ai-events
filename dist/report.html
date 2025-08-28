@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Events Report - 2025-08-27 21:19</title>
+    <title>AI Events Report - 2025-08-27 21:29</title>
     <style>
         * {
             margin: 0;
@@ -304,6 +304,7 @@
             font-size: 0.7rem;
             white-space: nowrap;
             flex-shrink: 0;
+            display: inline-block;
         }
         
         .tag.tier-flagship {
@@ -614,15 +615,28 @@
             }
             
             /* Fix event tags visibility on mobile */
+            .event-content {
+                overflow: visible !important;
+            }
+            
             .event-tags {
-                height: auto;
-                max-height: none;
-                overflow: visible;
+                height: auto !important;
+                max-height: none !important;
+                overflow: visible !important;
+                display: flex !important;
+                flex-wrap: wrap !important;
             }
             
             .event-card {
                 height: auto;
                 min-height: 320px;
+                overflow: visible;
+            }
+            
+            .tag {
+                display: inline-block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
             }
         }
     </style>
@@ -631,7 +645,7 @@
     <div class="container">
         <div class="header">
             <h1>AI Events Report</h1>
-            <p>Through December 2026 • Generated 2025-08-27 21:19</p>
+            <p>Through December 2026 • Generated 2025-08-27 21:29</p>
         </div>
         
         <div class="content">
