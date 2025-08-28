@@ -4,7 +4,7 @@ Automated AI events tracking system that fetches, analyzes, and reports on globa
 
 ## Recent Updates
 
-### December 2024 - Audience Tag Integration & Event Count Fix
+### August 2025 - Week 3 (Current)
 
 - **Audience Tag System**: Successfully implemented comprehensive audience categorization
   - Added audience_tag field to Event model for target audience classification
@@ -57,7 +57,7 @@ Automated AI events tracking system that fetches, analyzes, and reports on globa
 
 ## Features
 
-- **🔍 Intelligent Event Discovery**: Automatically scrapes 40+ major AI conference websites globally
+- **🔍 Intelligent Event Discovery**: Automatically scrapes 60+ major AI conference websites globally
 - **📊 Smart Categorization**: Events classified as Flagship, Major, or Other tier with intelligent scoring
 - **📱 Beautiful Reports**: Professional HTML reports with perfect card alignment and responsive design
 - **🔧 Advanced Filtering**: Multi-select city and tag filters for precise event discovery (shows "All" when no filters selected)
