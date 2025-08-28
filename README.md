@@ -9,7 +9,7 @@ Automated AI events tracking system that fetches, analyzes, and reports on globa
 - **Audience Tag System**: Successfully implemented comprehensive audience categorization
   - Added audience_tag field to Event model for target audience classification
   - Categories: Business Leaders, Tech Leaders, Mixed Audience, Practitioners
-  - All 70+ event parsers updated with appropriate audience tags based on event focus
+  - All event parsers updated with appropriate audience tags based on event focus
   - Tags displayed prominently on event cards with distinct styling
 - **Advanced Tag Filtering**: Complete overhaul of tag filtering system
   - Fixed multi-word tag handling by switching from space to pipe delimiter
@@ -26,7 +26,7 @@ Automated AI events tracking system that fetches, analyzes, and reports on globa
   - Dynamic filter updates based on selections
 - **Event Count Accuracy Fix**: Resolved discrepancy between desktop and mobile event counts
   - Fixed JavaScript counting logic that was incorrectly adding minor events to totals
-  - Desktop and mobile now show consistent counts (76 US, 57 International)
+  - Desktop and mobile now show consistent counts
   - Minor events are properly categorized but not double-counted in statistics
   - **Note**: Mobile/desktop consistency fully resolved by ensuring index.html is synced with dist/report.html for Vercel deployment
 - **Event Statistics Display Refinement**: Improved clarity and visual consistency of event counts
@@ -39,7 +39,7 @@ Automated AI events tracking system that fetches, analyzes, and reports on globa
 
 ### August 2025 - Week 2
 
-- **Comprehensive Event Addition**: Expanded from 44 to 63 total events with major flagship conferences
+- **Comprehensive Event Addition**: Significantly expanded event coverage with major flagship conferences
 - **Date System Overhaul**: Fixed filtering to use current date, extended horizon through December 2026
 - **CSS Layout Fixes**: Implemented perfect card alignment with grid and flexbox improvements
 - **Documentation Updates**: Updated README to reflect current system capabilities and event counts
@@ -57,7 +57,7 @@ Automated AI events tracking system that fetches, analyzes, and reports on globa
 
 ## Features
 
-- **🔍 Intelligent Event Discovery**: Automatically scrapes 60+ major AI conference websites globally
+- **🔍 Intelligent Event Discovery**: Automatically scrapes major AI conference websites globally
 - **📊 Smart Categorization**: Events classified as Flagship, Major, or Other tier with intelligent scoring
 - **📱 Beautiful Reports**: Professional HTML reports with perfect card alignment and responsive design
 - **🔧 Advanced Filtering**: Multi-select city and tag filters for precise event discovery (shows "All" when no filters selected)
@@ -97,7 +97,7 @@ This section captures key insights about the codebase architecture that may not 
   - Solution: Dynamic tag categorization in JavaScript
 - **Tag Ordering**: Business requirement for tier tags to appear first
   - Solution: Explicit ordering in both template and JavaScript
-- **Event Count Discrepancy**: Mobile showed 84/59 events while desktop showed 76/57 ✅ RESOLVED
+- **Event Count Discrepancy**: Resolved issue where mobile and desktop showed different event counts ✅ RESOLVED
   - Root cause: JavaScript was double-counting minor events in totals
   - Solution: Modified updateEventCounts() to exclude minor events from total count
   - **Final fix**: Syncing index.html with dist/report.html ensures consistency across all views
@@ -133,7 +133,7 @@ ai-events/
 │   ├── fetch/              # Web scraping system
 │   │   ├── base.py         # HTTP client and HTML parsing utilities
 │   │   ├── rules.yml       # Source configuration (currently unused)
-│   │   └── parsers/        # Site-specific parsers (70+ files)
+│   │   └── parsers/        # Site-specific event parsers
 │   └── templates/          # Jinja2 HTML templates
 │       └── report.html.j2  # Main report template with JS filtering
 ├── .windsurf/              # Windsurf IDE configuration
@@ -233,11 +233,11 @@ Vercel will automatically deploy within ~1 minute of pushing to GitHub.
 
 ### Comprehensive Global AI Conference Tracking
 
-The system currently tracks **70+ events** from major AI conferences, summits, and specialized gatherings through December 2026:
+The system tracks major AI conferences, summits, and specialized gatherings through December 2026, organized by tier:
 
-- **16 Flagship Events**: Premier global conferences including Ai4 Vegas, Data+AI Summit, SuperAI Singapore, DeepFest Riyadh, Dreamforce, NVIDIA GTC, AWS re:Invent, Microsoft Ignite, Google I/O, Apple WWDC, OpenAI DevDay, Meta Connect, KubeCon, and more
-- **15 Major Events**: Significant regional and specialized conferences including AI Summit NYC, AI Summit London, World Summit AI Amsterdam, AI Expo Africa, ODSC West, Ray Summit, and others  
-- **40+ Other Events**: Focused industry-specific, regional, and emerging conferences across all sectors and geographies
+- **Flagship Events**: Premier global conferences including Ai4 Vegas, Data+AI Summit, SuperAI Singapore, DeepFest Riyadh, Dreamforce, NVIDIA GTC, AWS re:Invent, Microsoft Ignite, Google I/O, Apple WWDC, OpenAI DevDay, Meta Connect, KubeCon, and more
+- **Major Events**: Significant regional and specialized conferences including AI Summit NYC, AI Summit London, World Summit AI Amsterdam, AI Expo Africa, ODSC West, Ray Summit, and others  
+- **Other Events**: Focused industry-specific, regional, and emerging conferences across all sectors and geographies
 
 ### Major Event Sources Include
 
@@ -502,7 +502,7 @@ sudo chown $(whoami) ~/Library/LaunchAgents/
 ### Event Coverage Expansion
 
 - Extended horizon from 7 to 12 months for better planning
-- Massive expansion from 44 to 63 total events tracked
+- Significantly expanded event coverage
 - Added major flagship conferences: Dreamforce, NVIDIA GTC, AWS re:Invent, Microsoft Ignite, Google I/O, Apple WWDC, OpenAI DevDay, Meta Connect, KubeCon, and more
 - Added comprehensive location details (city, state/country) to all events
 - Enhanced international coverage across Europe, Asia-Pacific, and other regions
@@ -515,14 +515,14 @@ sudo chown $(whoami) ~/Library/LaunchAgents/
 - Improved event categorization accuracy
 - Fixed date filtering issues to properly display all 2025+ events
 
-## Known Issues & Future Fixes
+## Known Issues
 
-### Recently Resolved
-- ✅ **FinTech Capitalization**: Fixed to consistent "FinTech AI" format across all parsers
-- ✅ **Standalone AI Tags**: Replaced with descriptive compound tags like "Applied AI"
-- ✅ **Infrastructure Tags**: Fixed to "AI Infrastructure" for consistency
-- ✅ **Minor Events UI**: Fixed faded font colors and improved readability
-- ✅ **Mobile Responsive Filters**: Fixed filter alignment on mobile devices
+### Current Issues
+
+**Tag Consistency Problems:**
+- **FinTech Capitalization**: Inconsistent across parsers - some use "Fintech", others use "FinTech AI"
+- **Standalone AI Tags**: Some parsers still use generic "AI" tags instead of descriptive compound tags
+- **Infrastructure Tags**: Inconsistent naming - needs standardization to "AI Infrastructure"
 
 ### Future Enhancements
 
