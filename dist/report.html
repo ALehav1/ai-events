@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Events Report - 2025-08-27 21:29</title>
+    <title>AI Events Report - 2025-08-27 21:37</title>
     <style>
         * {
             margin: 0;
@@ -645,7 +645,7 @@
     <div class="container">
         <div class="header">
             <h1>AI Events Report</h1>
-            <p>Through December 2026 • Generated 2025-08-27 21:29</p>
+            <p>Through December 2026 • Generated 2025-08-27 21:37</p>
         </div>
         
         <div class="content">
@@ -4203,12 +4203,14 @@
                 
                 if (tagsStr) {
                     const tags = tagsStr.split('|').filter(tag => tag.trim());
+                    console.log('Processing tags for card:', tagsStr, 'Split into:', tags);
                     tags.forEach(tag => {
                         // Separate tier, audience, and other tags
                         if (['Flagship', 'Major', 'Focused'].includes(tag)) {
                             tierTags.add(tag);
                         } else if (['Business Leaders', 'Tech Leaders', 'Mixed Audience', 'Practitioners'].includes(tag)) {
                             audienceTags.add(tag);
+                            console.log('Added audience tag:', tag);
                         } else if (!['Other'].includes(tag)) {
                             otherTags.add(tag);
                         }
@@ -4274,6 +4276,7 @@
             }
             
             // Add audience tags
+            console.log('Audience tags found:', Array.from(audienceTags));
             const audienceTagsArray = ['Business Leaders', 'Tech Leaders', 'Mixed Audience', 'Practitioners'];
             audienceTagsArray.forEach(tag => {
                 if (audienceTags.has(tag)) {
@@ -4281,6 +4284,7 @@
                     option.value = tag;
                     option.textContent = tag;
                     tagFilter.appendChild(option);
+                    console.log('Added audience tag to filter:', tag);
                 }
             });
             
