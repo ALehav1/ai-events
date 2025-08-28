@@ -13,7 +13,11 @@ from ai_events.fetch.parsers import (
     deepfest_riyadh, ai_expo_africa, techcrunch_disrupt, ai_compute_nyc, odsc_west,
     strata_data_ai, south_florida_ai, austin_ai, singapore_ai, london_ai, dubai_ai, 
     los_angeles_ai, new_york_ai, lisbon_ai, openai_forum_events, caio_london,
-    caio_berlin, cdao_defense, responsible_ai_summit, caio_boston, caio_london_dec)
+    caio_berlin, cdao_defense, responsible_ai_summit, caio_boston, caio_london_dec,
+    ai_finance_summit_london, finovatefall, ai_financial_services_conf,
+    genai_hyperautomation_finance, advise_ai, ft_future_of_ai, ai_for_finance_summit_paris,
+    ai_finance_summit_ny, maicon, ai_for_marketers_summit, genai_marketing_summit,
+    ai_for_agencies_summit, fintech_americas, dcd_connect_compute_ny)
 
 OUT_DIR = Path.cwd() / "dist"
 
@@ -66,6 +70,20 @@ async def fetch_all():
         (responsible_ai_summit, "https://www.aidataanalytics.network/events-responsible-ai-summit/"),
         (caio_boston, "https://world.aiacceleratorinstitute.com/location/caioboston"),
         (caio_london_dec, "https://world.aiacceleratorinstitute.com/location/caiolondon"),
+        (ai_finance_summit_london, "https://london-ai-finance.re-work.co/"),
+        (finovatefall, "https://informaconnect.com/finovatefall/"),
+        (ai_financial_services_conf, "https://www.arena-international.com/event/aifs/"),
+        (genai_hyperautomation_finance, "https://kinfos.events/haf/"),
+        (advise_ai, "https://conference.financial-planning.com/event/advise-ai/summary"),
+        (ft_future_of_ai, "https://ai.live.ft.com/"),
+        (ai_for_finance_summit_paris, "https://aiforfinance.artefact.com/"),
+        (ai_finance_summit_ny, "https://ny-ai-finance.re-work.co/"),
+        (maicon, "https://www.marketingaiinstitute.com/events/marketing-artificial-intelligence-conference"),
+        (ai_for_marketers_summit, "https://artificialintelligencesummit.com/"),
+        (genai_marketing_summit, "https://www.aidataanalytics.network/events-generative-ai-for-marketing"),
+        (ai_for_agencies_summit, "https://www.marketingaiinstitute.com/events/ai-for-agencies-summit"),
+        (fintech_americas, "https://www.fintechamericas.co/en/conferencia-miami-agenda"),
+        (dcd_connect_compute_ny, "https://www.datacenterdynamics.com/en/dcdconnect-compute/new-york/2026/"),
     ]:
         try:
             events.extend(await parser.parse(url))

@@ -5,7 +5,7 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:ai-events-weekly-20250901T090000
-DTSTAMP:20250827T235657Z
+DTSTAMP:20250828T010509Z
 SUMMARY:Review & send weekly AI events update
 DESCRIPTION:Run the 7-month sweep; summarize new adds; prompt register/speaking decisions.
 DTSTART;TZID=America/New_York:20250901T090000
