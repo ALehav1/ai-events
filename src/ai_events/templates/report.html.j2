@@ -917,14 +917,12 @@
                 
                 if (tagsStr) {
                     const tags = tagsStr.split('|').filter(tag => tag.trim());
-                    console.log('Processing tags for card:', tagsStr, 'Split into:', tags);
                     tags.forEach(tag => {
                         // Separate tier, audience, and other tags
                         if (['Flagship', 'Major', 'Focused'].includes(tag)) {
                             tierTags.add(tag);
                         } else if (['Business Leaders', 'Tech Leaders', 'Mixed Audience', 'Practitioners'].includes(tag)) {
                             audienceTags.add(tag);
-                            console.log('Added audience tag:', tag);
                         } else if (!['Other'].includes(tag)) {
                             otherTags.add(tag);
                         }
@@ -990,7 +988,6 @@
             }
             
             // Add audience tags
-            console.log('Audience tags found:', Array.from(audienceTags));
             const audienceTagsArray = ['Business Leaders', 'Tech Leaders', 'Mixed Audience', 'Practitioners'];
             audienceTagsArray.forEach(tag => {
                 if (audienceTags.has(tag)) {
@@ -998,7 +995,6 @@
                     option.value = tag;
                     option.textContent = tag;
                     tagFilter.appendChild(option);
-                    console.log('Added audience tag to filter:', tag);
                 }
             });
             
@@ -1304,25 +1300,22 @@
         document.addEventListener('DOMContentLoaded', function() {
             console.log('DOM loaded, populating filters...');
             
-            // Add a small delay for mobile browsers
-            setTimeout(function() {
-                // Debug: Check if elements exist
-                const cityFilter = document.getElementById('cityFilter');
-                const tagFilter = document.getElementById('tagFilter');
-                console.log('City filter element:', cityFilter);
-                console.log('Tag filter element:', tagFilter);
-                
-                // Debug: Check event cards
-                const eventCards = document.querySelectorAll('.event-card[data-city]');
-                console.log('Event cards found:', eventCards.length);
-                if (eventCards.length > 0) {
-                    console.log('First event card:', eventCards[0]);
-                    console.log('First card city:', eventCards[0].getAttribute('data-city'));
-                    console.log('First card tags:', eventCards[0].getAttribute('data-tags'));
-                }
-                
-                populateFilters();
-            }, 100); // 100ms delay for mobile browsers
+            // Debug: Check if elements exist
+            const cityFilter = document.getElementById('cityFilter');
+            const tagFilter = document.getElementById('tagFilter');
+            console.log('City filter element:', cityFilter);
+            console.log('Tag filter element:', tagFilter);
+            
+            // Debug: Check event cards
+            const eventCards = document.querySelectorAll('.event-card[data-city]');
+            console.log('Event cards found:', eventCards.length);
+            if (eventCards.length > 0) {
+                console.log('First event card:', eventCards[0]);
+                console.log('First card city:', eventCards[0].getAttribute('data-city'));
+                console.log('First card tags:', eventCards[0].getAttribute('data-tags'));
+            }
+            
+            populateFilters();
             
             // Ensure filter counts are set after a delay for mobile
             setTimeout(function() {
