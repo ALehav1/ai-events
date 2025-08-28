@@ -28,6 +28,7 @@ Automated AI events tracking system that fetches, analyzes, and reports on globa
   - Fixed JavaScript counting logic that was incorrectly adding minor events to totals
   - Desktop and mobile now show consistent counts (76 US, 57 International)
   - Minor events are properly categorized but not double-counted in statistics
+  - **Note**: Mobile/desktop consistency fully resolved by ensuring index.html is synced with dist/report.html for Vercel deployment
 - **Event Statistics Display Refinement**: Improved clarity and visual consistency of event counts
   - Stats boxes now show only significant events (Flagship + Major) as the main count
   - Added breakdown showing "X Flagship + Y Major" with "(plus Z other)" below
@@ -96,9 +97,10 @@ This section captures key insights about the codebase architecture that may not 
   - Solution: Dynamic tag categorization in JavaScript
 - **Tag Ordering**: Business requirement for tier tags to appear first
   - Solution: Explicit ordering in both template and JavaScript
-- **Event Count Discrepancy**: Mobile showed 84/59 events while desktop showed 76/57
+- **Event Count Discrepancy**: Mobile showed 84/59 events while desktop showed 76/57 ✅ RESOLVED
   - Root cause: JavaScript was double-counting minor events in totals
   - Solution: Modified updateEventCounts() to exclude minor events from total count
+  - **Final fix**: Syncing index.html with dist/report.html ensures consistency across all views
 - **Stats Display Clarity**: Main event count was confusing (showed less than sum of categories)
   - Root cause: Total included only Flagship + Major, but wasn't clear to users
   - Solution: Changed display to show significant events only with clear breakdown
