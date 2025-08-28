@@ -48,11 +48,11 @@ async def parse(url: str) -> list[Event]:
         format="live",
         site_url="https://www.meta.com/blog/connect-2025-llamacon-save-the-date/",
         size_profile=SizeProfile(
-            tier="major",
+            tier="flagship",
             evidence="Meta's inaugural AI-focused conference dedicated to Llama models and AI development"
         ),
         tracks_themes=["Llama Models", "Open Source AI", "AI Development", "Meta AI", "Large Language Models"],
-        emerging_flagship=True,
+        emerging_flagship=False,
         priority="go",
         why_priority="Meta's new AI-focused conference, major Llama model announcements, open source AI focus",
         source_urls=[url]

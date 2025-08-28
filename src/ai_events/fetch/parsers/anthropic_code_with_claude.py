@@ -24,11 +24,11 @@ async def parse(url: str) -> list[Event]:
         format="live",
         site_url="https://www.anthropic.com/events/code-with-claude-2025",
         size_profile=SizeProfile(
-            tier="major",
+            tier="flagship",
             evidence="Anthropic's first developer conference focused on Claude API and development tools"
         ),
         tracks_themes=["Claude API", "Model Context Protocol", "AI Agents", "Claude Code", "Developer Tools"],
-        emerging_flagship=True,
+        emerging_flagship=False,
         priority="go",
         why_priority="Anthropic's inaugural developer conference, Claude API focus, emerging AI company",
         source_urls=[url]
