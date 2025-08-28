@@ -4,7 +4,7 @@ Automated AI events tracking system that fetches, analyzes, and reports on globa
 
 ## Recent Updates
 
-### December 2024 - Audience Tag Integration
+### December 2024 - Audience Tag Integration & Event Count Fix
 
 - **Audience Tag System**: Successfully implemented comprehensive audience categorization
   - Added audience_tag field to Event model for target audience classification
@@ -24,6 +24,17 @@ Automated AI events tracking system that fetches, analyzes, and reports on globa
   - "Select (any)" placeholder text instead of confusing "0 items"
   - Multi-select functionality for both city and tag filters
   - Dynamic filter updates based on selections
+- **Event Count Accuracy Fix**: Resolved discrepancy between desktop and mobile event counts
+  - Fixed JavaScript counting logic that was incorrectly adding minor events to totals
+  - Desktop and mobile now show consistent counts (76 US, 57 International)
+  - Minor events are properly categorized but not double-counted in statistics
+- **Event Statistics Display Refinement**: Improved clarity and visual consistency of event counts
+  - Stats boxes now show only significant events (Flagship + Major) as the main count
+  - Added breakdown showing "X Flagship + Y Major" with "(plus Z other)" below
+  - Made stats boxes smaller and more compact for better visual balance
+  - Removed "Significant Events" subtitle for cleaner appearance
+  - Fixed text alignment issues by shortening "International Events" to "Intl Events"
+  - Stats boxes now have consistent height and internal spacing
 
 ### November 2024
 
@@ -55,7 +66,7 @@ Automated AI events tracking system that fetches, analyzes, and reports on globa
 - **🌍 Global Coverage**: Events across North America, Europe, Asia, Middle East, and Africa
 - **📍 Location Details**: Complete city, state/country information for all events
 - **🎯 Through December 2026**: Fixed horizon for comprehensive AI event planning
-- **📈 Dynamic Statistics**: US/International event counts update in real-time based on filters
+- **📈 Dynamic Statistics**: US/International significant event counts with breakdowns update in real-time
 
 ## Architecture & Lessons Learned
 
@@ -85,6 +96,12 @@ This section captures key insights about the codebase architecture that may not 
   - Solution: Dynamic tag categorization in JavaScript
 - **Tag Ordering**: Business requirement for tier tags to appear first
   - Solution: Explicit ordering in both template and JavaScript
+- **Event Count Discrepancy**: Mobile showed 84/59 events while desktop showed 76/57
+  - Root cause: JavaScript was double-counting minor events in totals
+  - Solution: Modified updateEventCounts() to exclude minor events from total count
+- **Stats Display Clarity**: Main event count was confusing (showed less than sum of categories)
+  - Root cause: Total included only Flagship + Major, but wasn't clear to users
+  - Solution: Changed display to show significant events only with clear breakdown
 
 #### 4. **Template Complexity**
 
@@ -353,7 +370,7 @@ Adjust scoring in `src/ai_events/config.py`:
 ## Output Files
 
 ### HTML Report (`dist/report.html`)
-- **Statistics Dashboard**: Event counts by region (US/International) and tier (Flagship/Major/Other)
+- **Statistics Dashboard**: Event counts showing significant events (Flagship + Major) with breakdown
 - **Advanced Filtering**: Multi-select city and tag filters with dynamic tag updates
 - **Regional Sections**: US and International events with flagship, major, and other categories
 - **Perfect Card Alignment**: Consistent event card heights with proper title wrapping
