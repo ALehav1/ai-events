@@ -37,14 +37,14 @@ Automated AI events tracking system that fetches, analyzes, and reports on globa
   - Fixed text alignment issues by shortening "International Events" to "Intl Events"
   - Stats boxes now have consistent height and internal spacing
 
-### November 2024
+### August 2025 - Week 2
 
 - **Comprehensive Event Addition**: Expanded from 44 to 63 total events with major flagship conferences
 - **Date System Overhaul**: Fixed filtering to use current date, extended horizon through December 2026
 - **CSS Layout Fixes**: Implemented perfect card alignment with grid and flexbox improvements
 - **Documentation Updates**: Updated README to reflect current system capabilities and event counts
 
-### October 2024
+### August 2025 - Week 1
 
 - **Initial System Creation**: Built complete AI events tracking system with web scraping and reporting
 - **Windsurf Integration**: Added keyboard shortcuts, NPM scripts, and command palette integration
