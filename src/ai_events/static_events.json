@@ -1,0 +1,2316 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2024-12-29",
+  "description": "Consolidated AI events data migrated from parser files",
+  "events": [
+    {
+      "id": "fa11e4c0da0e",
+      "name": "Chief AI Officer Summit Berlin",
+      "start_date": "2025-09-11",
+      "end_date": "2025-09-11",
+      "city": "Berlin",
+      "country": "Germany",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://world.aiacceleratorinstitute.com/location/caioberlin",
+      "tracks_themes": [
+        "AI Strategy",
+        "Enterprise AI",
+        "AI Scale",
+        "AI Production",
+        "AI Leadership"
+      ],
+      "audience_tag": "Business Leaders",
+      "priority": "maybe",
+      "source_urls": [],
+      "last_seen": "2025-08-29T15:14:46.143096",
+      "size_profile": {
+        "attendees_estimate": 150,
+        "tier": "major",
+        "evidence": "150+ executives expected, primarily VPs and C-level from tech and finance"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "6f215a706178",
+      "name": "CDAO Defense & Security 2025",
+      "start_date": "2025-09-16",
+      "end_date": "2025-09-17",
+      "city": "Washington",
+      "state_province": "DC",
+      "country": "USA",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://cdao-def.coriniumintelligence.com/",
+      "tracks_themes": [
+        "Defense AI",
+        "Security AI",
+        "Government AI",
+        "Data Analytics",
+        "AI Governance"
+      ],
+      "audience_tag": "Business Leaders",
+      "priority": "maybe",
+      "source_urls": [],
+      "last_seen": "2025-08-29T15:14:46.145076",
+      "size_profile": {
+        "attendees_estimate": 200,
+        "tier": "major",
+        "evidence": "200+ senior leaders from defense agencies, intelligence communities"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "d68df2a4367e",
+      "name": "AI in Education Forum",
+      "start_date": "2025-09-20",
+      "end_date": "2025-09-20",
+      "city": "Denver",
+      "state_province": "CO",
+      "country": "USA",
+      "venue": "Colorado Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://aieducation.edu/",
+      "tracks_themes": [
+        "EdTech",
+        "Learning Analytics",
+        "AI Tutoring"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658371",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Education sector focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "410662eef387",
+      "name": "Responsible AI Summit 2025",
+      "start_date": "2025-09-22",
+      "end_date": "2025-09-24",
+      "city": "London",
+      "country": "UK",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.aidataanalytics.network/events-responsible-ai-summit/",
+      "tracks_themes": [
+        "AI Ethics",
+        "AI Governance",
+        "Responsible AI",
+        "AI Bias",
+        "AI Regulation"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [],
+      "last_seen": "2025-08-29T15:14:58.208969",
+      "size_profile": {
+        "attendees_estimate": 500,
+        "tier": "major",
+        "evidence": "Enterprise leaders, regulators, and practitioners focused on AI ethics"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "bca6d5d393e7",
+      "name": "AI in Healthcare Workshop",
+      "start_date": "2025-09-25",
+      "end_date": "2025-09-25",
+      "city": "Boston",
+      "state_province": "MA",
+      "country": "USA",
+      "venue": "MIT Campus",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://aihealthcare.mit.edu/",
+      "tracks_themes": [
+        "Healthcare AI",
+        "Medical Research",
+        "Clinical Applications"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658314",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Single-day workshop focused on healthcare AI applications"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "322c58d9d42f",
+      "name": "AI UK Workshop",
+      "start_date": "2025-09-26",
+      "end_date": "2025-09-26",
+      "city": "Manchester",
+      "country": "United Kingdom",
+      "venue": "Manchester Central",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://aiuk.co.uk/",
+      "tracks_themes": [
+        "UK AI Strategy",
+        "Financial AI",
+        "Healthcare AI"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658633",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Regional UK focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "eb4e3d04f312",
+      "name": "AI Canada Meetup",
+      "start_date": "2025-09-30",
+      "end_date": "2025-09-30",
+      "city": "Toronto",
+      "state_province": "ON",
+      "country": "Canada",
+      "venue": "Metro Toronto Convention Centre",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://aicanada.ca/",
+      "tracks_themes": [
+        "AI Policy",
+        "Research Commercialization",
+        "Canadian Innovation"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658494",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Regional Canadian focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "0d2c2fc51f3c",
+      "name": "AI Media & Entertainment Summit",
+      "start_date": "2025-10-03",
+      "end_date": "2025-10-03",
+      "city": "Los Angeles",
+      "state_province": "CA",
+      "country": "USA",
+      "venue": "Los Angeles Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://aimediaent.com/",
+      "tracks_themes": [
+        "Content Generation",
+        "Video AI",
+        "Creative AI"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658561",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Media industry focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "f39af6f4b8d5",
+      "name": "AI in Agriculture Conference",
+      "start_date": "2025-10-08",
+      "end_date": "2025-10-08",
+      "city": "Des Moines",
+      "state_province": "IA",
+      "country": "USA",
+      "venue": "Iowa Events Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://aiagriculture.org/",
+      "tracks_themes": [
+        "Precision Agriculture",
+        "Crop Monitoring",
+        "Farm Automation"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658399",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Agriculture sector focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "fb79b8b52301",
+      "name": "AI Manufacturing Expo",
+      "start_date": "2025-10-12",
+      "end_date": "2025-10-12",
+      "city": "Detroit",
+      "state_province": "MI",
+      "country": "USA",
+      "venue": "Cobo Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://aimanufacturing.com/",
+      "tracks_themes": [
+        "Industrial AI",
+        "Robotics",
+        "Smart Manufacturing"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658508",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Large industry-specific conference with 2000+ attendees"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "c3bd7450a11a",
+      "name": "AI Australia Summit",
+      "start_date": "2025-10-15",
+      "end_date": "2025-10-15",
+      "city": "Sydney",
+      "country": "Australia",
+      "venue": "International Convention Centre Sydney",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://aiaustralia.com.au/",
+      "tracks_themes": [
+        "Australian AI Policy",
+        "Mining AI",
+        "Agriculture Tech"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658575",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Major regional summit covering Australia/NZ with 1500+ attendees"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "156f6b51ab2b",
+      "name": "AI DevWorld 2025",
+      "start_date": "2025-10-15",
+      "end_date": "2025-10-16",
+      "city": "San Jose",
+      "state_province": "CA",
+      "country": "USA",
+      "venue": "San Jose Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://aidevworld.com/",
+      "tracks_themes": [
+        "AI Development",
+        "MLOps",
+        "AI Tools"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658261",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Regional developer-focused conference with ~500 attendees"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "fdd8edf78599",
+      "name": "AI Asia-Pacific Workshop",
+      "start_date": "2025-10-22",
+      "end_date": "2025-10-22",
+      "city": "Singapore",
+      "country": "Singapore",
+      "venue": "Marina Bay Sands",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://aiapac.sg/",
+      "tracks_themes": [
+        "Smart Cities",
+        "Digital Economy",
+        "APAC Innovation"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658440",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Regional APAC focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "e5a8e0de3a47",
+      "name": "AI Transportation Forum",
+      "start_date": "2025-10-25",
+      "end_date": "2025-10-25",
+      "city": "Seattle",
+      "state_province": "WA",
+      "country": "USA",
+      "venue": "Washington State Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://aitransportation.org/",
+      "tracks_themes": [
+        "Autonomous Vehicles",
+        "Smart Logistics",
+        "Traffic AI"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658535",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Major transportation industry event with autonomous vehicle focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "c7e41e12fe3c",
+      "name": "AI India Summit",
+      "start_date": "2025-10-28",
+      "end_date": "2025-10-28",
+      "city": "Bangalore",
+      "country": "India",
+      "venue": "Bangalore International Exhibition Centre",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://aiindia.in/",
+      "tracks_themes": [
+        "Digital India",
+        "AI for Development",
+        "Indian Innovation"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658607",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Major Indian AI summit with significant tech industry participation"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "40e436422916",
+      "name": "AI in Finance Workshop",
+      "start_date": "2025-10-30",
+      "end_date": "2025-10-30",
+      "city": "New York",
+      "state_province": "NY",
+      "country": "USA",
+      "venue": "Wall Street Conference Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://aifinance.org/",
+      "tracks_themes": [
+        "Financial AI",
+        "Risk Management",
+        "Trading Algorithms"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658357",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Single-day workshop"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "3be33f2677b9",
+      "name": "Chief AI Officer Summit Boston",
+      "start_date": "2025-10-30",
+      "end_date": "2025-10-30",
+      "city": "Boston",
+      "state_province": "MA",
+      "country": "USA",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://world.aiacceleratorinstitute.com/location/caioboston",
+      "tracks_themes": [
+        "AI Strategy",
+        "Enterprise AI",
+        "Healthcare AI",
+        "Financial AI",
+        "AI Leadership"
+      ],
+      "audience_tag": "Business Leaders",
+      "priority": "maybe",
+      "source_urls": [],
+      "last_seen": "2025-08-29T15:14:46.143747",
+      "size_profile": {
+        "attendees_estimate": 200,
+        "tier": "major",
+        "evidence": "200+ senior AI leaders"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "d1063d96373a",
+      "name": "AI Startup Pitch Day",
+      "start_date": "2025-11-05",
+      "end_date": "2025-11-05",
+      "city": "Austin",
+      "state_province": "TX",
+      "country": "USA",
+      "venue": "Austin Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://aistartuppitch.com/",
+      "tracks_themes": [
+        "Startups",
+        "Funding",
+        "AI Innovation"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658329",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Regional startup event"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "9c96676ac524",
+      "name": "AI Legal Tech Summit",
+      "start_date": "2025-11-08",
+      "end_date": "2025-11-08",
+      "city": "Washington",
+      "state_province": "DC",
+      "country": "USA",
+      "venue": "Walter E. Washington Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://ailegaltech.org/",
+      "tracks_themes": [
+        "Legal AI",
+        "Contract Analysis",
+        "Compliance"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658522",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Legal industry specialization"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "5b86fdc3951e",
+      "name": "AI Nordics Summit",
+      "start_date": "2025-11-12",
+      "end_date": "2025-11-12",
+      "city": "Stockholm",
+      "country": "Sweden",
+      "venue": "Stockholm Convention Center",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://ainordics.se/",
+      "tracks_themes": [
+        "Digital Government",
+        "Sustainability AI",
+        "Nordic Innovation"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658413",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Regional Nordic focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "09a57137b563",
+      "name": "AI Germany Conference",
+      "start_date": "2025-11-14",
+      "end_date": "2025-11-14",
+      "city": "Berlin",
+      "country": "Germany",
+      "venue": "Messe Berlin",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://aigermany.de/",
+      "tracks_themes": [
+        "Industry 4.0",
+        "German Engineering AI",
+        "EU AI Act"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658620",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Regional German focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "b9897bacf56f",
+      "name": "AI Gaming Meetup",
+      "start_date": "2025-11-15",
+      "end_date": "2025-11-15",
+      "city": "Los Angeles",
+      "state_province": "CA",
+      "country": "USA",
+      "venue": "LA Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://aigaming.com/",
+      "tracks_themes": [
+        "Game AI",
+        "Procedural Generation",
+        "NPC Behavior"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658384",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Gaming industry meetup"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "34ab5aca6e45",
+      "name": "European AI Ethics Summit",
+      "start_date": "2025-11-20",
+      "end_date": "2025-11-21",
+      "city": "Brussels",
+      "country": "Belgium",
+      "venue": "EU Parliament",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://aiethics.eu/",
+      "tracks_themes": [
+        "AI Ethics",
+        "Policy",
+        "Regulation"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658296",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Specialized academic conference on AI ethics with ~300 attendees"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "f71ee0058627",
+      "name": "AI Energy Workshop",
+      "start_date": "2025-11-22",
+      "end_date": "2025-11-22",
+      "city": "Houston",
+      "state_province": "TX",
+      "country": "USA",
+      "venue": "George R. Brown Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://aienergy.org/",
+      "tracks_themes": [
+        "Smart Grid",
+        "Renewable Energy AI",
+        "Energy Optimization"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658548",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Energy sector specialization"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "bee543b8bc7a",
+      "name": "AI Japan Workshop",
+      "start_date": "2025-11-25",
+      "end_date": "2025-11-25",
+      "city": "Tokyo",
+      "country": "Japan",
+      "venue": "Tokyo Big Sight",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://aijapan.jp/",
+      "tracks_themes": [
+        "Robotics AI",
+        "Manufacturing AI",
+        "Japanese Innovation"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658593",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Major Japanese AI event with robotics focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "093c9b0e5e1c",
+      "name": "AI Latin America Summit",
+      "start_date": "2025-11-28",
+      "end_date": "2025-11-28",
+      "city": "São Paulo",
+      "country": "Brazil",
+      "venue": "Expo Center Norte",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://ailatam.com/",
+      "tracks_themes": [
+        "Digital Transformation",
+        "FinTech AI",
+        "Regional Innovation"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658466",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Regional Latin America focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "a98111a29653",
+      "name": "Chief AI Officer Summit London",
+      "start_date": "2025-12-02",
+      "end_date": "2025-12-02",
+      "city": "London",
+      "country": "UK",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://world.aiacceleratorinstitute.com/location/caiolondon",
+      "tracks_themes": [
+        "AI Strategy",
+        "Enterprise AI",
+        "AI Scale",
+        "AI Production",
+        "AI Leadership"
+      ],
+      "audience_tag": "Business Leaders",
+      "priority": "maybe",
+      "source_urls": [],
+      "last_seen": "2025-08-29T15:14:46.144682",
+      "size_profile": {
+        "attendees_estimate": 200,
+        "tier": "major",
+        "evidence": "200+ senior AI leaders"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "eed7f57f24ba",
+      "name": "AI Africa Forum",
+      "start_date": "2025-12-03",
+      "end_date": "2025-12-03",
+      "city": "Cape Town",
+      "country": "South Africa",
+      "venue": "Cape Town International Convention Centre",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://aiafrica.org/",
+      "tracks_themes": [
+        "AI for Development",
+        "Mobile AI",
+        "African Innovation"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658426",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Regional African focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "15fa035e7b82",
+      "name": "AI in Retail Summit",
+      "start_date": "2025-12-10",
+      "end_date": "2025-12-10",
+      "city": "Chicago",
+      "state_province": "IL",
+      "country": "USA",
+      "venue": "McCormick Place",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://airetail.com/",
+      "tracks_themes": [
+        "Retail AI",
+        "Customer Experience",
+        "Supply Chain"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658343",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Industry-specific conference"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "f30b41d33e92",
+      "name": "AI Middle East Conference",
+      "start_date": "2025-12-15",
+      "end_date": "2025-12-15",
+      "city": "Dubai",
+      "country": "UAE",
+      "venue": "Dubai World Trade Centre",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://aimiddleeast.ae/",
+      "tracks_themes": [
+        "Energy AI",
+        "Smart Infrastructure",
+        "Regional Innovation"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "source_urls": [
+        "https://example.com/minor_events"
+      ],
+      "last_seen": "2025-08-29T15:14:55.658480",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Regional Middle East focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "bf59af834b51",
+      "name": "IPTC Summit on AI for the Energy Industry 2026",
+      "start_date": "2026-01-13",
+      "end_date": "2026-01-14",
+      "city": "Dubai",
+      "state_province": "",
+      "country": "UAE",
+      "venue": "Conrad Hotel Dubai",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.iptcnet.org/ai-summit/",
+      "tracks_themes": [
+        "Energy AI",
+        "Decarbonization",
+        "Energy Efficiency",
+        "Sustainable AI",
+        "Oil & Gas AI"
+      ],
+      "priority": "maybe",
+      "why_priority": "Industry-specific focus on energy sector AI applications",
+      "source_urls": [
+        "https://example.com/dubai_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:49.443984",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Industry-specific summit on AI for energy sector efficiency and decarbonization"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "400793d1e93a",
+      "name": "Data Day Texas +AI 2026",
+      "start_date": "2026-01-24",
+      "end_date": "2026-01-24",
+      "city": "Austin",
+      "state_province": "TX",
+      "country": "USA",
+      "venue": "AT&T Hotel and Conference Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://www.datadaytexas.com/",
+      "tracks_themes": [
+        "Big Data",
+        "Data Science",
+        "Machine Learning",
+        "Applied AI",
+        "Analytics"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "Established annual event with comprehensive AI and data science coverage",
+      "source_urls": [
+        "https://example.com/austin_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:45.430202",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Long-running annual event covering big data, data science, machine learning, and AI"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "d984d792cdeb",
+      "name": "2026 AI/ML Conference",
+      "start_date": "2026-02-01",
+      "end_date": "2026-02-01",
+      "city": "Austin",
+      "state_province": "TX",
+      "country": "USA",
+      "venue": "Austin Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://www.aimlconference.com/",
+      "tracks_themes": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Deep Learning",
+        "AI Applications"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "Focused AI/ML conference with comprehensive technical coverage",
+      "source_urls": [
+        "https://example.com/austin_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:45.430314",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Dedicated AI and machine learning conference"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "864ba8166c5e",
+      "name": "AI & Big Data Expo Global",
+      "start_date": "2026-02-04",
+      "end_date": "2026-02-05",
+      "city": "London",
+      "state_province": "",
+      "country": "UK",
+      "venue": "Olympia London",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.ai-expo.net/global/",
+      "tracks_themes": [
+        "Big Data",
+        "Machine Learning",
+        "NLP",
+        "Business Applications",
+        "Responsible AI"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "Major global expo with comprehensive AI and big data coverage",
+      "source_urls": [
+        "https://example.com/london_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:54.335491",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Global expo focusing on AI, big data, ML, and NLP with business applications"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "e250d99c0397",
+      "name": "Digital Transformation Expo Global 2026",
+      "start_date": "2026-02-04",
+      "end_date": "2026-02-04",
+      "city": "Austin",
+      "state_province": "TX",
+      "country": "USA",
+      "venue": "Austin Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://www.digitaltransformationexpo.com/",
+      "tracks_themes": [
+        "Digital Transformation",
+        "IT Infrastructure",
+        "Cloud Computing",
+        "AI Integration"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "Major global expo with significant AI and digital transformation focus",
+      "source_urls": [
+        "https://example.com/austin_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:45.430433",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Major tech event covering IT infrastructure, cloud, and AI as part of digital transformation"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "d8bf10133a5c",
+      "name": "Information System Design & Intelligent Applications (ISDIA) 2026",
+      "start_date": "2026-02-07",
+      "end_date": "2026-02-07",
+      "city": "Dubai",
+      "state_province": "",
+      "country": "UAE",
+      "venue": "University of Wollongong Dubai",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.uowdubai.ac.ae/isdia/",
+      "tracks_themes": [
+        "Agentic AI",
+        "Sustainability",
+        "Information Systems",
+        "Intelligent Applications",
+        "Academic Research"
+      ],
+      "priority": "maybe",
+      "why_priority": "Academic conference with unique focus on AI and sustainability",
+      "source_urls": [
+        "https://example.com/dubai_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:49.444007",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Academic conference on Agentic AI & Sustainability by University of Wollongong"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "84e9f7dfce8f",
+      "name": "AIBC Eurasia 2026",
+      "start_date": "2026-02-10",
+      "end_date": "2026-02-12",
+      "city": "Dubai",
+      "state_province": "",
+      "country": "UAE",
+      "venue": "Festival Arena, Festival City",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.aibcworld.com/eurasia/",
+      "tracks_themes": [
+        "AI & Blockchain",
+        "Healthcare AI",
+        "Education AI",
+        "Smart Cities",
+        "AI Policy"
+      ],
+      "priority": "go",
+      "why_priority": "Unique focus on AI-blockchain convergence with high-level attendees",
+      "source_urls": [
+        "https://example.com/dubai_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:49.443959",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Conference on AI and blockchain convergence with policymakers, developers, and investors"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "c6562c6e8fb2",
+      "name": "FiNext Awards & Conference Dubai 2026",
+      "start_date": "2026-02-10",
+      "end_date": "2026-02-11",
+      "city": "Dubai",
+      "state_province": "",
+      "country": "UAE",
+      "venue": "Dubai World Trade Centre",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.finext.ae/",
+      "tracks_themes": [
+        "AI in Finance",
+        "FinTech AI",
+        "Blockchain",
+        "Banking Security",
+        "Financial AI"
+      ],
+      "priority": "maybe",
+      "why_priority": "Finance-focused conference with AI applications in banking and fintech",
+      "source_urls": [
+        "https://example.com/dubai_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:49.444017",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Financial sector conference on AI in finance, fintech, blockchain, and banking security"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "b467b7ea4edb",
+      "name": "Generative AI Summit Austin",
+      "start_date": "2026-02-11",
+      "end_date": "2026-02-11",
+      "city": "Austin",
+      "state_province": "TX",
+      "country": "USA",
+      "venue": "Downtown Austin Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://www.generativeaisummit.com/austin/",
+      "tracks_themes": [
+        "Generative AI",
+        "AI Applications",
+        "AI Infrastructure",
+        "Innovation"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "Specialized GenAI summit for AI professionals",
+      "source_urls": [
+        "https://example.com/austin_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:45.430334",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "AI professionals summit focusing on innovative GenAI solutions and infrastructure"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "3efe15181dfe",
+      "name": "Sales Enablement Summit Austin 2026",
+      "start_date": "2026-02-11",
+      "end_date": "2026-02-11",
+      "city": "Austin",
+      "state_province": "TX",
+      "country": "USA",
+      "venue": "Austin Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://www.salesenablementsummit.com/austin/",
+      "tracks_themes": [
+        "Sales Enablement",
+        "Revenue Operations",
+        "Sales AI",
+        "Performance Strategies"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "why_priority": "Senior-level sales summit with AI-powered sales performance focus",
+      "source_urls": [
+        "https://example.com/austin_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:45.430446",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Senior-level sales and revenue operations leaders discussing AI-powered sales strategies"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "55353e952c4c",
+      "name": "2nd International Conference on Artificial Intelligence & Data Science 2026",
+      "start_date": "2026-02-12",
+      "end_date": "2026-02-13",
+      "city": "Dubai",
+      "state_province": "",
+      "country": "UAE",
+      "venue": "Dubai International Convention Centre",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.aidata-conference.com/",
+      "tracks_themes": [
+        "AI Research",
+        "Data Science",
+        "Analytics",
+        "Machine Learning",
+        "Tech Innovation"
+      ],
+      "priority": "maybe",
+      "why_priority": "Academic-focused conference for data science professionals",
+      "source_urls": [
+        "https://example.com/dubai_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:49.443996",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Academic conference for data scientists, analysts, and tech professionals"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "2cbb0cbbc9f7",
+      "name": "Data Science Salon ATX 2026",
+      "start_date": "2026-02-18",
+      "end_date": "2026-02-19",
+      "city": "Austin",
+      "state_province": "TX",
+      "country": "USA",
+      "venue": "Oracle Austin Campus",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://www.datascience-salon.com/austin/",
+      "tracks_themes": [
+        "Generative AI",
+        "Machine Learning",
+        "Predictive Analytics",
+        "Data Science"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "why_priority": "Intimate conference format with high-quality industry leader sessions",
+      "source_urls": [
+        "https://example.com/austin_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:45.430372",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Intimate two-day conference with industry leaders on GenAI, ML, and predictive analytics"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "11c5dc1e5296",
+      "name": "Chief AI Officer Summit UK",
+      "start_date": "2026-02-25",
+      "end_date": "2026-02-26",
+      "city": "London",
+      "country": "UK",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://caio-london.re-work.co/",
+      "tracks_themes": [
+        "AI Strategy",
+        "Enterprise AI",
+        "AI Governance",
+        "AI ROI"
+      ],
+      "audience_tag": "Business Leaders",
+      "priority": "maybe",
+      "source_urls": [],
+      "last_seen": "2025-08-29T15:14:46.144194",
+      "size_profile": {
+        "attendees_estimate": 200,
+        "tier": "major",
+        "evidence": "200+ senior AI leaders"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "8b6f23603c38",
+      "name": "Chief AI Officer Summit UK",
+      "start_date": "2026-02-25",
+      "end_date": "2026-02-25",
+      "city": "London",
+      "state_province": "",
+      "country": "UK",
+      "venue": "London Business Centre",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.caiosummit.com/uk/",
+      "tracks_themes": [
+        "AI Leadership",
+        "AI Strategy",
+        "Executive AI",
+        "AI Implementation",
+        "Enterprise AI"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "Executive-level summit for AI leadership in Europe",
+      "source_urls": [
+        "https://example.com/london_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:54.335548",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Executive-level summit for Chief AI Officers and AI practitioners in Europe"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "b4dc00676675",
+      "name": "ViVE Event 2026 - AI Zone",
+      "start_date": "2026-03-10",
+      "end_date": "2026-03-12",
+      "city": "Los Angeles",
+      "state_province": "CA",
+      "country": "USA",
+      "venue": "Los Angeles Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://www.viveevent.com/ai-pavilion",
+      "tracks_themes": [
+        "Healthcare AI",
+        "Digital Health",
+        "Medical AI",
+        "Health Technology",
+        "AI in Healthcare"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "Premier healthcare AI event with dedicated AI focus and decision maker audience",
+      "source_urls": [
+        "https://example.com/los_angeles_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:54.336300",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Premier digital health event with dedicated AI Zone for healthcare decision makers"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "ccdb9cc9a64d",
+      "name": "AI in Communications Boot Camp - West Coast",
+      "start_date": "2026-03-12",
+      "end_date": "2026-03-13",
+      "city": "Los Angeles",
+      "state_province": "CA",
+      "country": "USA",
+      "venue": "Los Angeles Business Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://www.thepworld.com/event/ai-in-communications-bootcamp/",
+      "tracks_themes": [
+        "AI Communications",
+        "Marketing AI",
+        "Communication Tools",
+        "AI Training",
+        "Practical AI"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "why_priority": "Specialized training for communications professionals with hands-on approach",
+      "source_urls": [
+        "https://example.com/los_angeles_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:54.336316",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Hands-on AI training for leading communicators with practical applications"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "b7299fa6b038",
+      "name": "PROMPT NYC AI Conference 2026",
+      "start_date": "2026-03-14",
+      "end_date": "2026-03-15",
+      "city": "New York",
+      "state_province": "NY",
+      "country": "USA",
+      "venue": "New York Marriott Marquis",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://prompt.nyc/",
+      "tracks_themes": [
+        "AI Trends",
+        "AI Research",
+        "AI Applications",
+        "Machine Learning",
+        "AI Innovation"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "why_priority": "Community-focused conference for AI experts and researchers",
+      "source_urls": [
+        "https://example.com/new_york_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:56.382583",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Conference bringing together AI experts, researchers, and enthusiasts for latest AI trends"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "68e32de20511",
+      "name": "Generative AI Summit Los Angeles 2026",
+      "start_date": "2026-03-15",
+      "end_date": "2026-03-15",
+      "city": "Los Angeles",
+      "state_province": "CA",
+      "country": "USA",
+      "venue": "Los Angeles City Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://world.aiacceleratorinstitute.com/location/losangeles/",
+      "tracks_themes": [
+        "Generative AI",
+        "AI Engineering",
+        "AI Development",
+        "Tech Innovation",
+        "AI Applications"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "Major GenAI summit bringing together engineers and executives in tech hub",
+      "source_urls": [
+        "https://example.com/los_angeles_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:54.336278",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Summit for pioneering engineers, developers & executives facilitating the latest tech revolution"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "450d22f0bd15",
+      "name": "AI Singapore Summit 2026",
+      "start_date": "2026-03-18",
+      "end_date": "2026-03-19",
+      "city": "Singapore",
+      "state_province": "",
+      "country": "Singapore",
+      "venue": "Marina Bay Sands",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.aisingapore.org/summit/",
+      "tracks_themes": [
+        "AI Research",
+        "AI Applications",
+        "AI Policy",
+        "Southeast Asia AI",
+        "AI Innovation"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "Singapore's flagship AI summit with global reach and government backing",
+      "source_urls": [
+        "https://example.com/singapore_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:58.209485",
+      "size_profile": {
+        "tier": "flagship",
+        "evidence": "Singapore's premier AI summit bringing together global AI leaders and researchers"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "fa1a14653846",
+      "name": "AIM Conference - Artificial Intelligence in Management",
+      "start_date": "2026-03-20",
+      "end_date": "2026-03-21",
+      "city": "Los Angeles",
+      "state_province": "CA",
+      "country": "USA",
+      "venue": "UCLA Campus",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://sites.google.com/view/aimanagement/",
+      "tracks_themes": [
+        "AI in Management",
+        "Machine Learning",
+        "Business AI",
+        "Management Science",
+        "AI Applications"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "why_priority": "Academic conference with focus on AI applications in management",
+      "source_urls": [
+        "https://example.com/los_angeles_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:54.336347",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Academic conference on AI and machine learning methods in management applications"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "3887b3761ed2",
+      "name": "Data & AI Governance Conference Europe",
+      "start_date": "2026-03-23",
+      "end_date": "2026-03-26",
+      "city": "London",
+      "state_province": "",
+      "country": "UK",
+      "venue": "London Conference Centre",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.irmuk.co.uk/data-ai-governance/",
+      "tracks_themes": [
+        "AI Governance",
+        "Data Governance",
+        "Master Data Management",
+        "Responsible AI",
+        "Ethics"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "Critical focus on AI governance and responsible AI implementation",
+      "source_urls": [
+        "https://example.com/london_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:54.335528",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "European conference on responsible data and AI governance with MDM focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "f7d3169ad528",
+      "name": "Gartner Data & Analytics Summit 2026",
+      "start_date": "2026-03-23",
+      "end_date": "2026-03-25",
+      "city": "Orlando",
+      "state_province": "FL",
+      "country": "USA",
+      "venue": "Gaylord Palms Resort",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://www.gartner.com/en/conferences/na/data-analytics-us",
+      "tracks_themes": [
+        "Data Analytics",
+        "Machine Learning",
+        "Advanced Analytics",
+        "Data Strategy",
+        "Business Intelligence"
+      ],
+      "audience_tag": "Business Leaders",
+      "priority": "go",
+      "why_priority": "Gartner's flagship data and analytics summit with comprehensive AI coverage",
+      "source_urls": [
+        "https://example.com/gartner"
+      ],
+      "last_seen": "2025-08-29T15:14:50.970400",
+      "size_profile": {
+        "tier": "flagship",
+        "evidence": "Gartner's premier data and analytics conference with AI, ML, and advanced analytics focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "ad717cd96f40",
+      "name": "Gen AI Conference 2026",
+      "start_date": "2026-03-23",
+      "end_date": "2026-03-23",
+      "city": "New York",
+      "state_province": "NY",
+      "country": "USA",
+      "venue": "New York Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://www.genaiconference.com/",
+      "tracks_themes": [
+        "Generative AI",
+        "AI Governance",
+        "Generative Agents",
+        "Enterprise AI",
+        "AI Innovation"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "Major business-focused GenAI conference with enterprise AI governance focus",
+      "source_urls": [
+        "https://example.com/new_york_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:56.382471",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Platform for business leaders in AI, ML, data, innovation, and technology with enterprise focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "dbd9a15d37a9",
+      "name": "AI Revolution in Healthcare Summit 2026",
+      "start_date": "2026-03-27",
+      "end_date": "2026-03-27",
+      "city": "Dubai",
+      "state_province": "",
+      "country": "UAE",
+      "venue": "JW Marriott Hotel Marina",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.healthcareaisummit.com/",
+      "tracks_themes": [
+        "Healthcare AI",
+        "Clinical AI",
+        "Medical AI",
+        "Regulatory AI",
+        "Operational AI"
+      ],
+      "priority": "go",
+      "why_priority": "Specialized healthcare AI summit with clinical and regulatory focus",
+      "source_urls": [
+        "https://example.com/dubai_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:49.443973",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Specialized summit on clinical, operational, and regulatory AI advancements in healthcare"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "a3675b08a2a9",
+      "name": "AI, Data Science & Biotechnology Conference 2026",
+      "start_date": "2026-04-11",
+      "end_date": "2026-04-12",
+      "city": "New York",
+      "state_province": "NY",
+      "country": "USA",
+      "venue": "NYU Linhart Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://publichealth.nyu.edu/department/biostatistics/seminars-events",
+      "tracks_themes": [
+        "AI in Biotech",
+        "Data Science",
+        "Machine Learning",
+        "Biotechnology",
+        "Robotics"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "why_priority": "Academic conference with focus on AI applications in biotechnology",
+      "source_urls": [
+        "https://example.com/new_york_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:56.382568",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Academic conference on AI, ML, data science, biotechnology, and robotics advancements"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "808ada9f4cfe",
+      "name": "World Tech Summit on Big Data, Data Science & Machine Learning",
+      "start_date": "2026-04-13",
+      "end_date": "2026-04-13",
+      "city": "Austin",
+      "state_province": "TX",
+      "country": "USA",
+      "venue": "Austin Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://www.worldtechsummit.com/austin/",
+      "tracks_themes": [
+        "Big Data",
+        "Data Science",
+        "Machine Learning",
+        "Research",
+        "Professional Development"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "World-level summit bringing together researchers and professionals",
+      "source_urls": [
+        "https://example.com/austin_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:45.430388",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Platform for researchers and professionals discussing big data, data science, and ML advancements"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "e2bb1683eebd",
+      "name": "Dubai AI Festival 2026",
+      "start_date": "2026-04-14",
+      "end_date": "2026-04-14",
+      "city": "Dubai",
+      "state_province": "",
+      "country": "UAE",
+      "venue": "Madinat Jumeirah",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.dubaiaifestival.com/",
+      "tracks_themes": [
+        "AI Innovation",
+        "AI Investment",
+        "Ethical AI",
+        "AI Governance",
+        "AI Development"
+      ],
+      "priority": "go",
+      "why_priority": "Major AI festival with focus on innovation, investment, and governance",
+      "source_urls": [
+        "https://example.com/dubai_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:49.444028",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Festival dedicated to AI innovations, investment opportunities, and ethical AI governance"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "9f463ca6eb4a",
+      "name": "AIMLR2026 - International Conference on Artificial Intelligence, Machine Learning, and Robotics",
+      "start_date": "2026-04-16",
+      "end_date": "2026-04-18",
+      "city": "Lisbon",
+      "state_province": "",
+      "country": "Portugal",
+      "venue": "Lisbon Marriott Hotel",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.aimlr-conference.com/",
+      "tracks_themes": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Robotics",
+        "AI Research",
+        "ML Applications"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "Major international conference covering AI, ML, and robotics with academic and industry focus",
+      "source_urls": [
+        "https://example.com/lisbon_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:54.334581",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Annual international conference focused on AI, machine learning, and robotics"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "2eb6ca91c550",
+      "name": "Data Science & AI Summit Singapore 2026",
+      "start_date": "2026-04-22",
+      "end_date": "2026-04-23",
+      "city": "Singapore",
+      "state_province": "",
+      "country": "Singapore",
+      "venue": "Pan Pacific Singapore",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.datascienceaisummit.sg/",
+      "tracks_themes": [
+        "Data Science",
+        "Machine Learning",
+        "AI Research",
+        "Analytics",
+        "AI Applications"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "why_priority": "Regional data science and AI summit with practitioner focus",
+      "source_urls": [
+        "https://example.com/singapore_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:58.209556",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Data science and AI summit for practitioners and researchers in Southeast Asia"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "1fdeaaec0acb",
+      "name": "B2B Summit North America",
+      "start_date": "2026-04-26",
+      "end_date": "2026-04-26",
+      "city": "Austin",
+      "state_province": "TX",
+      "country": "USA",
+      "venue": "Austin Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://www.b2bsummit.com/",
+      "tracks_themes": [
+        "B2B Technology",
+        "AI Strategies",
+        "Business Technology",
+        "Sales AI"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "why_priority": "B2B focused with AI strategy components",
+      "source_urls": [
+        "https://example.com/austin_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:45.430401",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "B2B technology trends conference with focus on AI strategies"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "36281163c8b4",
+      "name": "Gartner Digital Workplace Summit 2026",
+      "start_date": "2026-05-12",
+      "end_date": "2026-05-13",
+      "city": "London",
+      "state_province": "",
+      "country": "UK",
+      "venue": "The Brewery",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.gartner.com/en/conferences/emea/digital-workplace-uk",
+      "tracks_themes": [
+        "Digital Workplace",
+        "AI Productivity",
+        "Workplace Automation",
+        "Employee Experience"
+      ],
+      "audience_tag": "Business Leaders",
+      "priority": "go",
+      "why_priority": "Gartner summit focusing on AI-powered workplace transformation",
+      "source_urls": [
+        "https://example.com/gartner"
+      ],
+      "last_seen": "2025-08-29T15:14:50.970432",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Gartner summit on digital workplace transformation with AI-powered productivity focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "1d5fbe1f09cb",
+      "name": "Tech in Asia Conference 2026",
+      "start_date": "2026-05-14",
+      "end_date": "2026-05-15",
+      "city": "Singapore",
+      "state_province": "",
+      "country": "Singapore",
+      "venue": "Suntec Singapore Convention Centre",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.techinasia.com/conference/",
+      "tracks_themes": [
+        "AI Startups",
+        "Southeast Asia Tech",
+        "AI Investment",
+        "Tech Innovation",
+        "Digital Transformation"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "Asia's largest tech conference with major AI and innovation components",
+      "source_urls": [
+        "https://example.com/singapore_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:58.209507",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Asia's largest tech conference with significant AI and startup focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "d1c80c7f97dd",
+      "name": "AI Sports 2026",
+      "start_date": "2026-05-19",
+      "end_date": "2026-05-19",
+      "city": "New York",
+      "state_province": "NY",
+      "country": "USA",
+      "venue": "Madison Square Garden Training Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://www.aisports.com/",
+      "tracks_themes": [
+        "Sports AI",
+        "Data Analytics",
+        "Athlete Performance",
+        "Team Building",
+        "Fan Engagement"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "why_priority": "Specialized conference for AI applications in sports and athletics",
+      "source_urls": [
+        "https://example.com/new_york_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:56.382535",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Conference for sports professionals and tech innovators on AI in high-performance sports"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "1ffd3c5c3964",
+      "name": "AI Summit NYC 2026",
+      "start_date": "2026-05-19",
+      "end_date": "2026-05-19",
+      "city": "New York",
+      "state_province": "NY",
+      "country": "USA",
+      "venue": "Jacob K. Javits Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://www.aisummitnyc.com/",
+      "tracks_themes": [
+        "AI in Finance",
+        "Banking AI",
+        "Insurance AI",
+        "Data Science",
+        "Machine Learning"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "Major AI summit focused on financial services applications",
+      "source_urls": [
+        "https://example.com/new_york_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:56.382515",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Business-focused AI summit on applications in finance, banking, and insurance"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "cb69bf6a4a48",
+      "name": "AI for Good Global Summit 2026",
+      "start_date": "2026-05-20",
+      "end_date": "2026-05-22",
+      "city": "Los Angeles",
+      "state_province": "CA",
+      "country": "USA",
+      "venue": "Los Angeles Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://aiforgood.itu.int/summit26",
+      "tracks_themes": [
+        "AI for Good",
+        "Social Impact AI",
+        "Global Challenges",
+        "AI Ethics",
+        "Sustainable AI"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "ITU-led flagship summit focusing on AI solutions for global challenges",
+      "source_urls": [
+        "https://example.com/los_angeles_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:54.336331",
+      "size_profile": {
+        "tier": "flagship",
+        "evidence": "ITU-led global summit bringing top AI experts and decision-makers for innovative AI solutions"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "79928c21ebb2",
+      "name": "Gartner AI & Data Science Summit 2026",
+      "start_date": "2026-06-08",
+      "end_date": "2026-06-10",
+      "city": "London",
+      "state_province": "",
+      "country": "UK",
+      "venue": "ExCeL London",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.gartner.com/en/conferences/emea/ai-data-science-uk",
+      "tracks_themes": [
+        "Artificial Intelligence",
+        "Data Science",
+        "Machine Learning",
+        "AI Ethics",
+        "AI Governance"
+      ],
+      "audience_tag": "Business Leaders",
+      "priority": "go",
+      "why_priority": "Gartner's dedicated AI and data science summit with global reach",
+      "source_urls": [
+        "https://example.com/gartner"
+      ],
+      "last_seen": "2025-08-29T15:14:50.970417",
+      "size_profile": {
+        "tier": "flagship",
+        "evidence": "Gartner's dedicated AI and data science summit for European market"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "14e8dfc4e345",
+      "name": "AEC INNOVATE",
+      "start_date": "2026-06-16",
+      "end_date": "2026-06-18",
+      "city": "Austin",
+      "state_province": "TX",
+      "country": "USA",
+      "venue": "Austin Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://www.aecinnovate.com/",
+      "tracks_themes": [
+        "AEC Industry",
+        "Construction AI",
+        "Architecture AI",
+        "Engineering AI",
+        "Project AI"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "why_priority": "Industry-specific AI applications in architecture, engineering, and construction",
+      "source_urls": [
+        "https://example.com/austin_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:45.430414",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "AEC industry conference featuring AI applications in construction projects"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "737a1fe84e49",
+      "name": "AWS Summit New York 2026",
+      "start_date": "2026-06-17",
+      "end_date": "2026-06-17",
+      "city": "New York",
+      "state_province": "NY",
+      "country": "USA",
+      "venue": "Jacob K. Javits Convention Center",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://aws.amazon.com/events/summits/new-york/",
+      "tracks_themes": [
+        "Cloud AI",
+        "Generative AI",
+        "AWS AI Services",
+        "Machine Learning",
+        "AI Infrastructure"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "Major AWS summit with significant AI and generative AI focus",
+      "source_urls": [
+        "https://example.com/new_york_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:56.382552",
+      "size_profile": {
+        "tier": "flagship",
+        "evidence": "Large-scale AWS tech conference with heavy emphasis on AI and generative AI tools"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "432ff88214e8",
+      "name": "Global AI Conference",
+      "start_date": "2026-06-29",
+      "end_date": "2026-06-30",
+      "city": "London",
+      "state_province": "",
+      "country": "UK",
+      "venue": "ExCeL London",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.rcr-ai-conference.com/",
+      "tracks_themes": [
+        "AI Technology",
+        "AI Science",
+        "Industry AI",
+        "Global AI",
+        "AI Innovation"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "Major global AI conference for tech, science, and industry professionals",
+      "source_urls": [
+        "https://example.com/london_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:54.335566",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Influential AI event for global tech, science, and industry ecosystem"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "17464906a3ab",
+      "name": "RISE Conference 2026",
+      "start_date": "2026-07-15",
+      "end_date": "2026-07-17",
+      "city": "Singapore",
+      "state_province": "",
+      "country": "Singapore",
+      "venue": "Marina Bay Sands",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.riseconf.com/",
+      "tracks_themes": [
+        "AI Innovation",
+        "Tech Leadership",
+        "Startup AI",
+        "Enterprise AI",
+        "AI Investment"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "Asia's largest tech conference with significant AI and innovation focus",
+      "source_urls": [
+        "https://example.com/singapore_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:58.209532",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Asia's largest tech conference bringing together global tech leaders with AI focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "250b5dc0d346",
+      "name": "Gartner Security & Risk Management Summit 2026",
+      "start_date": "2026-09-08",
+      "end_date": "2026-09-10",
+      "city": "National Harbor",
+      "state_province": "MD",
+      "country": "USA",
+      "venue": "Gaylord National Resort",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://www.gartner.com/en/conferences/na/security-risk-management-us",
+      "tracks_themes": [
+        "AI Security",
+        "Risk Management",
+        "Cybersecurity",
+        "AI Governance",
+        "Security Operations"
+      ],
+      "audience_tag": "Business Leaders",
+      "priority": "go",
+      "why_priority": "Major Gartner security summit with significant AI security coverage",
+      "source_urls": [
+        "https://example.com/gartner"
+      ],
+      "last_seen": "2025-08-29T15:14:50.970446",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Gartner's premier security conference with AI security and risk management focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "3df37dae82da",
+      "name": "AI World Singapore 2026",
+      "start_date": "2026-09-23",
+      "end_date": "2026-09-24",
+      "city": "Singapore",
+      "state_province": "",
+      "country": "Singapore",
+      "venue": "Raffles City Convention Centre",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.aiworld.sg/",
+      "tracks_themes": [
+        "Enterprise AI",
+        "AI Implementation",
+        "AI Strategy",
+        "Southeast Asia AI",
+        "AI Ethics"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "Dedicated AI conference serving Southeast Asian enterprise market",
+      "source_urls": [
+        "https://example.com/singapore_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:58.209544",
+      "size_profile": {
+        "tier": "major",
+        "evidence": "Dedicated AI conference for Southeast Asia market with enterprise focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "b3b6ee700a76",
+      "name": "International Conference on Artificial Intelligence and Data Mining (ICAIDM)",
+      "start_date": "2026-10-15",
+      "end_date": "2026-10-16",
+      "city": "Lisbon",
+      "state_province": "",
+      "country": "Portugal",
+      "venue": "Lisbon Congress Centre",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.icaidm.org/",
+      "tracks_themes": [
+        "AI Research",
+        "Data Mining",
+        "Machine Learning",
+        "Data Analytics",
+        "AI Applications"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "maybe",
+      "why_priority": "Academic conference with specialized focus on AI and data mining",
+      "source_urls": [
+        "https://example.com/lisbon_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:54.334623",
+      "size_profile": {
+        "tier": "focused",
+        "evidence": "Academic conference focusing on AI and data mining research and applications"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "89852e9c143f",
+      "name": "Gartner IT Symposium/Xpo 2026",
+      "start_date": "2026-10-19",
+      "end_date": "2026-10-23",
+      "city": "Orlando",
+      "state_province": "FL",
+      "country": "USA",
+      "venue": "Walt Disney World Swan and Dolphin Resort",
+      "region": "US",
+      "format": "live",
+      "site_url": "https://www.gartner.com/en/conferences/na/symposium-us",
+      "tracks_themes": [
+        "AI Strategy",
+        "Digital Transformation",
+        "IT Leadership",
+        "Automation",
+        "Enterprise AI"
+      ],
+      "audience_tag": "Business Leaders",
+      "priority": "go",
+      "why_priority": "Gartner's flagship IT conference with major AI and automation focus",
+      "source_urls": [
+        "https://example.com/gartner"
+      ],
+      "last_seen": "2025-08-29T15:14:50.970367",
+      "size_profile": {
+        "tier": "flagship",
+        "evidence": "Gartner's premier IT conference with extensive AI, automation, and digital transformation coverage"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "36d16a198f90",
+      "name": "Singapore FinTech Festival 2026",
+      "start_date": "2026-11-04",
+      "end_date": "2026-11-06",
+      "city": "Singapore",
+      "state_province": "",
+      "country": "Singapore",
+      "venue": "Singapore Expo",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.fintechfestival.sg/",
+      "tracks_themes": [
+        "FinTech AI",
+        "AI in Banking",
+        "Financial AI",
+        "RegTech",
+        "AI Trading"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "World's largest FinTech festival with major AI in finance coverage",
+      "source_urls": [
+        "https://example.com/singapore_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:58.209521",
+      "size_profile": {
+        "tier": "flagship",
+        "evidence": "World's largest FinTech festival with extensive AI in finance focus"
+      },
+      "emerging_flagship": false
+    },
+    {
+      "id": "39bd5cece268",
+      "name": "GITEX GLOBAL 2026",
+      "start_date": "2026-12-07",
+      "end_date": "2026-12-11",
+      "city": "Dubai",
+      "state_province": "",
+      "country": "UAE",
+      "venue": "Dubai Exhibition Centre, Expo City",
+      "region": "International",
+      "format": "live",
+      "site_url": "https://www.gitex.com/",
+      "tracks_themes": [
+        "AI Breakthroughs",
+        "Quantum Computing",
+        "Metaverse",
+        "Tech Innovation",
+        "Startups"
+      ],
+      "audience_tag": "Mixed Audience",
+      "priority": "go",
+      "why_priority": "World's largest tech event with major AI focus and global reach",
+      "source_urls": [
+        "https://example.com/dubai_ai"
+      ],
+      "last_seen": "2025-08-29T15:14:49.443931",
+      "size_profile": {
+        "tier": "flagship",
+        "evidence": "World's largest tech event with 5000+ exhibitors covering AI breakthroughs, quantum computing, and Metaverse"
+      },
+      "emerging_flagship": false
+    }
+  ]
+}

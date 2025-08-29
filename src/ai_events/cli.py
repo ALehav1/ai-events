@@ -5,91 +5,18 @@ from .report import render_html
 from .ics import write_ics
 from .score import apply_priority
 from .models import Event
-from ai_events.fetch.parsers import (
-    humanx, neurips, aiconf_sf, world_ai_summit, ray_summit, ai_summit_london, dotai,
-    dreamforce, gtc, aws_reinvent, microsoft_ignite, google_io, apple_wwdc, kubecon,
-    meta_connect, anthropic_code_with_claude, openai_devday, gartner, minor_events,
-    ai4_vegas, data_ai_summit, ai_summit_nyc, world_summit_ai, superai_singapore, 
-    deepfest_riyadh, ai_expo_africa, techcrunch_disrupt, ai_compute_nyc, odsc_west,
-    strata_data_ai, south_florida_ai, austin_ai, singapore_ai, london_ai, dubai_ai, 
-    los_angeles_ai, new_york_ai, lisbon_ai, openai_forum_events, caio_london,
-    caio_berlin, cdao_defense, responsible_ai_summit, caio_boston, caio_london_dec,
-    ai_finance_summit_london, finovatefall, ai_financial_services_conf,
-    genai_hyperautomation_finance, advise_ai, ft_future_of_ai, ai_for_finance_summit_paris,
-    ai_finance_summit_ny, maicon, ai_for_marketers_summit, genai_marketing_summit,
-    ai_for_agencies_summit, fintech_americas, dcd_connect_compute_ny)
+from .fetch.static_loader import load_static_events
 
 OUT_DIR = Path.cwd() / "dist"
 
 async def fetch_all():
     """Fetch events from all configured sources"""
-    events = []
-    for parser, url in [
-        (humanx, "https://www.humanx.co/"),
-        (aiconf_sf, "https://aiconference.com/"),
-        (neurips, "https://neurips.cc/"),
-        (world_ai_summit, "https://worldsummit.ai/"),
-        (ray_summit, "https://raysummit.anyscale.com/"),
-        (ai_summit_london, "https://london.theaisummit.com/"),
-        (dotai, "https://www.dotai.io/"),
-        (minor_events, "https://example.com/minor-events"),
-        (dreamforce, "https://www.salesforce.com/dreamforce/"),
-        (gtc, "https://www.nvidia.com/gtc/"),
-        (aws_reinvent, "https://reinvent.awsevents.com/"),
-        (ai_compute_nyc, "https://www.eventbrite.com/e/new-york-ai-conference-tickets-912664222257"),
-        (microsoft_ignite, "https://ignite.microsoft.com/"),
-        (google_io, "https://io.google/2025/"),
-        (apple_wwdc, "https://developer.apple.com/wwdc25/"),
-        (kubecon, "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/"),
-        (odsc_west, "https://odsc.com/california/"),
-        (meta_connect, "https://www.meta.com/connect/"),
-        (anthropic_code_with_claude, "https://www.anthropic.com/events/code-with-claude-2025"),
-        (openai_devday, "https://openai.com/index/announcing-devday-2025/"),
-        (strata_data_ai, "https://www.oreilly.com/conferences/strata-data-ai.html"),
-        (south_florida_ai, "https://www.southfloridaai.com/events"),
-        (austin_ai, "https://www.austinai.com/events"),
-        (gartner, "https://www.gartner.com/en/conferences"),
-        (singapore_ai, "https://www.singaporeai.com/events"),
-        (london_ai, "https://www.londonai.com/events"),
-        (dubai_ai, "https://www.dubaiaiweek.com/events"),
-        (los_angeles_ai, "https://www.laaiconference.com/events"),
-        (new_york_ai, "https://www.nyaiconference.com/events"),
-        (lisbon_ai, "https://www.lisbonai.com/events"),
-        (ai4_vegas, "https://ai4.io/vegas/"),
-        (data_ai_summit, "https://www.databricks.com/dataaisummit"),
-        (ai_summit_nyc, "https://newyork.theaisummit.com/"),
-        (world_summit_ai, "https://worldsummit.ai/"),
-        (superai_singapore, "https://www.superai.com/"),
-        (deepfest_riyadh, "https://deepfest.com"),
-        (ai_expo_africa, "https://aiexpoafrica.com/"),
-        (techcrunch_disrupt, "https://techcrunch.com/events/"),
-        (openai_forum_events, "https://forum.openai.com/public/events"),
-        (caio_london, "https://caio-london.re-work.co"),
-        (caio_berlin, "https://world.aiacceleratorinstitute.com/location/caioberlin"),
-        (cdao_defense, "https://cdao-def.coriniumintelligence.com/"),
-        (responsible_ai_summit, "https://www.aidataanalytics.network/events-responsible-ai-summit/"),
-        (caio_boston, "https://world.aiacceleratorinstitute.com/location/caioboston"),
-        (caio_london_dec, "https://world.aiacceleratorinstitute.com/location/caiolondon"),
-        (ai_finance_summit_london, "https://london-ai-finance.re-work.co/"),
-        (finovatefall, "https://informaconnect.com/finovatefall/"),
-        (ai_financial_services_conf, "https://www.arena-international.com/event/aifs/"),
-        (genai_hyperautomation_finance, "https://kinfos.events/haf/"),
-        (advise_ai, "https://conference.financial-planning.com/event/advise-ai/summary"),
-        (ft_future_of_ai, "https://ai.live.ft.com/"),
-        (ai_for_finance_summit_paris, "https://aiforfinance.artefact.com/"),
-        (ai_finance_summit_ny, "https://ny-ai-finance.re-work.co/"),
-        (maicon, "https://www.marketingaiinstitute.com/events/marketing-artificial-intelligence-conference"),
-        (ai_for_marketers_summit, "https://artificialintelligencesummit.com/"),
-        (genai_marketing_summit, "https://www.aidataanalytics.network/events-generative-ai-for-marketing"),
-        (ai_for_agencies_summit, "https://www.marketingaiinstitute.com/events/ai-for-agencies-summit"),
-        (fintech_americas, "https://www.fintechamericas.co/en/conferencia-miami-agenda"),
-        (dcd_connect_compute_ny, "https://www.datacenterdynamics.com/en/dcdconnect-compute/new-york/2026/"),
-    ]:
-        try:
-            events.extend(await parser.parse(url))
-        except Exception as e:
-            print(f"Error fetching from {url}: {e}")
+    # Load events from static JSON file
+    events = load_static_events()
     
+    print(f"Loaded {len(events)} events from static_events.json")
+    
+    # Apply priority and save to database
     for ev in events:
         apply_priority(ev)
         upsert_event(ev)

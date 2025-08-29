@@ -22,7 +22,7 @@ ai-events/
 │   └── com.ai.events.weekly.plist   # Weekly automation config
 ├── src/ai_events/
 │   ├── __init__.py                   # Package initialization
-│   ├── cli.py                        # Command-line interface
+│   ├── cli.py                        # Command-line interface (updated for JSON)
 │   ├── config.py                     # Configuration settings
 │   ├── db.py                         # SQLite database operations
 │   ├── models.py                     # Pydantic data models
@@ -31,16 +31,14 @@ ai-events/
 │   ├── score.py                      # Event scoring and prioritization
 │   ├── report.py                     # HTML report generation
 │   ├── ics.py                        # Calendar file generation
+│   ├── static_events.json            # Consolidated event data (76 events)
 │   ├── fetch/
 │   │   ├── __init__.py
 │   │   ├── base.py                   # Base fetching functionality
+│   │   ├── static_loader.py          # JSON event loader (NEW)
 │   │   ├── rules.yml                 # Source configuration
 │   │   └── parsers/
-│   │       ├── __init__.py
-│   │       ├── generic.py            # Generic parser template
-│   │       ├── humanx.py             # HumanX conference parser
-│   │       ├── aiconf_sf.py          # AI Conference SF parser
-│   │       └── neurips.py            # NeurIPS parser
+│   │       └── __init__.py           # Legacy directory (parsers removed)
 │   └── templates/
 │       └── report.html.j2            # HTML report template
 └── dist/                             # Generated reports (created at runtime)

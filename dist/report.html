@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Events Report - 2025-08-27 21:29</title>
+    <title>AI Events Report - 2025-08-29 11:20</title>
     <style>
         * {
             margin: 0;
@@ -512,16 +512,20 @@
         .stat-card {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 30px 40px;
-            border-radius: 16px;
+            padding: 20px 30px;
+            border-radius: 12px;
             text-align: center;
             transition: all 0.3s ease;
             cursor: pointer;
             text-decoration: none;
             box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
-            width: 280px;
+            width: 220px;
+            min-height: 140px;
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         
         .stat-card::before {
@@ -555,27 +559,38 @@
         }
         
         .stat-number {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 800;
             color: white;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         .stat-label {
             color: rgba(255,255,255,0.9);
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            line-height: 1.2;
+            white-space: nowrap;
         }
         
         .stat-breakdown {
-            color: rgba(255,255,255,0.8);
-            font-size: 0.9rem;
-            line-height: 1.3;
+            color: rgba(255,255,255,0.85);
+            font-size: 0.85rem;
+            line-height: 1.5;
             font-weight: 500;
+        }
+        
+        .stat-breakdown-line {
+            margin: 2px 0;
+        }
+        
+        .stat-breakdown-emphasis {
+            font-weight: 700;
+            color: rgba(255,255,255,0.95);
         }
         
         @media (max-width: 768px) {
@@ -598,12 +613,12 @@
             }
             
             .stat-card {
-                width: 280px;
-                padding: 25px 30px;
+                width: 260px;
+                padding: 20px 25px;
             }
             
             .stat-number {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
             
             .stat-label {
@@ -645,7 +660,7 @@
     <div class="container">
         <div class="header">
             <h1>AI Events Report</h1>
-            <p>Through December 2026 • Generated 2025-08-27 21:29</p>
+            <p>Through December 2026 • Generated 2025-08-29 11:20</p>
         </div>
         
         <div class="content">
@@ -667,23 +682,25 @@
             <!-- Statistics -->
             <div class="stats">
                 <a href="#us-events" class="stat-card">
-                    <div class="stat-number" id="usEventCount" data-total="76">76</div>
+                    <div class="stat-number" id="usEventCount" data-total="99">61</div>
                     <div class="stat-label">US Events</div>
                     <div class="stat-breakdown" id="usEventBreakdown" 
-                        data-flagship="19" 
-                        data-major="28" 
-                        data-other="29">
-                        19 flagship, 28 major, 29 other
+                        data-flagship="23" 
+                        data-major="38" 
+                        data-other="38">
+                        <div class="stat-breakdown-line"><span class="stat-breakdown-emphasis">23</span> Flagship + <span class="stat-breakdown-emphasis">38</span> Major</div>
+                        <div class="stat-breakdown-line">(plus 38 other)</div>
                     </div>
                 </a>
                 <a href="#intl-events" class="stat-card">
-                    <div class="stat-number" id="intlEventCount" data-total="57">57</div>
-                    <div class="stat-label">International Events</div>
+                    <div class="stat-number" id="intlEventCount" data-total="79">49</div>
+                    <div class="stat-label">Intl Events</div>
                     <div class="stat-breakdown" id="intlEventBreakdown" 
-                        data-flagship="11" 
-                        data-major="24" 
-                        data-other="22">
-                        11 flagship, 24 major, 22 other
+                        data-flagship="15" 
+                        data-major="34" 
+                        data-other="30">
+                        <div class="stat-breakdown-line"><span class="stat-breakdown-emphasis">15</span> Flagship + <span class="stat-breakdown-emphasis">34</span> Major</div>
+                        <div class="stat-breakdown-line">(plus 30 other)</div>
                     </div>
                 </a>
             </div>
@@ -1146,6 +1163,41 @@
                     
                     
                     
+                    <div class="event-card priority-maybe" data-city="Austin" data-tags="Major|Mixed Audience|Live|Big Data|Data Science|Machine Learning">
+                        <div class="event-header">
+                            <div class="event-title">Data Day Texas +AI 2026</div>
+                            <div class="event-date">2026-01-24 - 2026-01-24</div>
+                            <div class="event-location">📍 Austin, TX</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">Big Data</span>
+                                
+                                <span class="tag">Data Science</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.datadaytexas.com/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
                     <div class="event-card priority-maybe" data-city="Miami" data-tags="Major|Mixed Audience|Live|Agentic AI|AI Transformation|Business Innovation">
                         <div class="event-header">
                             <div class="event-title">Business Transformation World Summit 2026</div>
@@ -1209,6 +1261,76 @@
                         <div class="event-footer">
                             <div class="event-links">
                                 <a href="https://www.aimlconference.com/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="event-card priority-maybe" data-city="Austin" data-tags="Major|Mixed Audience|Live|Artificial Intelligence|Machine Learning|Deep Learning">
+                        <div class="event-header">
+                            <div class="event-title">2026 AI/ML Conference</div>
+                            <div class="event-date">2026-02-01 - 2026-02-01</div>
+                            <div class="event-location">📍 Austin, TX</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">Artificial Intelligence</span>
+                                
+                                <span class="tag">Machine Learning</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.aimlconference.com/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="event-card priority-maybe" data-city="Austin" data-tags="Major|Mixed Audience|Live|Digital Transformation|IT Infrastructure|Cloud Computing">
+                        <div class="event-header">
+                            <div class="event-title">Digital Transformation Expo Global 2026</div>
+                            <div class="event-date">2026-02-04 - 2026-02-04</div>
+                            <div class="event-location">📍 Austin, TX</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">Digital Transformation</span>
+                                
+                                <span class="tag">IT Infrastructure</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.digitaltransformationexpo.com/" class="btn btn-primary" target="_blank">Visit Site</a>
                                 
                             </div>
                         </div>
@@ -1321,6 +1443,45 @@
                     
                     
                     
+                    <div class="event-card priority-maybe" data-city="Austin" data-tags="Major|Mixed Audience|Live|Generative AI|AI Applications|AI Infrastructure">
+                        <div class="event-header">
+                            <div class="event-title">Generative AI Summit Austin</div>
+                            <div class="event-date">2026-02-11 - 2026-02-11</div>
+                            <div class="event-location">📍 Austin, TX</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">Generative AI</span>
+                                
+                                <span class="tag">AI Applications</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.generativeaisummit.com/austin/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -1364,7 +1525,81 @@
                     
                     
                     
+                    <div class="event-card priority-maybe" data-city="Los Angeles" data-tags="Major|Mixed Audience|Live|Healthcare AI|Digital Health|Medical AI">
+                        <div class="event-header">
+                            <div class="event-title">ViVE Event 2026 - AI Zone</div>
+                            <div class="event-date">2026-03-10 - 2026-03-12</div>
+                            <div class="event-location">📍 Los Angeles, CA</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">Healthcare AI</span>
+                                
+                                <span class="tag">Digital Health</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.viveevent.com/ai-pavilion" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div class="event-card priority-maybe" data-city="Los Angeles" data-tags="Major|Mixed Audience|Live|Generative AI|AI Engineering|AI Development">
+                        <div class="event-header">
+                            <div class="event-title">Generative AI Summit Los Angeles 2026</div>
+                            <div class="event-date">2026-03-15 - 2026-03-15</div>
+                            <div class="event-location">📍 Los Angeles, CA</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">Generative AI</span>
+                                
+                                <span class="tag">AI Engineering</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://world.aiacceleratorinstitute.com/location/losangeles/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
                     
                     
                     
@@ -1510,6 +1745,8 @@
                     
                     
                     
+                    
+                    
                     <div class="event-card priority-go" data-city="Orlando" data-tags="Flagship|Business Leaders|Live|Data Analytics|Machine Learning|Advanced Analytics">
                         <div class="event-header">
                             <div class="event-title">Gartner Data & Analytics Summit 2026</div>
@@ -1538,6 +1775,76 @@
                         <div class="event-footer">
                             <div class="event-links">
                                 <a href="https://www.gartner.com/en/conferences/na/data-analytics-us" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="event-card priority-go" data-city="Orlando" data-tags="Flagship|Business Leaders|Live|Data Analytics|Machine Learning|Advanced Analytics">
+                        <div class="event-header">
+                            <div class="event-title">Gartner Data & Analytics Summit 2026</div>
+                            <div class="event-date">2026-03-23 - 2026-03-25</div>
+                            <div class="event-location">📍 Orlando, FL</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-flagship">Flagship</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Business Leaders</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">Data Analytics</span>
+                                
+                                <span class="tag">Machine Learning</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.gartner.com/en/conferences/na/data-analytics-us" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="event-card priority-maybe" data-city="New York" data-tags="Major|Mixed Audience|Live|Generative AI|AI Governance|Generative Agents">
+                        <div class="event-header">
+                            <div class="event-title">Gen AI Conference 2026</div>
+                            <div class="event-date">2026-03-23 - 2026-03-23</div>
+                            <div class="event-location">📍 New York, NY</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">Generative AI</span>
+                                
+                                <span class="tag">AI Governance</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.genaiconference.com/" class="btn btn-primary" target="_blank">Visit Site</a>
                                 
                             </div>
                         </div>
@@ -1656,6 +1963,43 @@
                     
                     
                     
+                    
+                    
+                    <div class="event-card priority-maybe" data-city="Austin" data-tags="Major|Mixed Audience|Live|Big Data|Data Science|Machine Learning">
+                        <div class="event-header">
+                            <div class="event-title">World Tech Summit on Big Data, Data Science & Machine Learning</div>
+                            <div class="event-date">2026-04-13 - 2026-04-13</div>
+                            <div class="event-location">📍 Austin, TX</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">Big Data</span>
+                                
+                                <span class="tag">Data Science</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.worldtechsummit.com/austin/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
                     <div class="event-card priority-maybe" data-city="Austin" data-tags="Major|Mixed Audience|Live|Big Data|Data Science|Machine Learning">
                         <div class="event-header">
                             <div class="event-title">World Tech Summit on Big Data, Data Science & Machine Learning</div>
@@ -1697,6 +2041,10 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                     <div class="event-card priority-maybe" data-city="New York" data-tags="Major|Mixed Audience|Live|AI in Finance|Banking AI|Insurance AI">
                         <div class="event-header">
                             <div class="event-title">AI Summit NYC 2026</div>
@@ -1725,6 +2073,76 @@
                         <div class="event-footer">
                             <div class="event-links">
                                 <a href="https://www.aisummitnyc.com/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="event-card priority-maybe" data-city="New York" data-tags="Major|Mixed Audience|Live|AI in Finance|Banking AI|Insurance AI">
+                        <div class="event-header">
+                            <div class="event-title">AI Summit NYC 2026</div>
+                            <div class="event-date">2026-05-19 - 2026-05-19</div>
+                            <div class="event-location">📍 New York, NY</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">AI in Finance</span>
+                                
+                                <span class="tag">Banking AI</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.aisummitnyc.com/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="event-card priority-go" data-city="Los Angeles" data-tags="Flagship|Mixed Audience|Live|AI for Good|Social Impact AI|Global Challenges">
+                        <div class="event-header">
+                            <div class="event-title">AI for Good Global Summit 2026</div>
+                            <div class="event-date">2026-05-20 - 2026-05-22</div>
+                            <div class="event-location">📍 Los Angeles, CA</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-flagship">Flagship</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">AI for Good</span>
+                                
+                                <span class="tag">Social Impact AI</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://aiforgood.itu.int/summit26" class="btn btn-primary" target="_blank">Visit Site</a>
                                 
                             </div>
                         </div>
@@ -1909,6 +2327,43 @@
                     
                     
                     
+                    
+                    
+                    <div class="event-card priority-go" data-city="New York" data-tags="Flagship|Mixed Audience|Live|Cloud AI|Generative AI|AWS AI Services">
+                        <div class="event-header">
+                            <div class="event-title">AWS Summit New York 2026</div>
+                            <div class="event-date">2026-06-17 - 2026-06-17</div>
+                            <div class="event-location">📍 New York, NY</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-flagship">Flagship</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">Cloud AI</span>
+                                
+                                <span class="tag">Generative AI</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://aws.amazon.com/events/summits/new-york/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
                     <div class="event-card priority-go" data-city="New York" data-tags="Flagship|Mixed Audience|Live|Cloud AI|Generative AI|AWS AI Services">
                         <div class="event-header">
                             <div class="event-title">AWS Summit New York 2026</div>
@@ -1972,6 +2427,41 @@
                         <div class="event-footer">
                             <div class="event-links">
                                 <a href="https://www.meta.com/blog/connect-2025-llamacon-save-the-date/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="event-card priority-maybe" data-city="National Harbor" data-tags="Major|Business Leaders|Live|AI Security|Risk Management|Cybersecurity">
+                        <div class="event-header">
+                            <div class="event-title">Gartner Security & Risk Management Summit 2026</div>
+                            <div class="event-date">2026-09-08 - 2026-09-10</div>
+                            <div class="event-location">📍 National Harbor, MD</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Business Leaders</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">AI Security</span>
+                                
+                                <span class="tag">Risk Management</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.gartner.com/en/conferences/na/security-risk-management-us" class="btn btn-primary" target="_blank">Visit Site</a>
                                 
                             </div>
                         </div>
@@ -2147,6 +2637,41 @@
                         <div class="event-footer">
                             <div class="event-links">
                                 <a href="https://www.salesforce.com/dreamforce/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="event-card priority-go" data-city="Orlando" data-tags="Flagship|Business Leaders|Live|AI Strategy|Digital Transformation|IT Leadership">
+                        <div class="event-header">
+                            <div class="event-title">Gartner IT Symposium/Xpo 2026</div>
+                            <div class="event-date">2026-10-19 - 2026-10-23</div>
+                            <div class="event-location">📍 Orlando, FL</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-flagship">Flagship</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Business Leaders</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">AI Strategy</span>
+                                
+                                <span class="tag">Digital Transformation</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.gartner.com/en/conferences/na/symposium-us" class="btn btn-primary" target="_blank">Visit Site</a>
                                 
                             </div>
                         </div>
@@ -2402,7 +2927,7 @@
                     <!-- Minor Events Tile -->
                     
                     <div class="event-card minor-events" data-city="Multiple" data-tags="Other">
-                        <div class="event-title">📋 Other US Events (29)</div>
+                        <div class="event-title">📋 Other US Events (38)</div>
                         <div class="minor-events-list">
                             
                             <div class="minor-event-item" data-city="Virtual" data-tags="Focused Virtual Future of Work AI Impact Employment">
@@ -2533,11 +3058,27 @@
                                 
                             </div>
                             
+                            <div class="minor-event-item" data-city="Austin" data-tags="Focused Live Sales Enablement Revenue Operations Sales AI">
+                                <a href="https://www.salesenablementsummit.com/austin/" target="_blank" class="minor-event-link">Sales Enablement Summit Austin 2026</a>
+                                <div class="minor-event-date">2026-02-11 • Austin, TX</div>
+                                
+                                <div class="minor-event-organizer">Organizer: salesenablementsummit.com/austin/</div>
+                                
+                            </div>
+                            
                             <div class="minor-event-item" data-city="Miami" data-tags="Focused Live Startup AI AI Innovation Entrepreneurship">
                                 <a href="https://www.miamistartupconference.com/" target="_blank" class="minor-event-link">Miami Startup Ecosystem Conference 2026</a>
                                 <div class="minor-event-date">2026-02-12 • Miami, FL</div>
                                 
                                 <div class="minor-event-organizer">Organizer: miamistartupconference.com/</div>
+                                
+                            </div>
+                            
+                            <div class="minor-event-item" data-city="Austin" data-tags="Focused Live Generative AI Machine Learning Predictive Analytics">
+                                <a href="https://www.datascience-salon.com/austin/" target="_blank" class="minor-event-link">Data Science Salon ATX 2026</a>
+                                <div class="minor-event-date">2026-02-18 • Austin, TX</div>
+                                
+                                <div class="minor-event-organizer">Organizer: datascience-salon.com/austin/</div>
                                 
                             </div>
                             
@@ -2565,6 +3106,22 @@
                                 
                             </div>
                             
+                            <div class="minor-event-item" data-city="Los Angeles" data-tags="Focused Live AI Communications Marketing AI Communication Tools">
+                                <a href="https://www.thepworld.com/event/ai-in-communications-bootcamp/" target="_blank" class="minor-event-link">AI in Communications Boot Camp - West Coast</a>
+                                <div class="minor-event-date">2026-03-12 • Los Angeles, CA</div>
+                                
+                                <div class="minor-event-organizer">Organizer: thepworld.com/event/ai-in-communications-bootcamp/</div>
+                                
+                            </div>
+                            
+                            <div class="minor-event-item" data-city="New York" data-tags="Focused Live AI Trends AI Research AI Applications">
+                                <a href="https://prompt.nyc/" target="_blank" class="minor-event-link">PROMPT NYC AI Conference 2026</a>
+                                <div class="minor-event-date">2026-03-14 • New York, NY</div>
+                                
+                                <div class="minor-event-organizer">Organizer: prompt.nyc/</div>
+                                
+                            </div>
+                            
                             <div class="minor-event-item" data-city="New York" data-tags="Focused Live AI Trends AI Research AI Applications">
                                 <a href="https://prompt.nyc/" target="_blank" class="minor-event-link">PROMPT NYC AI Conference 2026</a>
                                 <div class="minor-event-date">2026-03-14 • New York, NY</div>
@@ -2581,11 +3138,27 @@
                                 
                             </div>
                             
+                            <div class="minor-event-item" data-city="Los Angeles" data-tags="Focused Live AI in Management Machine Learning Business AI">
+                                <a href="https://sites.google.com/view/aimanagement/" target="_blank" class="minor-event-link">AIM Conference - Artificial Intelligence in Management</a>
+                                <div class="minor-event-date">2026-03-20 • Los Angeles, CA</div>
+                                
+                                <div class="minor-event-organizer">Organizer: sites.google.com/view/aimanagement/</div>
+                                
+                            </div>
+                            
                             <div class="minor-event-item" data-city="Boca Raton" data-tags="Focused Live AI Philosophy Psychology Neuroscience">
                                 <a href="https://www.fau.edu/future-mind/mindfest/" target="_blank" class="minor-event-link">MindFest 2026</a>
                                 <div class="minor-event-date">2026-04-01 • Boca Raton, FL</div>
                                 
                                 <div class="minor-event-organizer">Organizer: fau.edu/future-mind/mindfest/</div>
+                                
+                            </div>
+                            
+                            <div class="minor-event-item" data-city="New York" data-tags="Focused Live AI in Biotech Data Science Machine Learning">
+                                <a href="https://publichealth.nyu.edu/department/biostatistics/seminars-events" target="_blank" class="minor-event-link">AI, Data Science & Biotechnology Conference 2026</a>
+                                <div class="minor-event-date">2026-04-11 • New York, NY</div>
+                                
+                                <div class="minor-event-organizer">Organizer: publichealth.nyu.edu/department/biostatistics/seminars-events</div>
                                 
                             </div>
                             
@@ -2621,11 +3194,35 @@
                                 
                             </div>
                             
+                            <div class="minor-event-item" data-city="Austin" data-tags="Focused Live B2B Technology AI Strategies Business Technology">
+                                <a href="https://www.b2bsummit.com/" target="_blank" class="minor-event-link">B2B Summit North America</a>
+                                <div class="minor-event-date">2026-04-26 • Austin, TX</div>
+                                
+                                <div class="minor-event-organizer">Organizer: b2bsummit.com/</div>
+                                
+                            </div>
+                            
                             <div class="minor-event-item" data-city="New York" data-tags="Focused Live Sports AI Data Analytics Athlete Performance">
                                 <a href="https://www.aisports.com/" target="_blank" class="minor-event-link">AI Sports 2026</a>
                                 <div class="minor-event-date">2026-05-19 • New York, NY</div>
                                 
                                 <div class="minor-event-organizer">Organizer: aisports.com/</div>
+                                
+                            </div>
+                            
+                            <div class="minor-event-item" data-city="New York" data-tags="Focused Live Sports AI Data Analytics Athlete Performance">
+                                <a href="https://www.aisports.com/" target="_blank" class="minor-event-link">AI Sports 2026</a>
+                                <div class="minor-event-date">2026-05-19 • New York, NY</div>
+                                
+                                <div class="minor-event-organizer">Organizer: aisports.com/</div>
+                                
+                            </div>
+                            
+                            <div class="minor-event-item" data-city="Austin" data-tags="Focused Live AEC Industry Construction AI Architecture AI">
+                                <a href="https://www.aecinnovate.com/" target="_blank" class="minor-event-link">AEC INNOVATE</a>
+                                <div class="minor-event-date">2026-06-16 • Austin, TX</div>
+                                
+                                <div class="minor-event-organizer">Organizer: aecinnovate.com/</div>
                                 
                             </div>
                             
@@ -3031,6 +3628,8 @@
                     
                     
                     
+                    
+                    
                     <div class="event-card priority-maybe" data-city="London" data-tags="Major|Mixed Audience|Live|Big Data|Machine Learning|NLP">
                         <div class="event-header">
                             <div class="event-title">AI & Big Data Expo Global</div>
@@ -3065,6 +3664,76 @@
                     </div>
                     
                     
+                    
+                    <div class="event-card priority-maybe" data-city="London" data-tags="Major|Mixed Audience|Live|Big Data|Machine Learning|NLP">
+                        <div class="event-header">
+                            <div class="event-title">AI & Big Data Expo Global</div>
+                            <div class="event-date">2026-02-04 - 2026-02-05</div>
+                            <div class="event-location">📍 London, UK</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">Big Data</span>
+                                
+                                <span class="tag">Machine Learning</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.ai-expo.net/global/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div class="event-card priority-maybe" data-city="Dubai" data-tags="Major|Live|AI & Blockchain|Healthcare AI|Education AI">
+                        <div class="event-header">
+                            <div class="event-title">AIBC Eurasia 2026</div>
+                            <div class="event-date">2026-02-10 - 2026-02-12</div>
+                            <div class="event-location">📍 Dubai, UAE</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">AI & Blockchain</span>
+                                
+                                <span class="tag">Healthcare AI</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.aibcworld.com/eurasia/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
                     
                     
                     
@@ -3107,6 +3776,10 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                     <div class="event-card priority-maybe" data-city="London" data-tags="Major|Business Leaders|Live|AI Strategy|Enterprise AI|AI Governance">
                         <div class="event-header">
                             <div class="event-title">Chief AI Officer Summit UK</div>
@@ -3135,6 +3808,43 @@
                         <div class="event-footer">
                             <div class="event-links">
                                 <a href="https://caio-london.re-work.co/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    <div class="event-card priority-go" data-city="Singapore" data-tags="Flagship|Mixed Audience|Live|AI Research|AI Applications|AI Policy">
+                        <div class="event-header">
+                            <div class="event-title">AI Singapore Summit 2026</div>
+                            <div class="event-date">2026-03-18 - 2026-03-19</div>
+                            <div class="event-location">📍 Singapore, Singapore</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-flagship">Flagship</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">AI Research</span>
+                                
+                                <span class="tag">AI Applications</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.aisingapore.org/summit/" class="btn btn-primary" target="_blank">Visit Site</a>
                                 
                             </div>
                         </div>
@@ -3209,6 +3919,43 @@
                             </div>
                         </div>
                     </div>
+                    
+                    
+                    
+                    <div class="event-card priority-maybe" data-city="London" data-tags="Major|Mixed Audience|Live|AI Governance|Data Governance|Master Data Management">
+                        <div class="event-header">
+                            <div class="event-title">Data & AI Governance Conference Europe</div>
+                            <div class="event-date">2026-03-23 - 2026-03-26</div>
+                            <div class="event-location">📍 London, UK</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">AI Governance</span>
+                                
+                                <span class="tag">Data Governance</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.irmuk.co.uk/data-ai-governance/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
                     
                     
                     
@@ -3317,6 +4064,39 @@
                     
                     
                     
+                    <div class="event-card priority-maybe" data-city="Dubai" data-tags="Major|Live|AI Innovation|AI Investment|Ethical AI">
+                        <div class="event-header">
+                            <div class="event-title">Dubai AI Festival 2026</div>
+                            <div class="event-date">2026-04-14 - 2026-04-14</div>
+                            <div class="event-location">📍 Dubai, UAE</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">AI Innovation</span>
+                                
+                                <span class="tag">AI Investment</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.dubaiaifestival.com/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
                     <div class="event-card priority-maybe" data-city="Lisbon" data-tags="Major|Mixed Audience|Live|Artificial Intelligence|Machine Learning|Robotics">
                         <div class="event-header">
                             <div class="event-title">AIMLR2026 - International Conference on Artificial Intelligence, Machine Learning, and Robotics</div>
@@ -3351,6 +4131,78 @@
                     </div>
                     
                     
+                    
+                    <div class="event-card priority-maybe" data-city="Lisbon" data-tags="Major|Mixed Audience|Live|Artificial Intelligence|Machine Learning|Robotics">
+                        <div class="event-header">
+                            <div class="event-title">AIMLR2026 - International Conference on Artificial Intelligence, Machine Learning, and Robotics</div>
+                            <div class="event-date">2026-04-16 - 2026-04-18</div>
+                            <div class="event-location">📍 Lisbon, Portugal</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">Artificial Intelligence</span>
+                                
+                                <span class="tag">Machine Learning</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.aimlr-conference.com/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div class="event-card priority-maybe" data-city="London" data-tags="Major|Business Leaders|Live|Digital Workplace|AI Productivity|Workplace Automation">
+                        <div class="event-header">
+                            <div class="event-title">Gartner Digital Workplace Summit 2026</div>
+                            <div class="event-date">2026-05-12 - 2026-05-13</div>
+                            <div class="event-location">📍 London, UK</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Business Leaders</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">Digital Workplace</span>
+                                
+                                <span class="tag">AI Productivity</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.gartner.com/en/conferences/emea/digital-workplace-uk" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
                     
                     
                     
@@ -3424,6 +4276,41 @@
                     
                     
                     
+                    <div class="event-card priority-maybe" data-city="Singapore" data-tags="Major|Mixed Audience|Live|AI Startups|Southeast Asia Tech|AI Investment">
+                        <div class="event-header">
+                            <div class="event-title">Tech in Asia Conference 2026</div>
+                            <div class="event-date">2026-05-14 - 2026-05-15</div>
+                            <div class="event-location">📍 Singapore, Singapore</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">AI Startups</span>
+                                
+                                <span class="tag">Southeast Asia Tech</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.techinasia.com/conference/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
                     <div class="event-card priority-maybe" data-city="Taipei" data-tags="Major|Tech Leaders|Live|GPU Computing|AI Infrastructure|Manufacturing AI">
                         <div class="event-header">
                             <div class="event-title">NVIDIA GTC Taipei</div>
@@ -3452,6 +4339,41 @@
                         <div class="event-footer">
                             <div class="event-links">
                                 <a href="https://www.nvidia.com/gtc/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="event-card priority-go" data-city="London" data-tags="Flagship|Business Leaders|Live|Artificial Intelligence|Data Science|Machine Learning">
+                        <div class="event-header">
+                            <div class="event-title">Gartner AI & Data Science Summit 2026</div>
+                            <div class="event-date">2026-06-08 - 2026-06-10</div>
+                            <div class="event-location">📍 London, UK</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-flagship">Flagship</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Business Leaders</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">Artificial Intelligence</span>
+                                
+                                <span class="tag">Data Science</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.gartner.com/en/conferences/emea/ai-data-science-uk" class="btn btn-primary" target="_blank">Visit Site</a>
                                 
                             </div>
                         </div>
@@ -3634,6 +4556,41 @@
                     
                     
                     
+                    <div class="event-card priority-maybe" data-city="London" data-tags="Major|Mixed Audience|Live|AI Technology|AI Science|Industry AI">
+                        <div class="event-header">
+                            <div class="event-title">Global AI Conference</div>
+                            <div class="event-date">2026-06-29 - 2026-06-30</div>
+                            <div class="event-location">📍 London, UK</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">AI Technology</span>
+                                
+                                <span class="tag">AI Science</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.rcr-ai-conference.com/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
                     <div class="event-card priority-maybe" data-city="Singapore" data-tags="Major|Mixed Audience|Live|AI Innovation|Tech Leadership|Startup AI">
                         <div class="event-header">
                             <div class="event-title">RISE Conference 2026</div>
@@ -3662,6 +4619,76 @@
                         <div class="event-footer">
                             <div class="event-links">
                                 <a href="https://www.riseconf.com/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="event-card priority-maybe" data-city="Singapore" data-tags="Major|Mixed Audience|Live|AI Innovation|Tech Leadership|Startup AI">
+                        <div class="event-header">
+                            <div class="event-title">RISE Conference 2026</div>
+                            <div class="event-date">2026-07-15 - 2026-07-17</div>
+                            <div class="event-location">📍 Singapore, Singapore</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">AI Innovation</span>
+                                
+                                <span class="tag">Tech Leadership</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.riseconf.com/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="event-card priority-maybe" data-city="Singapore" data-tags="Major|Mixed Audience|Live|Enterprise AI|AI Implementation|AI Strategy">
+                        <div class="event-header">
+                            <div class="event-title">AI World Singapore 2026</div>
+                            <div class="event-date">2026-09-23 - 2026-09-24</div>
+                            <div class="event-location">📍 Singapore, Singapore</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-major">Major</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">Enterprise AI</span>
+                                
+                                <span class="tag">AI Implementation</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.aiworld.sg/" class="btn btn-primary" target="_blank">Visit Site</a>
                                 
                             </div>
                         </div>
@@ -3738,6 +4765,43 @@
                     </div>
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    <div class="event-card priority-go" data-city="Singapore" data-tags="Flagship|Mixed Audience|Live|FinTech AI|AI in Banking|Financial AI">
+                        <div class="event-header">
+                            <div class="event-title">Singapore FinTech Festival 2026</div>
+                            <div class="event-date">2026-11-04 - 2026-11-06</div>
+                            <div class="event-location">📍 Singapore, Singapore</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-flagship">Flagship</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">FinTech AI</span>
+                                
+                                <span class="tag">AI in Banking</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.fintechfestival.sg/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
                     
                     
                     
@@ -3881,6 +4945,41 @@
                     
                     
                     
+                    <div class="event-card priority-go" data-city="Dubai" data-tags="Flagship|Mixed Audience|Live|AI Breakthroughs|Quantum Computing|Metaverse">
+                        <div class="event-header">
+                            <div class="event-title">GITEX GLOBAL 2026</div>
+                            <div class="event-date">2026-12-07 - 2026-12-11</div>
+                            <div class="event-location">📍 Dubai, UAE</div>
+                        </div>
+                        
+                        <div class="event-content">
+                            <div class="event-tags">
+                                
+                                <span class="tag tier-flagship">Flagship</span>
+                                
+                                
+                                
+                                <span class="tag audience-tag">Mixed Audience</span>
+                                
+                                <span class="tag">Live</span>
+                                
+                                <span class="tag">AI Breakthroughs</span>
+                                
+                                <span class="tag">Quantum Computing</span>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="event-footer">
+                            <div class="event-links">
+                                <a href="https://www.gitex.com/" class="btn btn-primary" target="_blank">Visit Site</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
                     <div class="event-card priority-go" data-city="Doha" data-tags="Flagship|Business Leaders|Live|Middle East AI|Government AI|Digital Transformation">
                         <div class="event-header">
                             <div class="event-title">World AI Summit Doha</div>
@@ -3919,7 +5018,7 @@
                     <!-- Minor Events Tile -->
                     
                     <div class="event-card minor-events" data-city="Multiple" data-tags="Other">
-                        <div class="event-title">📋 Other International Events (22)</div>
+                        <div class="event-title">📋 Other International Events (30)</div>
                         <div class="minor-events-list">
                             
                             <div class="minor-event-item" data-city="London" data-tags="Focused Live AI in Finance Machine Learning Fraud Detection">
@@ -4034,11 +5133,27 @@
                                 
                             </div>
                             
+                            <div class="minor-event-item" data-city="Dubai" data-tags="Focused Live Energy AI Decarbonization Energy Efficiency">
+                                <a href="https://www.iptcnet.org/ai-summit/" target="_blank" class="minor-event-link">IPTC Summit on AI for the Energy Industry 2026</a>
+                                <div class="minor-event-date">2026-01-13 • Dubai, UAE</div>
+                                
+                                <div class="minor-event-organizer">Organizer: iptcnet.org/ai-summit/</div>
+                                
+                            </div>
+                            
                             <div class="minor-event-item" data-city="Virtual" data-tags="Focused Virtual AI for Agencies Agency Growth AI Tools">
                                 <a href="https://www.marketingaiinstitute.com/events/ai-for-agencies-summit" target="_blank" class="minor-event-link">AI for Agencies Summit</a>
                                 <div class="minor-event-date">2026-02-01 • Virtual, Online</div>
                                 
                                 <div class="minor-event-organizer">Organizer: marketingaiinstitute.com/events/ai-for-agencies-summit</div>
+                                
+                            </div>
+                            
+                            <div class="minor-event-item" data-city="Dubai" data-tags="Focused Live Agentic AI Sustainability Information Systems">
+                                <a href="https://www.uowdubai.ac.ae/isdia/" target="_blank" class="minor-event-link">Information System Design & Intelligent Applications (ISDIA) 2026</a>
+                                <div class="minor-event-date">2026-02-07 • Dubai, UAE</div>
+                                
+                                <div class="minor-event-organizer">Organizer: uowdubai.ac.ae/isdia/</div>
                                 
                             </div>
                             
@@ -4058,11 +5173,35 @@
                                 
                             </div>
                             
+                            <div class="minor-event-item" data-city="Dubai" data-tags="Focused Live AI in Finance FinTech AI Blockchain">
+                                <a href="https://www.finext.ae/" target="_blank" class="minor-event-link">FiNext Awards & Conference Dubai 2026</a>
+                                <div class="minor-event-date">2026-02-10 • Dubai, UAE</div>
+                                
+                                <div class="minor-event-organizer">Organizer: finext.ae/</div>
+                                
+                            </div>
+                            
                             <div class="minor-event-item" data-city="Dubai" data-tags="Focused Live AI Research Data Science Analytics">
                                 <a href="https://www.aidata-conference.com/" target="_blank" class="minor-event-link">2nd International Conference on Artificial Intelligence & Data Science 2026</a>
                                 <div class="minor-event-date">2026-02-12 • Dubai, UAE</div>
                                 
                                 <div class="minor-event-organizer">Organizer: aidata-conference.com/</div>
+                                
+                            </div>
+                            
+                            <div class="minor-event-item" data-city="Dubai" data-tags="Focused Live AI Research Data Science Analytics">
+                                <a href="https://www.aidata-conference.com/" target="_blank" class="minor-event-link">2nd International Conference on Artificial Intelligence & Data Science 2026</a>
+                                <div class="minor-event-date">2026-02-12 • Dubai, UAE</div>
+                                
+                                <div class="minor-event-organizer">Organizer: aidata-conference.com/</div>
+                                
+                            </div>
+                            
+                            <div class="minor-event-item" data-city="London" data-tags="Focused Live AI Leadership AI Strategy Executive AI">
+                                <a href="https://www.caiosummit.com/uk/" target="_blank" class="minor-event-link">Chief AI Officer Summit UK</a>
+                                <div class="minor-event-date">2026-02-25 • London, UK</div>
+                                
+                                <div class="minor-event-organizer">Organizer: caiosummit.com/uk/</div>
                                 
                             </div>
                             
@@ -4082,11 +5221,35 @@
                                 
                             </div>
                             
+                            <div class="minor-event-item" data-city="Dubai" data-tags="Focused Live Healthcare AI Clinical AI Medical AI">
+                                <a href="https://www.healthcareaisummit.com/" target="_blank" class="minor-event-link">AI Revolution in Healthcare Summit 2026</a>
+                                <div class="minor-event-date">2026-03-27 • Dubai, UAE</div>
+                                
+                                <div class="minor-event-organizer">Organizer: healthcareaisummit.com/</div>
+                                
+                            </div>
+                            
                             <div class="minor-event-item" data-city="Singapore" data-tags="Focused Live Data Science Machine Learning AI Research">
                                 <a href="https://www.datascienceaisummit.sg/" target="_blank" class="minor-event-link">Data Science & AI Summit Singapore 2026</a>
                                 <div class="minor-event-date">2026-04-22 • Singapore, Singapore</div>
                                 
                                 <div class="minor-event-organizer">Organizer: datascienceaisummit.sg/</div>
+                                
+                            </div>
+                            
+                            <div class="minor-event-item" data-city="Singapore" data-tags="Focused Live Data Science Machine Learning AI Research">
+                                <a href="https://www.datascienceaisummit.sg/" target="_blank" class="minor-event-link">Data Science & AI Summit Singapore 2026</a>
+                                <div class="minor-event-date">2026-04-22 • Singapore, Singapore</div>
+                                
+                                <div class="minor-event-organizer">Organizer: datascienceaisummit.sg/</div>
+                                
+                            </div>
+                            
+                            <div class="minor-event-item" data-city="Lisbon" data-tags="Focused Live AI Research Data Mining Machine Learning">
+                                <a href="https://www.icaidm.org/" target="_blank" class="minor-event-link">International Conference on Artificial Intelligence and Data Mining (ICAIDM)</a>
+                                <div class="minor-event-date">2026-10-15 • Lisbon, Portugal</div>
+                                
+                                <div class="minor-event-organizer">Organizer: icaidm.org/</div>
                                 
                             </div>
                             
@@ -4374,7 +5537,7 @@
                 if (usMinorTile) {
                     const visibleMinorItems = usMinorTile.querySelectorAll('.minor-event-item:not([style*="display: none"])');
                     usOther = visibleMinorItems.length;
-                    usTotal += usOther;
+                    // Don't add minor events to total - they're already counted in the data attributes
                 }
             }
             
@@ -4402,7 +5565,7 @@
                 if (intlMinorTile) {
                     const visibleMinorItems = intlMinorTile.querySelectorAll('.minor-event-item:not([style*="display: none"])');
                     intlOther = visibleMinorItems.length;
-                    intlTotal += intlOther;
+                    // Don't add minor events to total - they're already counted in the data attributes
                 }
             }
             
@@ -4410,20 +5573,22 @@
             const usEventCount = document.getElementById('usEventCount');
             const usEventBreakdown = document.getElementById('usEventBreakdown');
             if (usEventCount) {
-                usEventCount.textContent = usTotal;
+                // Show only significant events (flagship + major)
+                usEventCount.textContent = usFlagship + usMajor;
             }
             if (usEventBreakdown) {
-                usEventBreakdown.textContent = `${usFlagship} flagship, ${usMajor} major, ${usOther} other`;
+                usEventBreakdown.innerHTML = `<div class="stat-breakdown-line"><span class="stat-breakdown-emphasis">${usFlagship}</span> Flagship + <span class="stat-breakdown-emphasis">${usMajor}</span> Major</div><div class="stat-breakdown-line">(plus ${usOther} other)</div>`;
             }
             
             // Update International stats display
             const intlEventCount = document.getElementById('intlEventCount');
             const intlEventBreakdown = document.getElementById('intlEventBreakdown');
             if (intlEventCount) {
-                intlEventCount.textContent = intlTotal;
+                // Show only significant events (flagship + major)
+                intlEventCount.textContent = intlFlagship + intlMajor;
             }
             if (intlEventBreakdown) {
-                intlEventBreakdown.textContent = `${intlFlagship} flagship, ${intlMajor} major, ${intlOther} other`;
+                intlEventBreakdown.innerHTML = `<div class="stat-breakdown-line"><span class="stat-breakdown-emphasis">${intlFlagship}</span> Flagship + <span class="stat-breakdown-emphasis">${intlMajor}</span> Major</div><div class="stat-breakdown-line">(plus ${intlOther} other)</div>`;
             }
         }
         

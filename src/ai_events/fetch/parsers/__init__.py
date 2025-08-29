@@ -1,2 +1,2 @@
-# AI Events Parsers Module
-# Contains specific parsers for different AI conference websites
+# Legacy parser directory - migrated to static_events.json
+# This directory is kept for future dynamic scrapers
