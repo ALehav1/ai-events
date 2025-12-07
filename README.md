@@ -39,7 +39,7 @@ git add index.html && git commit -m "Update events" && git push
 ```text
 ai-events/
 ├── src/ai_events/
-│   ├── static_events.json     # All event data (76 events)
+│   ├── static_events.json     # All event data (48 current events)
 │   ├── fetch/
 │   │   ├── base.py           # HTTP fetch utilities (for future scrapers)
 │   │   ├── static_loader.py  # JSON event loader
@@ -48,6 +48,7 @@ ai-events/
 │   ├── db.py                 # SQLite persistence
 │   ├── report.py             # HTML report generation
 │   └── templates/            # Jinja2 templates
+├── cleanup_events.py       # Maintenance script to remove past events
 ├── .windsurf/              # Windsurf IDE configuration
 ├── .vscode/                # VS Code tasks (Windsurf compatible)
 ├── scripts/                # Automation scripts
@@ -55,12 +56,13 @@ ai-events/
 └── dist/                   # Generated reports (created at runtime)
 ```
 
-## Current State (December 2024)
+## Current State (December 2025)
 
 - ✅ Major conferences tracked through December 2026
 - ✅ All events migrated to single `static_events.json` file
 - ✅ JSON-based loading system implemented
 - ✅ Full system working and deployed
+- ✅ Past events cleaned up (December 2025 - current data starts from Dec 10, 2025)
 
 ## Roadmap
 
@@ -115,7 +117,32 @@ ai-events fetch && ai-events report
 
 # Open report
 open dist/report.html
+
+# Clean up past events (maintenance)
+python3 cleanup_events.py
 ```
+
+### Maintenance: Cleaning Up Past Events
+
+The `cleanup_events.py` script removes events whose end date has passed:
+
+```bash
+# Remove events that ended before today
+python3 cleanup_events.py
+```
+
+This script:
+
+- Filters out events with `end_date < 2025-12-07` (or current cutoff)
+- Updates the `last_updated` field in `static_events.json`
+- Preserves all metadata and validates date formats
+- Provides detailed logging and summary output
+
+**When to run:**
+
+- Periodically (monthly/quarterly) to keep the event list current
+- Before generating reports for distribution
+- After major conference seasons pass
 
 ### Testing
 
